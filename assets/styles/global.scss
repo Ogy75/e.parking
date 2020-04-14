@@ -1,0 +1,79 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  background: $bg-color;
+  font-family: "Roboto", sans-serif;
+}
+.pr-block-menu{
+    margin:8px;
+    width:32px;
+    height:32px;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    right: 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 9px;
+    transition: $default-transition;
+    &:hover{
+        background: transparentize($black, .92);
+    }
+    .pointer{
+        position: absolute;
+        top:-7px;
+        right:24px;
+        transform: rotate(-45deg);
+        width:12px;
+        height:12px;
+        border-top:1px solid fade-out($black, 0.9);
+        border-right:1px solid fade-out($black, 0.9);
+        z-index: 1;
+        background: white;
+    }
+    .menu-items{
+        display: none;
+        position: absolute;
+        top:40px;
+        right:-16px;
+        width:240px;
+        background: white;
+        border-radius: $default-border-radius * 1.5;
+        border: 1px solid fade-out($black, 0.9);
+        padding: 12px;
+        box-shadow: 0 2px 4px 0 transparentize($black, .9);
+        transition: $default-transition;
+         ul{
+            margin:0;
+            padding: 0;
+              li{
+                padding: 0;
+                list-style: none;
+                a{
+                    display: block;
+                    border-radius: $default-border-radius;
+                    width:100%;
+                    margin:0;
+                    font-size: 14px;
+                    line-height: 14px;
+                    text-align: right;
+                    color:$black;
+                    padding: 10px 12px;
+                    font-weight: 400;
+                    font-family: 'Roboto',sans-serif;
+                    transition: $default-transition;
+                    &:hover{
+                        background: $parking-blue;
+                        color:white;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

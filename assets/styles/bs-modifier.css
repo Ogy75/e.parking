@@ -1,0 +1,11 @@
+.badge {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+  padding: 4px 6px;
+}
+
+.badge.badge-primary {
+  background: #0000b4;
+}
+/*# sourceMappingURL=bs-modifier.css.map */

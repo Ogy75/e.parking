@@ -1,0 +1,11 @@
+@import 'variables';
+
+.badge{
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 500;
+    padding:4px 6px;
+    &.badge-primary{
+        background:$parking-blue;
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,CAAC,CAAA;EACG,UAAU,EAAE,UAAU;CACzB",
+    "sources": [
+        "bundle.scss",
+        "root.scss",
+        "bs-modifier.scss",
+        "fonts.scss"
+    ],
+    "names": [],
+    "file": "bundle.css"
+}

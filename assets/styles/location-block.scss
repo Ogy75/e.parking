@@ -1,0 +1,47 @@
+@import "variables";
+
+.pr-location-block {
+  margin-bottom: 16px;
+  .pr-location-block-content {
+    position: relative;
+    background: white;
+    border-radius: $default-border-radius;
+    padding: 16px 48px 32px 16px;
+    height: 100%;
+    &.add {
+      padding: 0;
+      text-align: center;
+      padding: 24px 0;
+      a{
+          color:transparentize($black, 0.6);
+          &:hover{
+            color:$black;
+          }
+      }
+      i {
+        font-size: 36px;
+      }
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      color: $black;
+      min-height: 100% !important;
+      transition: $default-transition;
+      &:hover{
+          color: transparentize($black, 0.6);
+      }
+    }
+    p {
+      display: block;
+      color: fade-out($black, 0.6);
+      font-size: 12px;
+      line-height: 12px;
+      margin: 0;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 24px 0 8px 0;
+    }
+  }
+}

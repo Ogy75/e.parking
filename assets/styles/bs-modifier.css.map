@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,MAAM,CAAA;EACF,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;EACjB,WAAW,EAAE,GAAG;EAChB,OAAO,EAAC,OAAO;CAIlB;;AARD,AAKI,MALE,AAKD,cAAc,CAAA;EACX,UAAU,ECQH,OAAO;CDPjB",
+    "sources": [
+        "bs-modifier.scss",
+        "variables.scss"
+    ],
+    "names": [],
+    "file": "bs-modifier.css"
+}
