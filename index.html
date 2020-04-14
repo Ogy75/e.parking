@@ -9,12 +9,46 @@
     <link rel="stylesheet" type="text/css" href="assets/styles/grid.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/bs-modifier.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/fonts.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/input.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/modal.css">
     <link rel="stylesheet" type="text/css" href="/assets/fonts/fa.css">
     <link rel="stylesheet" type="text/css" href="/assets/styles/location-block.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+<!-- MODALS START -->
+
+<!-- ADD LOCATION START -->
+<div class="modal fade" id="addLocation" tabindex="-1" role="dialog" aria-labelledby="addLocation" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+            <div class="modal-title">Add New Location</div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="fas fa-times"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-title mb-3">Location Name</div>
+          <div class="row">
+              <div class="col-6">
+                  <label for="locationName">Location Name
+                      <input type="text" name="locationName"/>
+                  </label>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- ADD LOCATION END -->
+
+<!-- MODALS END -->
+
+
     <div>
         <div class="pr-top-bar nav-down">
             <div class="pr-profile">
@@ -57,7 +91,7 @@
                     <!-- LOCATION BLOCK ADD -->
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-3 pr-location-block">
                         <div class="pr-location-block-content add">
-                            <a href="#" class="d-flex justify-content-center align-items-center">
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#addLocation" class="d-flex justify-content-center align-items-center">
                                 <div>
                                     <i class="fas fa-plus-circle"></i>
                                     <span class="d-block">add new location</span>
@@ -95,7 +129,31 @@
                         <div class="pr-location-block-content">
                             <a href="javascript:void(0)">
                                 <p>location</p>
-                                <h2>BG Open Space</h2>
+                                <h2>BG GTC GH</h2>
+                                <span class="badge badge-primary">28 parking spots</span>
+                            </a>
+                            <!-- BLOCK -->
+                            <div class="pr-block-menu fas fa-ellipsis-v">
+                                <div class="menu-items">
+                                    <div class="pointer"></div>
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0)" class="menu-item">edit location</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="menu-item">delete location</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- LOCATION BLOCK -->
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 pr-location-block">
+                        <div class="pr-location-block-content">
+                            <a href="javascript:void(0)">
+                                <p>location</p>
+                                <h2>BG GTC 41</h2>
                                 <span class="badge badge-primary">28 parking spots</span>
                             </a>
                             <!-- BLOCK -->
@@ -120,7 +178,32 @@
                         <div class="pr-location-block-content">
                             <a href="javascript:void(0)">
                                 <p>location</p>
-                                <h2>BG Open Space</h2>
+                                <h2>KG Open Parking</h2>
+                                <span class="badge badge-primary">28 parking spots</span>
+                            </a>
+                            <!-- BLOCK -->
+                            <div class="pr-block-menu fas fa-ellipsis-v">
+                                <div class="menu-items">
+                                    <div class="pointer"></div>
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0)" class="menu-item">edit location</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="menu-item">delete location</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- LOCATION BLOCK -->
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 pr-location-block">
+                        <div class="pr-location-block-content">
+                            <a href="javascript:void(0)">
+                                <p>location</p>
+                                <h2>NI Open Parking</h2>
                                 <span class="badge badge-primary">28 parking spots</span>
                             </a>
                             <!-- BLOCK -->

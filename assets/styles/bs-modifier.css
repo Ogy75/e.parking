@@ -8,4 +8,19 @@
 .badge.badge-primary {
   background: #0000b4;
 }
+
+.modal-content .modal-header, .modal-content .modal-body {
+  padding: 24px !important;
+  border-radius: 2px;
+}
+
+.modal-content .modal-title {
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  color: black;
+}
+
+.modal-content .close {
+  font-size: 16px;
+}
 /*# sourceMappingURL=bs-modifier.css.map */

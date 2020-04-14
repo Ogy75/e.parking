@@ -1,11 +1,25 @@
-@import 'variables';
+@import "variables";
 
-.badge{
-    font-size: 12px;
-    line-height: 12px;
-    font-weight: 500;
-    padding:4px 6px;
-    &.badge-primary{
-        background:$parking-blue;
+.badge {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+  padding: 4px 6px;
+  &.badge-primary {
+    background: $parking-blue;
+  }
+}
+.modal-content {
+    .modal-header, .modal-body{
+        padding:24px !important;
+        border-radius: $default-border-radius;
     }
+  .modal-title {
+    font-size: 22px !important;
+    font-weight: 400 !important;
+    color: black;
+  }
+  .close{
+      font-size: 16px;
+}
 }

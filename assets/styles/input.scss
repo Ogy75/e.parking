@@ -1,0 +1,14 @@
+@import 'variables';
+
+label {
+    display: block;
+    font-size: 12px;
+    color: fade-out($black, 0.5);
+    input[type=text] {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 14px;
+    height: 36px;
+  }
+}

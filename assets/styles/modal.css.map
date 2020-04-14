@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,WAAW,CAAA;EACP,SAAS,EAAE,IAAI;CAClB",
+    "sources": [
+        "modal.scss",
+        "variables.scss"
+    ],
+    "names": [],
+    "file": "modal.css"
+}
