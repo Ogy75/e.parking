@@ -10,17 +10,28 @@
 }
 
 .modal-content {
+  background: transparent;
+  border: none;
   border-radius: 2px;
 }
 
-.modal-content .modal-header,
+.modal-content .modal-header {
+  padding: 24px;
+  background-color: #272724;
+}
+
+.modal-content .modal-header .modal-title, .modal-content .modal-header .close, .modal-content .modal-header p {
+  color: white;
+}
+
 .modal-content .modal-body {
-  padding: 24px !important;
+  padding: 24px;
+  background-color: white;
 }
 
 .modal-content .modal-title {
-  font-size: 22px !important;
-  font-weight: 400 !important;
+  font-size: 22px;
+  font-weight: 400;
   color: black;
 }
 

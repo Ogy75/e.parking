@@ -312,20 +312,22 @@
         aria-labelledby="deleteLocation" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-md" role="document">
             <div class="modal-content">
-                <div class="modal-body">
-                    <div class=" mb-4">
-                        <div class="form-title mb-2">Are you sure you want to delete <b>{location name}</b> parking location?
-                        </div>
-                        <small class="text-danger">These changes can not be undone.</small>
-                    </div>
+                <div class="modal-header">
                     <div>
-                        <button class="btn btn-danger mr-3">Delete</button>
-                        <button class="btn btn-primary" data-dismiss="modal" aria-label="Close">Cancel</button>
+                        <div class="modal-title mb-3">Are you sure you want to delete { location name } parking
+                            location?
+                        </div>
+                        <p>This action can not be undone.</p>
                     </div>
+                </div>
+                <div class="modal-body">
+                    <button class="btn btn-danger mr-3">Delete</button>
+                    <button class="btn btn-primary" data-dismiss="modal" aria-label="Close">Cancel</button>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- DELETE LOCATION END -->
 
     <!------------------ MODALS END ------------------>

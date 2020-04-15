@@ -7,19 +7,28 @@
   font-weight: 500;
   padding: 4px 6px;
   &.badge-primary {
-    background: $parking-blue;
+    background: $primary;
   }
 }
 //MODAL
 .modal-content {
+  background: transparent;
+  border:none;
   border-radius: $default-border-radius;
-  .modal-header,
+  .modal-header{
+    padding: 24px;
+    background-color: $secondary;
+    .modal-title, .close, p{
+      color:white;
+    }
+  }
   .modal-body {
-    padding: 24px !important;
+    padding: 24px;
+    background-color:white;
   }
   .modal-title {
-    font-size: 22px !important;
-    font-weight: 400 !important;
+    font-size: 22px;
+    font-weight: 400;
     color: black;
   }
   .close {
