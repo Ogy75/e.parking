@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
     //MAIN NAV
     var navTrigger = $('.pr-nav-button');
     var nav = $('.pr-container-nav');
@@ -43,7 +43,7 @@ $(document).ready(function () {
         var trigger = event.target;
         $(trigger).find('.menu-items').toggle();
     });
-    $('.menu-items').on('click', function() {
+    $('.menu-items').on('click', function () {
         $(this).hide();
     });
     $(document).mouseup(function (ev) {
@@ -53,8 +53,30 @@ $(document).ready(function () {
         }
     });
 
+    //ADD NEW PARKING SPOT
+    var pSpot = '<tr><td>Level 2 - 215</td><td><select><option selected="">Rotating</option><option selected="">Permanent</option></select></td><td><span class="badge badge-warning remove-entry">remove</span></td></tr>';
+    $('#add-spot').on('click', function () {
+        $('.pr-default-table tbody').append(pSpot);
+    });
+
     //REMOVE ENTRY ITEM
-    $('.remove-entry').on('click', function(){
+    $('.remove-entry').on('click', function () {
         $(this).parents('tr').remove();
+    });
+
+    //SCROLL TOP
+    //Scroll to top
+    $(window).scroll(function () {
+        var height = $(window).scrollTop();
+        if (height > 100) {
+            $('#go-top').fadeIn(100);
+        } else {
+            $('#go-top').fadeOut(100);
+        }
+    });
+    $('#go-top').click(function (event) {
+        event.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+        return false;
     });
 });

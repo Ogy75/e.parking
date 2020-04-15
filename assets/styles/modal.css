@@ -6,4 +6,14 @@
   padding: 12px 0;
   border-bottom: 1px solid rgba(39, 39, 36, 0.25);
 }
+
+.parking-sceheme-img {
+  border: 1px solid rgba(39, 39, 36, 0.2);
+  overflow: hidden;
+}
+
+.parking-sceheme-img img {
+  width: 100%;
+  height: auto;
+}
 /*# sourceMappingURL=modal.css.map */

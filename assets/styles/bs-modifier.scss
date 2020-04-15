@@ -28,7 +28,7 @@
 }
 //BUTTON
 .btn {
-  //min-width: 92px;
+  min-width: 100px;
   font-size: 14px;
   line-height: 14px;
   padding: 9px 20px;
@@ -43,31 +43,35 @@
   border: 2px solid fade-out($black, 0.4);
 }
 .btn-primary {
-  &:hover {
+  &:hover, &:focus {
     background-color: $primary;
     border-color: $primary;
   }
+  &:disabled{
+      background-color: fade-out($black, 0.6) !important;
+      border-color:fade-out($black, 0.98);
+  }
 }
 .btn-secondary {
-    &:hover {
+    &:hover, &:focus {
       background-color: $secondary;
       border-color: $secondary;
     }
   }
   .btn-warning {
-    &:hover {
+    &:hover, &:focus {
       background-color: $warning;
       border-color: $warning;
     }
   }
   .btn-success {
-    &:hover {
+    &:hover, &:focus {
       background-color: $success;
       border-color: $success;
     }
   }
   .btn-danger {
-    &:hover {
+    &:hover, &:focus {
       background-color: $danger;
       border-color: $danger;
     }
