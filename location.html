@@ -307,6 +307,32 @@
     </div>
     <!-- EDIT LOCATION END -->
 
+        <!-- SHOW MAP START -->
+        <div class="modal fade" id="locationLayout" tabindex="-1" role="dialog"
+        aria-labelledby="locationLayout" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="modal-title">{ location name } Layout</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="fas fa-times-circle"></span>
+                    </button>
+                </div>
+                <div class="modal-body">                    
+                    <div class="row">
+                        <div class="col-12 mb-5">
+                            <div class="parking-sceheme-img">
+                                <img src="assets/images/BGopenparking.jpg" alt="parking scheme" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SHOW MAP END -->
+
+
     <!-- DELETE LOCATION START -->
     <div class="modal fade" id="deleteLocation" data-backdrop="static" tabindex="-1" role="dialog"
         aria-labelledby="deleteLocation" aria-hidden="true">
@@ -387,7 +413,8 @@
                     <!-- LOCATION BLOCK -->
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-3 pr-location-block">
                         <div class="pr-location-block-content">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" data-toggle="modal"
+                            data-target="#locationLayout">
                                 <p>location</p>
                                 <h2>BG Open Space</h2>
                                 <span class="badge badge-primary">28 parking spots</span>
@@ -414,7 +441,8 @@
                     <!-- LOCATION BLOCK -->
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-3 pr-location-block">
                         <div class="pr-location-block-content">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" data-toggle="modal"
+                            data-target="#locationLayout">
                                 <p>location</p>
                                 <h2>BG GTC GH</h2>
                                 <span class="badge badge-primary">28 parking spots</span>
@@ -440,7 +468,8 @@
                     <!-- LOCATION BLOCK -->
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-3 pr-location-block">
                         <div class="pr-location-block-content">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" data-toggle="modal"
+                            data-target="#locationLayout">
                                 <p>location</p>
                                 <h2>BG GTC 41</h2>
                                 <span class="badge badge-primary">28 parking spots</span>
@@ -467,7 +496,8 @@
                     <!-- LOCATION BLOCK -->
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-3 pr-location-block">
                         <div class="pr-location-block-content">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" data-toggle="modal"
+                            data-target="#locationLayout">
                                 <p>location</p>
                                 <h2>KG Open Parking</h2>
                                 <span class="badge badge-primary">28 parking spots</span>
@@ -494,7 +524,8 @@
                     <!-- LOCATION BLOCK -->
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-3 pr-location-block">
                         <div class="pr-location-block-content">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" data-toggle="modal"
+                            data-target="#locationLayout">
                                 <p>location</p>
                                 <h2>NI Open Parking</h2>
                                 <span class="badge badge-primary">28 parking spots</span>
