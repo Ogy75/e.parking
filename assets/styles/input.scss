@@ -1,14 +1,26 @@
-@import 'variables';
+@import "variables";
 
 label {
-    display: block;
-    font-size: 12px;
-    color: fade-out($black, 0.5);
-    input[type=text] {
+  display: block;
+  font-size: 12px;
+  line-height: 12px;
+  color: fade-out($black, 0.4);
+}
+input[type=text],
+  input[type=password],
+  input[type=email] {
     display: block;
     width: 100%;
     font-size: 14px;
-    line-height: 14px;
+    line-height: 36px;
+    border: 1px solid fade-out($black, 0.8);
     height: 36px;
+    padding: 0 8px;
+    border-radius: $default-border-radius;
+    &:focus {
+      border: 1px solid $black;
+    }
+    &:disabled{
+        background: fade-out($black, 0.9);
+    }
   }
-}

@@ -1,4 +1,9 @@
 .form-title {
   font-size: 16px;
 }
+
+.parking-spot {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(39, 39, 36, 0.25);
+}
 /*# sourceMappingURL=modal.css.map */

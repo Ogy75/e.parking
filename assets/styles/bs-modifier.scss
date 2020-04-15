@@ -1,5 +1,6 @@
 @import "variables";
 
+// BADGE
 .badge {
   font-size: 12px;
   line-height: 12px;
@@ -9,17 +10,65 @@
     background: $parking-blue;
   }
 }
+//MODAL
 .modal-content {
-    .modal-header, .modal-body{
-        padding:24px !important;
-        border-radius: $default-border-radius;
-    }
+  border-radius: $default-border-radius;
+  .modal-header,
+  .modal-body {
+    padding: 24px !important;
+  }
   .modal-title {
     font-size: 22px !important;
     font-weight: 400 !important;
     color: black;
   }
-  .close{
-      font-size: 16px;
+  .close {
+    font-size: 24px;
+  }
 }
+//BUTTON
+.btn {
+  //min-width: 92px;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 9px 20px;
 }
+.btn-primary,
+.btn-secondary,
+.btn-warning,
+.btn-success,
+.btn-danger {
+  background-color: white;
+  color: $black;
+  border: 2px solid fade-out($black, 0.4);
+}
+.btn-primary {
+  &:hover {
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+.btn-secondary {
+    &:hover {
+      background-color: $secondary;
+      border-color: $secondary;
+    }
+  }
+  .btn-warning {
+    &:hover {
+      background-color: $warning;
+      border-color: $warning;
+    }
+  }
+  .btn-success {
+    &:hover {
+      background-color: $success;
+      border-color: $success;
+    }
+  }
+  .btn-danger {
+    &:hover {
+      background-color: $danger;
+      border-color: $danger;
+    }
+  }

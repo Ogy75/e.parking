@@ -52,4 +52,9 @@ $(document).ready(function () {
             container.hide();
         }
     });
+
+    //REMOVE ENTRY ITEM
+    $('.remove-entry').on('click', function(){
+        $(this).parents('tr').remove();
+    });
 });

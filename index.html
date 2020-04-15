@@ -12,54 +12,149 @@
     <link rel="stylesheet" type="text/css" href="assets/styles/input.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/modal.css">
     <link rel="stylesheet" type="text/css" href="/assets/fonts/fa.css">
-    <link rel="stylesheet" type="text/css" href="/assets/styles/location-block.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/location-block.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-<!-- MODALS START -->
+    <!-- MODALS START -->
 
-<!-- ADD LOCATION START -->
-<div class="modal fade" id="addLocation" tabindex="-1" role="dialog" aria-labelledby="addLocation" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header border-0">
-            <div class="modal-title">Add New Location</div>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true" class="fas fa-times"></span>
-          </button>
+    <!-- ADD LOCATION START -->
+    <div class="modal fade" id="addLocation" tabindex="-1" role="dialog" aria-labelledby="addLocation"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="modal-title">Add New Location</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="fas fa-times-circle"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-title mb-2">Location Name</div>
+                    <div class="row">
+                        <div class="col-8 mb-4">
+                            <label for="locationName">Enter Location Name</label>
+                            <input type="text" name="locationName" />
+                        </div>
+                    </div>
+                    <div class="form-title mb-2">Parking Spots</div>
+                    <div class="row">
+                        <div class="col-12">
+                            <table class="pr-default-table mb-4">
+                                <thead>
+                                    <tr>
+                                        <th>Parking Spot</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Level 2 - 214
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option selected>Rotating</option>
+                                                <option selected>Permanent</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning remove-entry">remove</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Level 2 - 214
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option selected>Rotating</option>
+                                                <option>Permanent</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning remove-entry">remove</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Level 2 - 214
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option>Rotating</option>
+                                                <option selected>Permanent</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning remove-entry">remove</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Level 2 - 214
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option selected>Rotating</option>
+                                                <option>Permanent</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning remove-entry">remove</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Level 2 - 214
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option selected>Rotating</option>
+                                                <option>Permanent</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning remove-entry">remove</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="row">
+                                <div class="col-8">
+                                    <label for="addSpot">Add Parking Spot Number</label>
+                                    <input type="text" name="addSpot" />
+                                    <button class="btn btn-primary mt-2 add-spot">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          <div class="form-title mb-3">Location Name</div>
-          <div class="row">
-              <div class="col-6">
-                  <label for="locationName">Location Name
-                      <input type="text" name="locationName"/>
-                  </label>
-              </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-<!-- ADD LOCATION END -->
+    <!-- ADD LOCATION END -->
 
-<!-- MODALS END -->
+    <!-- MODALS END -->
 
 
     <div>
         <div class="pr-top-bar nav-down">
             <div class="pr-profile">
-                <img src="/assets/images/profile-1.jpg" alt="user name">
+                <img src="assets/images/profile-1.jpg" alt="user name">
             </div>
         </div>
 
         <!-- LEFT  NAV -->
         <div class="pr-container-nav nav-responsive">
             <div class="pr-logo">
-                <img src="/assets/images/app-logo_w.svg" alt="e.parkingManager" />
+                <img src="assets/images/app-logo_w.svg" alt="e.parkingManager" />
             </div>
             <div class="pr-nav-button nav-down fas fa-bars"></div>
             <nav>
@@ -91,7 +186,8 @@
                     <!-- LOCATION BLOCK ADD -->
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-3 pr-location-block">
                         <div class="pr-location-block-content add">
-                            <a href="javascript:void(0)" data-toggle="modal" data-target="#addLocation" class="d-flex justify-content-center align-items-center">
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#addLocation"
+                                class="d-flex justify-content-center align-items-center">
                                 <div>
                                     <i class="fas fa-plus-circle"></i>
                                     <span class="d-block">add new location</span>
@@ -230,7 +326,7 @@
 
     </div>
 
-    <script src="/assets/js/behavior.js"></script>
+    <script src="assets/js/behavior.js"></script>
 </body>
 
 </html>

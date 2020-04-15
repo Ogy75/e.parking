@@ -9,9 +9,13 @@
   background: #0000b4;
 }
 
-.modal-content .modal-header, .modal-content .modal-body {
-  padding: 24px !important;
+.modal-content {
   border-radius: 2px;
+}
+
+.modal-content .modal-header,
+.modal-content .modal-body {
+  padding: 24px !important;
 }
 
 .modal-content .modal-title {
@@ -21,6 +25,47 @@
 }
 
 .modal-content .close {
-  font-size: 16px;
+  font-size: 24px;
+}
+
+.btn {
+  font-size: 14px;
+  line-height: 14px;
+  padding: 9px 20px;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-warning,
+.btn-success,
+.btn-danger {
+  background-color: white;
+  color: #272724;
+  border: 2px solid rgba(39, 39, 36, 0.6);
+}
+
+.btn-primary:hover {
+  background-color: #0000b4;
+  border-color: #0000b4;
+}
+
+.btn-secondary:hover {
+  background-color: #272724;
+  border-color: #272724;
+}
+
+.btn-warning:hover {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.btn-success:hover {
+  background-color: #1f9c26;
+  border-color: #1f9c26;
+}
+
+.btn-danger:hover {
+  background-color: #d8483e;
+  border-color: #d8483e;
 }
 /*# sourceMappingURL=bs-modifier.css.map */
