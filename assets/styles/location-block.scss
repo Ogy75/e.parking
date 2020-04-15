@@ -15,7 +15,7 @@
       a{
           color:transparentize($black, 0.6);
           &:hover{
-            color:$black;
+            color:$parking-blue;
           }
       }
       i {
@@ -29,7 +29,7 @@
       min-height: 100% !important;
       transition: $default-transition;
       &:hover{
-          color: transparentize($black, 0.6);
+          color: fade-out($black, 60%);
       }
     }
     p {
