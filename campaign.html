@@ -385,11 +385,10 @@
                         <a href="spots.html"><i class="fas fa-map-marker-alt pr-3"></i>Parking Spots</a>
                     </li>
                     <li>
-                        <a href="campaign.html"><i class="fas fa-dice-six pr-3"></i>Campaign</a>
+                        <a href="campaign.html" class="active"><i class="fas fa-dice-six pr-3"></i>Campaign</a>
                     </li>
                     <li>
-                        <a href="location.html" class="active"><i
-                                class="fas fa-map-marked-alt pr-3"></i>Location</a>
+                        <a href="location.html"><i class="fas fa-map-marked-alt pr-3"></i>Location</a>
                     </li>
                     <li>
                         <a href="stats.html"><i class="fas fa-chart-pie pr-3"></i>Stats</a>
@@ -402,143 +401,128 @@
         <div class="pr-wrapper-right">
             <div class="pr-container-content">
                 <div class="d-flex justify-content-between align-items-center">
-                    <h5 class="pb-3">Location Management</h5>
+                    <h5 class="pb-3">Campaign Management</h5>
                 </div>
                 <div class="row">
-                    <!-- LOCATION BLOCK -->
-                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 pr-block">
-                        <div class="pr-block-content">
-                            <a href="javascript:void(0)" data-toggle="modal" data-target="#locationLayout">
-                                <small>location</small>
-                                <div class="title my-3">BG Open Space</div>
-                                <span class="badge badge-primary">28 parking spots</span>
-                            </a>
-                            <!-- BLOCK MENU -->
-                            <div class="pr-block-menu fas fa-ellipsis-v">
-                                <div class="menu-items">
-                                    <div class="pointer"></div>
-                                    <ul>
-                                        <li>
-                                            <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                data-target="#editLocation">edit location</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                data-target="#deleteLocation">delete location</a>
-                                        </li>
-                                    </ul>
+                    <!-- LEFT BLOCKS START -->
+                    <div class="col-12 col-lg-5">
+                        <div class="row">
+                            <!-- CAMPAIGN STATUS BLOCK -->
+                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6 pr-block">
+                                <div class="pr-block-content">
+                                        <small>current campaign status</small>
+                                        <div class="title my-3">Campaign is <span class="badge badge-success">ON</span> until Friday 12.06.2020.</div>
+                                        <span class="badge badge-primary">46 users</span>
+                                        <span class="badge badge-warning">30 reserved</span>
+                                        <span class="badge badge-success">21 confirmed</span>
+                                    <!-- BLOCK MENU -->
+                                    <!-- <div class="pr-block-menu fas fa-ellipsis-v">
+                                        <div class="menu-items">
+                                            <div class="pointer"></div>
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
+                                                        data-target="#editLocation">edit location</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
+                                                        data-target="#deleteLocation">delete location</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div> -->
                                 </div>
-                            </div>
-                        </div>
 
-                    </div>
-                    <!-- LOCATION BLOCK -->
-                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 pr-block">
-                        <div class="pr-block-content">
-                            <a href="javascript:void(0)" data-toggle="modal" data-target="#locationLayout">
-                                <small>location</small>
-                                <div class="title my-3">BG GTC GH</div>
-                                <span class="badge badge-primary">28 parking spots</span>
-                            </a>
-                            <!-- BLOCK -->
-                            <div class="pr-block-menu fas fa-ellipsis-v">
-                                <div class="menu-items">
-                                    <div class="pointer"></div>
-                                    <ul>
-                                        <li>
-                                            <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                data-target="#editLocation">edit location</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                data-target="#deleteLocation">delete location</a>
-                                        </li>
-                                    </ul>
+                            </div>
+                            <!-- CAMPAIGN APP SETTINGS BLOCK -->
+                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6 pr-block">
+                                <div class="pr-block-content">
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#locationLayout">
+                                        <small>campaign state</small>
+                                        <div class="title my-3">BG GTC GH</div>
+                                        <p>If you want to put the Parking App on hold and do not want to use it for some time, please turn it off here.</p>
+                                        <span class="badge badge-primary">28 parking spots</span>
+                                    </a>
+                                    <!-- BLOCK -->
+                                    <!-- <div class="pr-block-menu fas fa-ellipsis-v">
+                                        <div class="menu-items">
+                                            <div class="pointer"></div>
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
+                                                        data-target="#editLocation">edit location</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
+                                                        data-target="#deleteLocation">delete location</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <!-- CAMPAIGN MODE BLOCK -->
+                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6 pr-block">
+                                <div class="pr-block-content">
+                                        <small>campaign running mode</small>
+                                        <div class="title my-3">BG GTC GH</div>
+                                        <span class="badge badge-primary">28 parking spots</span>
+                                    <!-- BLOCK -->
+                                    <!-- <div class="pr-block-menu fas fa-ellipsis-v">
+                                        <div class="menu-items">
+                                            <div class="pointer"></div>
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
+                                                        data-target="#editLocation">edit location</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
+                                                        data-target="#deleteLocation">delete location</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- LOCATION BLOCK -->
-                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 pr-block">
-                        <div class="pr-block-content">
-                            <a href="javascript:void(0)" data-toggle="modal" data-target="#locationLayout">
-                                <small>location</small>
-                                <div class="title my-3">BG GTC 41</div>
-                                <span class="badge badge-primary">28 parking spots</span>
-                            </a>
-                            <!-- BLOCK -->
-                            <div class="pr-block-menu fas fa-ellipsis-v">
-                                <div class="menu-items">
-                                    <div class="pointer"></div>
-                                    <ul>
-                                        <li>
-                                            <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                data-target="#editLocation">edit location</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                data-target="#deleteLocation">delete location</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- LEFT BLOCKS END -->
 
-                    </div>
-                    <!-- LOCATION BLOCK -->
-                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 pr-block">
-                        <div class="pr-block-content">
-                            <a href="javascript:void(0)" data-toggle="modal" data-target="#locationLayout">
-                                <small>location</small>
-                                <div class="title my-3">KG Open Parking</div>
-                                <span class="badge badge-primary">28 parking spots</span>
-                            </a>
-                            <!-- BLOCK -->
-                            <div class="pr-block-menu fas fa-ellipsis-v">
-                                <div class="menu-items">
-                                    <div class="pointer"></div>
-                                    <ul>
-                                        <li>
-                                            <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                data-target="#editLocation">edit location</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                data-target="#deleteLocation">delete location</a>
-                                        </li>
-                                    </ul>
+                    <!-- RIGHT BLOCK START -->
+                    <div class="col-12 col-lg-7">
+                        <div class="row">
+                            <!-- ??? -->
+                            <div class="col-12 pr-block">
+                                <div class="pr-block-content py-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="title">Campaign History</div>
+                                        <select>
+                                            <option selected>2021</option>
+                                            <option>2019</option>
+                                        </select>
+                                    </div>
+                                    <!-- BLOCK -->
+                                    <!-- <div class="pr-block-menu fas fa-ellipsis-v">
+                                        <div class="menu-items">
+                                            <div class="pointer"></div>
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
+                                                        data-target="#editLocation">edit location</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
+                                                        data-target="#deleteLocation">delete location</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                    <!-- LOCATION BLOCK -->
-                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 pr-block">
-                        <div class="pr-block-content">
-                            <a href="javascript:void(0)" data-toggle="modal" data-target="#locationLayout">
-                                <small>location</small>
-                                <div class="title my-3">NI Open Parking</div>
-                                <span class="badge badge-primary">28 parking spots</span>
-                            </a>
-                            <!-- BLOCK -->
-                            <div class="pr-block-menu fas fa-ellipsis-v">
-                                <div class="menu-items">
-                                    <div class="pointer"></div>
-                                    <ul>
-                                        <li>
-                                            <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                data-target="#editLocation">edit location</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                data-target="#deleteLocation">delete location</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                    <!-- RIGHT BLOCK START -->
                 </div>
             </div>
         </div>
