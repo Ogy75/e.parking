@@ -99,6 +99,11 @@ body {
   cursor: pointer;
 }
 
+.pr-default-table thead tr {
+  background: rgba(39, 39, 36, 0.05);
+  border-bottom: none;
+}
+
 .pr-default-table tr {
   width: 100%;
 }
@@ -109,12 +114,17 @@ body {
 
 .pr-default-table tr th, .pr-default-table tr td {
   width: 50%;
-  padding: 10px 6px;
+  padding: 8px 10px;
   border-bottom: 1px solid rgba(39, 39, 36, 0.25);
 }
 
 .pr-default-table tr th th:last-of-type, .pr-default-table tr td th:last-of-type {
   text-align: right;
+}
+
+.pr-default-table tr th {
+  color: rgba(39, 39, 36, 0.4);
+  font-weight: 400;
 }
 
 #go-top {
