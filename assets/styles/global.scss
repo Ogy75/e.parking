@@ -51,6 +51,7 @@ body {
     padding: 12px;
     box-shadow: 0 2px 4px 0 transparentize($black, 0.9);
     transition: $default-transition;
+    z-index: 1000;
     ul {
       margin: 0;
       padding: 0;

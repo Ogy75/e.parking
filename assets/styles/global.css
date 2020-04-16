@@ -61,6 +61,7 @@ body {
           box-shadow: 0 2px 4px 0 rgba(39, 39, 36, 0.1);
   -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
+  z-index: 1000;
 }
 
 .pr-block-menu .menu-items ul {
