@@ -357,15 +357,59 @@
             </div>
         </div>
     </div>
-
     <!-- DELETE LOCATION END -->
+
+    <!-- USER PROFILE START -->
+    <div class="modal fade" id="userProfile" data-backdrop="static" tabindex="-1" role="dialog"
+        aria-labelledby="userProfile" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-flex justify-content start align-items-center">
+                        <div class="user-img">
+                            <img src="assets/images/profile-1.jpg" alt="user name">
+                        </div>
+                        <div class="modal-title w-75 ml-3">Welcome to enjoy.ing ParkingManager Name LastName
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="form-title mb-4">Please enter your profile data to be able to use the app</div>
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <label for="licence-plate1">Licence plate 1</label>
+                            <input type="text" name="licence-plate1">
+                        </div>
+                        <div class="col-6">
+                            <label for="licence-plate2">Licence plate 2 (optional)</label>
+                            <input type="text" name="licence-plate2">
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-6">
+                            <label for="preffered-location">preffered location</label>
+                            <select class="w-100" name="preffered location">
+                                <option selected>Belgrade - GTC GH</option>
+                                <option>Belgrade - GTC 41</option>
+                                <option>Belgrade - Open Parking</option>
+                                <option>Kragujevac - Open Parking</option>
+                                <option>Nis - Open Parking</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" data-dismiss="modal" aria-label="Close">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- USER PROFILE END -->
 
     <!------------------ MODALS END ------------------>
 
 
     <div>
         <div class="pr-top-bar nav-down">
-            <div class="pr-profile">
+            <div class="pr-profile" data-toggle="modal" data-target="#userProfile">
                 <img src="assets/images/profile-1.jpg" alt="user name">
             </div>
         </div>
@@ -503,7 +547,8 @@
                                         </div>
                                         <div class="col-5">
                                             <label for="campaign-start-time">start time</label>
-                                            <input type="time" class="w-100" name="campaign-start-time" min="08:00" max="18:00" required>
+                                            <input type="time" class="w-100" name="campaign-start-time" min="08:00"
+                                                max="18:00" required>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -518,7 +563,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    
+
                                     <!-- BLOCK -->
                                     <!-- <div class="pr-block-menu fas fa-ellipsis-v">
                                         <div class="menu-items">
@@ -560,12 +605,8 @@
                                             <div class="pointer"></div>
                                             <ul>
                                                 <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                        data-target="#editLocation">edit location</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                        data-target="#deleteLocation">delete location</a>
+                                                    <a href="javascript:void(0)" class="menu-item">Export yearly report
+                                                        to pdf</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -574,43 +615,108 @@
                             </div>
 
                             <!-- CAMPAIGN HISTORY ENTRY -->
-                            <div class="col-12 pr-block">
+                            <div class="col-12 pr-block mb-2">
                                 <div class="pr-block-content py-3">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <small>camapaign period</small>
-                                        <span class="period">10.06.- 12.06.</span>
+                                    <div class="row align-items-center">
+                                        <div class="col-6 col-sm-3">
+                                            <small>camapaign period</small>
+                                            <span class="period">10.06.- 12.06.</span>
+                                        </div>
+                                        <div class="col-6 col-sm-3">
+                                            <small>parking period</small>
+                                            <span class="period">15.06. - 19.06.</span>
+                                        </div>
+                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
+                                            <span class="badge badge-success">campaign running</span>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <small>parking period</small>
-                                        <span class="period">15.06. - 19.06.</span>
-                                    </div>
-                                    <div>
-                                        <span class="badge badge-success">running</span>
-                                        <span class="badge badge-primary">parking in use</span>
-                                        <span class="badge badge-secondary">done</span>
-                                    </div>
-                                    <div>
-                                        <span class="badge badge-secondary">report</span>
-                                    </div>
-                                </div>
-                                <!-- BLOCK -->
-                                <div class="pr-block-menu fas fa-ellipsis-v">
-                                    <div class="menu-items">
-                                        <div class="pointer"></div>
-                                        <ul>
-                                            <li>
-                                                <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                    data-target="#editLocation">edit location</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                    data-target="#deleteLocation">delete location</a>
-                                            </li>
-                                        </ul>
+                                    <!-- BLOCK -->
+                                    <div class="pr-block-menu fas fa-ellipsis-v">
+                                        <div class="menu-items">
+                                            <div class="pointer"></div>
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
+                                                        data-target="#viewReport">View Report</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">Export Report as PDF</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- CAMPAIGN HISTORY ENTRY -->
+                            <div class="col-12 pr-block mb-2">
+                                <div class="pr-block-content py-3">
+                                    <div class="row align-items-center">
+                                        <div class="col-6 col-sm-3">
+                                            <small>camapaign period</small>
+                                            <span class="period">03.06.- 05.06.</span>
+                                        </div>
+                                        <div class="col-6 col-sm-3">
+                                            <small>parking period</small>
+                                            <span class="period">08.06. - 12.06.</span>
+                                        </div>
+                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
+                                            <span class="badge badge-secondary">campaign done</span>
+                                            <span class="badge badge-primary">parking in use</span>
+                                        </div>
+                                    </div>
+                                    <!-- BLOCK -->
+                                    <div class="pr-block-menu fas fa-ellipsis-v">
+                                        <div class="menu-items">
+                                            <div class="pointer"></div>
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
+                                                        data-target="#viewReport" aria-disabled="true">View Report</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="menu-item">Export Report as
+                                                        PDF</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CAMPAIGN HISTORY ENTRY -->
+                            <div class="col-12 pr-block mb-2">
+                                <div class="pr-block-content py-3">
+                                    <div class="row align-items-center">
+                                        <div class="col-6 col-sm-3">
+                                            <small>camapaign period</small>
+                                            <span class="period">27.05.- 29.05.</span>
+                                        </div>
+                                        <div class="col-6 col-sm-3">
+                                            <small>parking period</small>
+                                            <span class="period">01.06. - 05.06.</span>
+                                        </div>
+                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
+                                            <span class="badge badge-secondary">campaign done</span>
+                                        </div>
+                                    </div>
+                                    <!-- BLOCK -->
+                                    <div class="pr-block-menu fas fa-ellipsis-v">
+                                        <div class="menu-items">
+                                            <div class="pointer"></div>
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
+                                                        data-target="#viewReport" aria-disabled="true">View Report</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="menu-item">Export Report as
+                                                        PDF</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>

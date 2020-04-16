@@ -1,10 +1,9 @@
+//SPINNER SIM
+$(window).on('load', function() {
+    $('.spinner-bg').fadeOut(700);
+});
 
 $(function () {
-
-    //SPINNER SIM
-    $(window).on('load', function() {
-        $('.spinner-bg').fadeOut(1200);
-    });
 
     //MAIN NAV
     var navTrigger = $('.pr-nav-button');

@@ -16,4 +16,16 @@
   width: 100%;
   height: auto;
 }
+
+.user-img {
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.user-img img {
+  width: 64px;
+  height: auto;
+}
 /*# sourceMappingURL=modal.css.map */
