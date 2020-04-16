@@ -45,7 +45,7 @@
   display: block;
   color: rgba(39, 39, 36, 0.4);
   font-size: 12px;
-  line-height: 22px;
+  line-height: 12px;
   margin: 0;
 }
 
@@ -54,5 +54,9 @@
   font-weight: 500;
   letter-spacing: -.1px;
   line-height: 24px;
+}
+
+.pr-block .pr-block-content .period {
+  font-weight: 700;
 }
 /*# sourceMappingURL=block.css.map */
