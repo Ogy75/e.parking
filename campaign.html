@@ -405,16 +405,18 @@
                 </div>
                 <div class="row">
                     <!-- LEFT BLOCKS START -->
-                    <div class="col-12 col-lg-5">
+                    <div class="col-12 col-lg-4">
                         <div class="row">
-                            <!-- CAMPAIGN STATUS BLOCK -->
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6 pr-block">
+
+                            <!-- CURRENT CAMAPIGN STATUS -->
+                            <div class="col-12 col-sm-6 col-lg-12 col-xl-12 pr-block">
                                 <div class="pr-block-content">
-                                        <small>current campaign status</small>
-                                        <div class="title my-3">Campaign is <span class="badge badge-success">ON</span> until Friday 12.06.2020.</div>
-                                        <span class="badge badge-primary">46 users</span>
-                                        <span class="badge badge-warning">30 reserved</span>
-                                        <span class="badge badge-success">21 confirmed</span>
+                                    <small>current campaign status</small>
+                                    <div class="title my-3">Campaign is <span class="badge badge-success">ON</span>
+                                        until Friday 12.06.2020.</div>
+                                    <span class="badge badge-primary">46 users</span>
+                                    <span class="badge badge-warning">30 reserved</span>
+                                    <span class="badge badge-success">21 confirmed</span>
                                     <!-- BLOCK MENU -->
                                     <!-- <div class="pr-block-menu fas fa-ellipsis-v">
                                         <div class="menu-items">
@@ -434,15 +436,21 @@
                                 </div>
 
                             </div>
-                            <!-- CAMPAIGN APP SETTINGS BLOCK -->
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6 pr-block">
+
+                            <!-- CAMPAIGN STATE -->
+                            <div class="col-12 col-sm-6 col-lg-12 col-xl-12 pr-block">
                                 <div class="pr-block-content">
-                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#locationLayout">
-                                        <small>campaign state</small>
-                                        <div class="title my-3">BG GTC GH</div>
-                                        <p>If you want to put the Parking App on hold and do not want to use it for some time, please turn it off here.</p>
-                                        <span class="badge badge-primary">28 parking spots</span>
-                                    </a>
+                                    <small>campaign state</small>
+                                    <div class="flipswitch my-3">
+                                        <input type="checkbox" name="flipswitch" class="flipswitch-checkbox" id="123"
+                                            checked>
+                                        <label class="flipswitch-label" for="123">
+                                            <span class="flipswitch-inner"></span>
+                                            <span class="flipswitch-switch"></span>
+                                        </label>
+                                    </div>
+                                    <p>If you want to put the Parking App on hold and do not want to use it for some
+                                        time, please turn it off.</p>
                                     <!-- BLOCK -->
                                     <!-- <div class="pr-block-menu fas fa-ellipsis-v">
                                         <div class="menu-items">
@@ -461,12 +469,56 @@
                                     </div> -->
                                 </div>
                             </div>
-                            <!-- CAMPAIGN MODE BLOCK -->
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6 pr-block">
+
+                            <!-- CAMPAIGN MODE -->
+                            <div class="col-12 col-sm-6 col-lg-12 col-xl-12 pr-block">
                                 <div class="pr-block-content">
-                                        <small>campaign running mode</small>
-                                        <div class="title my-3">BG GTC GH</div>
-                                        <span class="badge badge-primary">28 parking spots</span>
+                                    <small>campaign mode</small>
+
+                                    <div class="d-flex justify content-left align-items-center">
+                                        <div>
+                                            <div class="flipswitch my-3">
+                                                <input type="checkbox" name="flipswitch" class="flipswitch-checkbox"
+                                                    id="223" checked>
+                                                <label class="flipswitch-label" for="223">
+                                                    <span class="flipswitch-inner"></span>
+                                                    <span class="flipswitch-switch"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <label class="m-0 pl-2">AUTO mode</label>
+                                    </div>
+                                    <div class="title my-3">AUTO mode settings</div>
+
+                                    <div class="row mb-3">
+                                        <div class="col-7">
+                                            <label for="campaign-start">campaign start day</label>
+                                            <select name="campaign-start" class="w-100">
+                                                <option>Monday</option>
+                                                <option>Tuesday</option>
+                                                <option>Wednesday</option>
+                                                <option>Thursday</option>
+                                                <option>Friday</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-5">
+                                            <label for="campaign-start-time">start time</label>
+                                            <input type="time" class="w-100" name="campaign-start-time" min="08:00" max="18:00" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <label for="campaign-start">campaign end day</label>
+                                            <select name="campaign-start" class="w-100">
+                                                <option>Monday</option>
+                                                <option>Tuesday</option>
+                                                <option>Wednesday</option>
+                                                <option>Thursday</option>
+                                                <option>Friday</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
                                     <!-- BLOCK -->
                                     <!-- <div class="pr-block-menu fas fa-ellipsis-v">
                                         <div class="menu-items">
@@ -490,7 +542,7 @@
                     <!-- LEFT BLOCKS END -->
 
                     <!-- RIGHT BLOCK START -->
-                    <div class="col-12 col-lg-7">
+                    <div class="col-12 col-lg-8">
                         <div class="row">
                             <!-- ??? -->
                             <div class="col-12 pr-block">
@@ -499,7 +551,7 @@
                                         <div class="title">Campaign History</div>
                                         <select>
                                             <option selected>2021</option>
-                                            <option>2019</option>
+                                            <option>2020</option>
                                         </select>
                                     </div>
                                     <!-- BLOCK -->

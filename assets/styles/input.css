@@ -5,9 +5,9 @@ label {
   color: rgba(39, 39, 36, 0.6);
 }
 
-input[type=text],
-input[type=password],
-input[type=email] {
+input[type="text"],
+input[type="password"],
+input[type="email"] {
   display: block;
   width: 100%;
   font-size: 14px;
@@ -18,15 +18,93 @@ input[type=email] {
   border-radius: 2px;
 }
 
-input[type=text]:focus,
-input[type=password]:focus,
-input[type=email]:focus {
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
   border: 1px solid #272724;
 }
 
-input[type=text]:disabled,
-input[type=password]:disabled,
-input[type=email]:disabled {
+input[type="text"]:disabled,
+input[type="password"]:disabled,
+input[type="email"]:disabled {
   background: rgba(39, 39, 36, 0.1);
+}
+
+.flipswitch {
+  position: relative;
+  width: 56px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.flipswitch .flipswitch-checkbox {
+  display: none;
+}
+
+.flipswitch .flipswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0;
+  border-radius: 20px;
+}
+
+.flipswitch .flipswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.flipswitch .flipswitch-inner:before, .flipswitch .flipswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 24px;
+  padding: 0;
+  line-height: 24px;
+  font-size: 12px;
+  color: white;
+  font-weight: 500;
+}
+
+.flipswitch .flipswitch-inner:before {
+  content: "ON";
+  padding-left: 10px;
+  background-color: #1f9c26;
+  color: #ffffff;
+}
+
+.flipswitch .flipswitch-inner:after {
+  content: "OFF";
+  padding-right: 8px;
+  background-color: #a9a9a1;
+  color: white;
+  text-align: right;
+}
+
+.flipswitch .flipswitch-switch {
+  display: block;
+  width: 20px;
+  margin: 2px;
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 32px;
+  border: 0px solid #999999;
+  border-radius: 20px;
+  -webkit-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+
+.flipswitch .flipswitch-checkbox:checked + .flipswitch-label .flipswitch-inner {
+  margin-left: 0;
+}
+
+.flipswitch .flipswitch-checkbox:checked + .flipswitch-label .flipswitch-switch {
+  right: 0px;
 }
 /*# sourceMappingURL=input.css.map */
