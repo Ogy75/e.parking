@@ -46,7 +46,7 @@ input[type="email"] {
     display: block;
     width: 200%;
     margin-left: -100%;
-    transition: margin 0.3s ease-in 0s;
+    transition: margin 0.2s linear;
     &:before,
     &:after {
       display: block;
@@ -84,7 +84,7 @@ input[type="email"] {
     right: 32px;
     border: 0px solid #999999;
     border-radius: 20px;
-    transition: all 0.3s ease-in 0s;
+    transition: all 0.2s linear;
   }
   .flipswitch-checkbox:checked + .flipswitch-label .flipswitch-inner {
     margin-left: 0;

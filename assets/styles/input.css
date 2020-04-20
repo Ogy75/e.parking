@@ -54,8 +54,8 @@ input[type="email"]:disabled {
   display: block;
   width: 200%;
   margin-left: -100%;
-  -webkit-transition: margin 0.3s ease-in 0s;
-  transition: margin 0.3s ease-in 0s;
+  -webkit-transition: margin 0.2s linear;
+  transition: margin 0.2s linear;
 }
 
 .flipswitch .flipswitch-inner:before, .flipswitch .flipswitch-inner:after {
@@ -96,8 +96,8 @@ input[type="email"]:disabled {
   right: 32px;
   border: 0px solid #999999;
   border-radius: 20px;
-  -webkit-transition: all 0.3s ease-in 0s;
-  transition: all 0.3s ease-in 0s;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .flipswitch .flipswitch-checkbox:checked + .flipswitch-label .flipswitch-inner {

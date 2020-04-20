@@ -89,12 +89,12 @@ $(function () {
     //TOGGLE CAMPAIGN MODE
     $('#campaign-mode').click(function(){
         if($(this).prop('checked') == true){
-            $('#manual').toggle();
-            $('#auto').fadeIn();
+            $('#manual').hide(200);
+            $('#auto').show(200);
         }
         else {
-            $('#manual').fadeIn();
-            $('#auto').toggle();
+            $('#manual').show(200);
+            $('#auto').hide(200);
         }
     });
 
@@ -102,15 +102,15 @@ $(function () {
     $('#campaign-state').click(function(){
         if($(this).prop('checked') == true){
             console.log('checked');
-            $('#mode-block').fadeIn();
-            $('#text-on').fadeIn();
-            $('#text-off').hide();
+            $('#mode-block').show();
+            $('#text-on').show(200);
+            $('#text-off').hide(200);
         }
         else {
             console.log('unchecked');
-            $('#mode-block').fadeOut();
-            $('#text-on').hide();
-            $('#text-off').fadeIn();
+            $('#mode-block').hide();
+            $('#text-on').hide(200);
+            $('#text-off').show(200);
         }
     });
 
