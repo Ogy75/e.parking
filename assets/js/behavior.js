@@ -86,4 +86,33 @@ $(function () {
         return false;
     });
 
+    //TOGGLE CAMPAIGN MODE
+    $('#campaign-mode').click(function(){
+        if($(this).prop('checked') == true){
+            $('#manual').toggle();
+            $('#auto').fadeIn();
+        }
+        else {
+            $('#manual').fadeIn();
+            $('#auto').toggle();
+        }
+    });
+
+    //TOGGLE MODE BLOCK
+    $('#campaign-state').click(function(){
+        if($(this).prop('checked') == true){
+            console.log('checked');
+            $('#mode-block').fadeIn();
+            $('#text-on').fadeIn();
+            $('#text-off').hide();
+        }
+        else {
+            console.log('unchecked');
+            $('#mode-block').fadeOut();
+            $('#text-on').hide();
+            $('#text-off').fadeIn();
+        }
+    });
+
+
 });

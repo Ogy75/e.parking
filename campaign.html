@@ -456,7 +456,7 @@
                             <div class="col-12 col-sm-6 col-lg-12 col-xl-12 pr-block">
                                 <div class="pr-block-content">
                                     <small class="mb-4">current campaign status</small>
-                                    <div class="title my-3">Campaign is <span class="badge badge-success">ON</span>
+                                    <div class="title my-3">Campaign is <span class="badge badge-success">ACTIVE</span>
                                         until Friday 12.06.2020.</div>
                                     <span class="badge badge-primary">46 users</span>
                                     <span class="badge badge-warning">30 reserved</span>
@@ -486,15 +486,14 @@
                                 <div class="pr-block-content">
                                     <small class="mb-4">campaign state</small>
                                     <div class="flipswitch mb-4">
-                                        <input type="checkbox" name="flipswitch" class="flipswitch-checkbox" id="123"
-                                            checked>
-                                        <label class="flipswitch-label" for="123">
+                                        <input type="checkbox" name="campaign-state" class="flipswitch-checkbox" id="campaign-state" checked>
+                                        <label class="flipswitch-label" for="campaign-state">
                                             <span class="flipswitch-inner"></span>
                                             <span class="flipswitch-switch"></span>
                                         </label>
                                     </div>
-                                    <p>If you want to put the Parking App on hold and do not want to use it for some
-                                        time, please turn it off.</p>
+                                    <p id="text-on">If you want to put the Parking App on hold and do not want to use it, please turn it OFF.</p>
+                                        <p id="text-off" style="display: none;">Campaign state if currently OFF and it will become completely inactive after ongoing campaing (if any) is done. if you want to use campaign scheduling again please turn it ON.</p>
                                     <!-- BLOCK -->
                                     <!-- <div class="pr-block-menu fas fa-ellipsis-v">
                                         <div class="menu-items">
@@ -516,15 +515,15 @@
 
                             <!-- CAMPAIGN MODE -->
                             <div class="col-12 col-sm-6 col-lg-12 col-xl-12 pr-block">
-                                <div class="pr-block-content">
+                                <div class="pr-block-content" id="mode-block">
                                     <small class="mb-4">campaign mode</small>
 
                                     <div class="d-flex justify-content-start align-items-center mb-4">
                                         <div>
                                             <div class="flipswitch">
-                                                <input type="checkbox" name="flipswitch" class="flipswitch-checkbox"
-                                                    id="223" checked>
-                                                <label class="flipswitch-label" for="223">
+                                                <input type="checkbox" name="campaign-mode" class="flipswitch-checkbox"
+                                                    id="campaign-mode" checked>
+                                                <label class="flipswitch-label" for="campaign-mode">
                                                     <span class="flipswitch-inner"></span>
                                                     <span class="flipswitch-switch"></span>
                                                 </label>
@@ -532,37 +531,59 @@
                                         </div>
                                         <label class="pl-2">AUTO mode</label>
                                     </div>
-                                    <div class="title mb-2">AUTO mode settings</div>
 
-                                    <div class="row mb-3">
-                                        <div class="col-7">
-                                            <label for="campaign-start">campaign start day</label>
-                                            <select name="campaign-start" class="w-100">
-                                                <option>Monday</option>
-                                                <option>Tuesday</option>
-                                                <option>Wednesday</option>
-                                                <option>Thursday</option>
-                                                <option>Friday</option>
-                                            </select>
+                                    <div id="auto">
+                                        <div class="title mb-2">AUTO mode settings</div>
+                                        <div class="row mb-3">
+                                            <div class="col-7">
+                                                <label for="campaign-start">campaign start day</label>
+                                                <select name="campaign-start" class="w-100">
+                                                    <option>Monday</option>
+                                                    <option>Tuesday</option>
+                                                    <option>Wednesday</option>
+                                                    <option>Thursday</option>
+                                                    <option>Friday</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-5">
+                                                <label for="campaign-start-time">start time</label>
+                                                <input type="text" class="w-100" name="campaign-start-time" required>
+                                            </div>
                                         </div>
-                                        <div class="col-5">
-                                            <label for="campaign-start-time">start time</label>
-                                            <input type="time" class="w-100" name="campaign-start-time" min="08:00"
-                                                max="18:00" required>
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <label for="campaign-start">campaign end day</label>
+                                                <select name="campaign-start" class="w-100">
+                                                    <option>Monday</option>
+                                                    <option>Tuesday</option>
+                                                    <option>Wednesday</option>
+                                                    <option>Thursday</option>
+                                                    <option>Friday</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-7">
-                                            <label for="campaign-start">campaign end day</label>
-                                            <select name="campaign-start" class="w-100">
-                                                <option>Monday</option>
-                                                <option>Tuesday</option>
-                                                <option>Wednesday</option>
-                                                <option>Thursday</option>
-                                                <option>Friday</option>
-                                            </select>
+
+                                    <div id="manual" style="display: none;">
+                                        <div class="title mb-2">Manual settings</div>
+                                        <div class="row mb-3">
+                                            <div class="col-7">
+                                                <label for="campaign-start-man">campaign start date</label>
+                                                <input type="text" name="campaign-start-man"/>
+                                            </div>
+                                            <div class="col-5">
+                                                <label for="campaign-start-time">start time</label>
+                                                <input type="text" class="w-100" name="campaign-start-time" required>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <label for="campaign-end-man">campaign end date</label>
+                                                <input type="text" name="campaign-end-man">
+                                            </div>
                                         </div>
                                     </div>
+
 
                                     <!-- BLOCK -->
                                     <!-- <div class="pr-block-menu fas fa-ellipsis-v">
@@ -627,7 +648,7 @@
                                             <span class="period">15.06. - 19.06.</span>
                                         </div>
                                         <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-success">campaign running</span>
+                                            <span class="badge badge-success mr-1 my-1">campaign running</span>
                                         </div>
                                     </div>
                                     <!-- BLOCK -->
@@ -661,8 +682,8 @@
                                             <span class="period">08.06. - 12.06.</span>
                                         </div>
                                         <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary">campaign done</span>
-                                            <span class="badge badge-primary">parking in use</span>
+                                            <span class="badge badge-secondary mr-1 my-1">campaign done</span>
+                                            <span class="badge badge-primary mr-1 my-1">parking in use</span>
                                         </div>
                                     </div>
                                     <!-- BLOCK -->
@@ -697,7 +718,7 @@
                                             <span class="period">01.06. - 05.06.</span>
                                         </div>
                                         <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary">campaign done</span>
+                                            <span class="badge badge-secondary mr-1 my-1">campaign done</span>
                                         </div>
                                     </div>
                                     <!-- BLOCK -->
