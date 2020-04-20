@@ -89,12 +89,12 @@ $(function () {
     //TOGGLE CAMPAIGN MODE
     $('#campaign-mode').click(function(){
         if($(this).prop('checked') == true){
-            $('#manual').hide(200);
-            $('#auto').show(200);
+            $('#manual').hide();
+            $('#auto').show();
         }
         else {
-            $('#manual').show(200);
-            $('#auto').hide(200);
+            $('#manual').show();
+            $('#auto').hide();
         }
     });
 
@@ -103,14 +103,14 @@ $(function () {
         if($(this).prop('checked') == true){
             console.log('checked');
             $('#mode-block').show();
-            $('#text-on').show(200);
-            $('#text-off').hide(200);
+            $('#text-on').show();
+            $('#text-off').hide();
         }
         else {
             console.log('unchecked');
             $('#mode-block').hide();
-            $('#text-on').hide(200);
-            $('#text-off').show(200);
+            $('#text-on').hide();
+            $('#text-off').show();
         }
     });
 
