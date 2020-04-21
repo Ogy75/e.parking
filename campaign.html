@@ -96,455 +96,465 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 mb-4">
-                            <label for="pkLocation">select location</label>
-                            <select name="pkLocation">
-                                <option value="1" selected>BG GTC Open Space</option>
-                                <option value="2">BG GTC GH</option>
-                                <option value="3">BG GTC 41</option>
-                                <option value="4">KG Open Space</option>
-                                <option value="5">NI Open Space</option>
-                            </select>
+                        <div class="col-12 d-flex justify-content-between align-items-end mb-4">
+                            <div>
+                                <label for="pkLocation">select location</label>
+                                <select name="pkLocation">
+                                    <option value="1" selected>BG GTC Open Space</option>
+                                    <option value="2">BG GTC GH</option>
+                                    <option value="3">BG GTC 41</option>
+                                    <option value="4">KG Open Space</option>
+                                    <option value="5">NI Open Space</option>
+                                </select>
+                            </div>
+                            <a class="badge badge-secondary" id="view-location" href="javascript:void(0)">view location</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="parking-sceheme-img d-none">
+                                <img src="assets/images/BGopenparking.jpg" alt="parking scheme">
+                            </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 mb-5">
                             <div class="table-scroll">
 
-                            <table class="pr-default-table mb-2" id="bg-gtc-open">
-                                <thead>
-                                    <tr>
-                                        <th>parking spot</th>
-                                        <th>user</th>
-                                        <th>status</th>
-                                        <th>Licence plates</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            243
-                                        </td>
-                                        <td>
-                                            Milan Vasiljevic
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success">confirmed</span>
-                                        </td>
-                                        <td>
-                                            BG1024GX, BG399AU
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            244
-                                        </td>
-                                        <td>
-                                            Dejan Dejanovic
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning">reserved</span>
-                                        </td>
-                                        <td>
-                                            BG9999ER
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            244
-                                        </td>
-                                        <td>
-                                            Bogdan Perisic
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success">confirmed</span>
-                                        </td>
-                                        <td>
-                                            BG1234AB
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            245
-                                        </td>
-                                        <td>
-                                            Miljana Vasiljkovic
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success">confirmed</span>
-                                        </td>
-                                        <td>
-                                            BG2331BT, SD975ES
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            246
-                                        </td>
-                                        <td>
-                                            Miodrag Pavic
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning">reserved</span>
-                                        </td>
-                                        <td>
-                                            BG1111EX
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            246
-                                        </td>
-                                        <td>
-                                            Bojana Kisic
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success">confirmed</span>
-                                        </td>
-                                        <td>
-                                            BG4511CG
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                <table class="pr-default-table mb-2" id="bg-gtc-open">
+                                    <thead>
+                                        <tr>
+                                            <th>parking spot</th>
+                                            <th>user</th>
+                                            <th>status</th>
+                                            <th>Licence plates</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                243
+                                            </td>
+                                            <td>
+                                                Milan Vasiljevic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">confirmed</span>
+                                            </td>
+                                            <td>
+                                                BG1024GX, BG399AU
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                244
+                                            </td>
+                                            <td>
+                                                Dejan Dejanovic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">reserved</span>
+                                            </td>
+                                            <td>
+                                                BG9999ER
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                244
+                                            </td>
+                                            <td>
+                                                Bogdan Perisic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">confirmed</span>
+                                            </td>
+                                            <td>
+                                                BG1234AB
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                245
+                                            </td>
+                                            <td>
+                                                Miljana Vasiljkovic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">confirmed</span>
+                                            </td>
+                                            <td>
+                                                BG2331BT, SD975ES
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                246
+                                            </td>
+                                            <td>
+                                                Miodrag Pavic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">reserved</span>
+                                            </td>
+                                            <td>
+                                                BG1111EX
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                246
+                                            </td>
+                                            <td>
+                                                Bojana Kisic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">confirmed</span>
+                                            </td>
+                                            <td>
+                                                BG4511CG
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
 
-                            <table class="pr-default-table mb-2" id="bg-gtc-gh" style="display: none;">
-                                <thead>
-                                    <tr>
-                                        <th>parking spot</th>
-                                        <th>user</th>
-                                        <th>status</th>
-                                        <th>Licence plates</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            244
-                                        </td>
-                                        <td>
-                                            Name Last Name
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning">reserved</span>
-                                        </td>
-                                        <td>
-                                            BG9999ER
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            244
-                                        </td>
-                                        <td>
-                                            Last Name
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success">confirmed</span>
-                                        </td>
-                                        <td>
-                                            BG1234AB
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            245
-                                        </td>
-                                        <td>
-                                            Name Last Name
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success">confirmed</span>
-                                        </td>
-                                        <td>
-                                            BG2331BT, SD975ES
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            246
-                                        </td>
-                                        <td>
-                                            Name Last Name
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning">reserved</span>
-                                        </td>
-                                        <td>
-                                            BG1111EX
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            246
-                                        </td>
-                                        <td>
-                                            Name Last Name
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning">reserved</span>
-                                        </td>
-                                        <td>
-                                            BG2222TU
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            246
-                                        </td>
-                                        <td>
-                                            
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-danger">free</span>
-                                        </td>
-                                        <td>
-                                            
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                <table class="pr-default-table mb-2" id="bg-gtc-gh" style="display: none;">
+                                    <thead>
+                                        <tr>
+                                            <th>parking spot</th>
+                                            <th>user</th>
+                                            <th>status</th>
+                                            <th>Licence plates</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                244
+                                            </td>
+                                            <td>
+                                                Name Last Name
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">reserved</span>
+                                            </td>
+                                            <td>
+                                                BG9999ER
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                244
+                                            </td>
+                                            <td>
+                                                Last Name
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">confirmed</span>
+                                            </td>
+                                            <td>
+                                                BG1234AB
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                245
+                                            </td>
+                                            <td>
+                                                Name Last Name
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">confirmed</span>
+                                            </td>
+                                            <td>
+                                                BG2331BT, SD975ES
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                246
+                                            </td>
+                                            <td>
+                                                Name Last Name
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">reserved</span>
+                                            </td>
+                                            <td>
+                                                BG1111EX
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                246
+                                            </td>
+                                            <td>
+                                                Name Last Name
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">reserved</span>
+                                            </td>
+                                            <td>
+                                                BG2222TU
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                246
+                                            </td>
+                                            <td>
 
-                            <table class="pr-default-table mb-2" id="bg-gtc-41" style="display: none;">
-                                <thead>
-                                    <tr>
-                                        <th>parking spot</th>
-                                        <th>user</th>
-                                        <th>status</th>
-                                        <th>Licence plates</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            244
-                                        </td>
-                                        <td>
-                                            Dejan Dejanovic
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning">reserved</span>
-                                        </td>
-                                        <td>
-                                            BG9999ER
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            244
-                                        </td>
-                                        <td>
-                                            Bogdan Perisic
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success">confirmed</span>
-                                        </td>
-                                        <td>
-                                            BG1234AB
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            246
-                                        </td>
-                                        <td>
-                                            Miodrag Pavic
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning">reserved</span>
-                                        </td>
-                                        <td>
-                                            BG1111EX
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            246
-                                        </td>
-                                        <td>
-                                            Bojana Kisic
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success">confirmed</span>
-                                        </td>
-                                        <td>
-                                            BG4511CG
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-danger">free</span>
+                                            </td>
+                                            <td>
 
-                            <table class="pr-default-table mb-2" id="kg-open" style="display: none;">
-                                <thead>
-                                    <tr>
-                                        <th>parking spot</th>
-                                        <th>user</th>
-                                        <th>status</th>
-                                        <th>Licence plates</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            244
-                                        </td>
-                                        <td>
-                                            Name Last Name
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning">reserved</span>
-                                        </td>
-                                        <td>
-                                            BG9999ER
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            244
-                                        </td>
-                                        <td>
-                                            Last Name
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success">confirmed</span>
-                                        </td>
-                                        <td>
-                                            BG1234AB
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            245
-                                        </td>
-                                        <td>
-                                            Name Last Name
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success">confirmed</span>
-                                        </td>
-                                        <td>
-                                            BG2331BT, SD975ES
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            246
-                                        </td>
-                                        <td>
-                                            Name Last Name
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning">reserved</span>
-                                        </td>
-                                        <td>
-                                            BG1111EX
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            246
-                                        </td>
-                                        <td>
-                                            Name Last Name
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning">reserved</span>
-                                        </td>
-                                        <td>
-                                            BG2222TU
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            246
-                                        </td>
-                                        <td>
-                                            
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-danger">free</span>
-                                        </td>
-                                        <td>
-                                            
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
 
-                            <table class="pr-default-table mb-2" id="ni-open" style="display: none;">
-                                <thead>
-                                    <tr>
-                                        <th>parking spot</th>
-                                        <th>user</th>
-                                        <th>status</th>
-                                        <th>Licence plates</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            244
-                                        </td>
-                                        <td>
-                                            Dejan Dejanovic
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning">reserved</span>
-                                        </td>
-                                        <td>
-                                            BG9999ER
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            244
-                                        </td>
-                                        <td>
-                                            Bogdan Perisic
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success">confirmed</span>
-                                        </td>
-                                        <td>
-                                            BG1234AB
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            246
-                                        </td>
-                                        <td>
-                                            Miodrag Pavic
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning">reserved</span>
-                                        </td>
-                                        <td>
-                                            BG1111EX
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            246
-                                        </td>
-                                        <td>
-                                            Bojana Kisic
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-success">confirmed</span>
-                                        </td>
-                                        <td>
-                                            BG4511CG
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                <table class="pr-default-table mb-2" id="bg-gtc-41" style="display: none;">
+                                    <thead>
+                                        <tr>
+                                            <th>parking spot</th>
+                                            <th>user</th>
+                                            <th>status</th>
+                                            <th>Licence plates</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                244
+                                            </td>
+                                            <td>
+                                                Dejan Dejanovic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">reserved</span>
+                                            </td>
+                                            <td>
+                                                BG9999ER
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                244
+                                            </td>
+                                            <td>
+                                                Bogdan Perisic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">confirmed</span>
+                                            </td>
+                                            <td>
+                                                BG1234AB
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                246
+                                            </td>
+                                            <td>
+                                                Miodrag Pavic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">reserved</span>
+                                            </td>
+                                            <td>
+                                                BG1111EX
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                246
+                                            </td>
+                                            <td>
+                                                Bojana Kisic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">confirmed</span>
+                                            </td>
+                                            <td>
+                                                BG4511CG
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
 
-                        </div>
+                                <table class="pr-default-table mb-2" id="kg-open" style="display: none;">
+                                    <thead>
+                                        <tr>
+                                            <th>parking spot</th>
+                                            <th>user</th>
+                                            <th>status</th>
+                                            <th>Licence plates</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                244
+                                            </td>
+                                            <td>
+                                                Name Last Name
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">reserved</span>
+                                            </td>
+                                            <td>
+                                                BG9999ER
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                244
+                                            </td>
+                                            <td>
+                                                Last Name
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">confirmed</span>
+                                            </td>
+                                            <td>
+                                                BG1234AB
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                245
+                                            </td>
+                                            <td>
+                                                Name Last Name
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">confirmed</span>
+                                            </td>
+                                            <td>
+                                                BG2331BT, SD975ES
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                246
+                                            </td>
+                                            <td>
+                                                Name Last Name
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">reserved</span>
+                                            </td>
+                                            <td>
+                                                BG1111EX
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                246
+                                            </td>
+                                            <td>
+                                                Name Last Name
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">reserved</span>
+                                            </td>
+                                            <td>
+                                                BG2222TU
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                246
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-danger">free</span>
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table class="pr-default-table mb-2" id="ni-open" style="display: none;">
+                                    <thead>
+                                        <tr>
+                                            <th>parking spot</th>
+                                            <th>user</th>
+                                            <th>status</th>
+                                            <th>Licence plates</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                244
+                                            </td>
+                                            <td>
+                                                Dejan Dejanovic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">reserved</span>
+                                            </td>
+                                            <td>
+                                                BG9999ER
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                244
+                                            </td>
+                                            <td>
+                                                Bogdan Perisic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">confirmed</span>
+                                            </td>
+                                            <td>
+                                                BG1234AB
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                246
+                                            </td>
+                                            <td>
+                                                Miodrag Pavic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-warning">reserved</span>
+                                            </td>
+                                            <td>
+                                                BG1111EX
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                246
+                                            </td>
+                                            <td>
+                                                Bojana Kisic
+                                            </td>
+                                            <td>
+                                                <span class="badge badge-success">confirmed</span>
+                                            </td>
+                                            <td>
+                                                BG4511CG
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
                         </div>
                     </div>
-                    
-                    
+
+
                     <div class="mb-4">
                         <button class="btn btn-primary mr-3">Print Report</button>
                         <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">Close</button>

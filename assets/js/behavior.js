@@ -115,13 +115,6 @@ $(function () {
     });
 
     //LOCATION SELECT
-    // $('select[name="pkLocation"]').change(function(){
-
-    //     if ($(this).val() == '1'){
-    //         alert("call the do something function on option 2");
-    //      }        
-    // });​
-
     $('select[name="pkLocation"]').change(function(){
         var value = $(this).find("option:selected").attr("value");
       
@@ -147,6 +140,20 @@ $(function () {
             $('#bg-gtc-open').siblings().hide()
             break;
         }
+      });
+
+      //REPORT VIEW LOCATION
+      $('#view-location').on('click', function(){
+          var img = $('.parking-sceheme-img');
+          img.toggle();
+          if(img.hasClass('d-none')){
+              img.toggleClass('d-none');
+              $(this).html('hide location');
+          }
+          else if(!img.hasClass('d-none')) {
+            img.toggleClass('d-none');
+            $(this).text('show location');
+          }
       });
 
 
