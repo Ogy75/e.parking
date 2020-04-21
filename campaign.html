@@ -32,333 +32,6 @@
 
     <!------------------ MODALS START ------------------>
 
-    <!-- ADD LOCATION START -->
-    <div class="modal fade" id="addLocation" data-backdrop="static" tabindex="-1" role="dialog"
-        aria-labelledby="addLocation" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <div class="modal-title">Add New Location</div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="fas fa-times-circle"></span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-title mb-2">Location Name</div>
-                    <div class="row">
-                        <div class="col-12 col-sm-6 mb-5">
-                            <label for="locationName">Enter Location Name</label>
-                            <input type="text" name="locationName" />
-                        </div>
-                    </div>
-                    <div class="form-title mb-2">Parking Spots</div>
-                    <div class="row">
-                        <div class="col-12">
-                            <table class="pr-default-table mb-2">
-                                <thead>
-                                    <tr>
-                                        <th>Parking Spot</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- <tr>
-                                        <td>
-                                            Level 2 - 214
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option selected>Rotating</option>
-                                                <option selected>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning remove-entry">remove</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Level 2 - 214
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option selected>Rotating</option>
-                                                <option>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning remove-entry">remove</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Level 2 - 214
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option>Rotating</option>
-                                                <option selected>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning remove-entry">remove</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Level 2 - 214
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option selected>Rotating</option>
-                                                <option>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning remove-entry">remove</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Level 2 - 214
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option selected>Rotating</option>
-                                                <option>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning remove-entry">remove</span>
-                                        </td>
-                                    </tr> -->
-                                </tbody>
-                            </table>
-                            <div class="row">
-                                <div class="col-12 col-sm-6 mb-5">
-                                    <label for="addSpot">Add New Parking Spot Number</label>
-                                    <div class="d-flex justify-content-between">
-                                        <input type="text" name="addSpot" />
-                                        <button id="add-spot" class="btn btn-primary fas fa-plus ml-2"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-title mb-2">Add Parking Scheme</div>
-                    <div class="row">
-                        <div class="col-12 col-sm-6 mb-2">
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="customFile">
-                                <label class="custom-file-label" for="customFile">Choose file</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 mb-5">
-                            <div class="parking-sceheme-img">
-                                <!-- <img src="assets/images/BGopenparking.jpg" alt="parking scheme" /> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <button class="btn btn-primary mr-3" disabled>Save</button>
-                        <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancel</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ADD LOCATION END -->
-
-    <!-- EDIT LOCATION START -->
-    <div class="modal fade" id="editLocation" data-backdrop="static" tabindex="-1" role="dialog"
-        aria-labelledby="editLocation" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <div class="modal-title">Edit Location</div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="fas fa-times-circle"></span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-title mb-2">Location Name</div>
-                    <div class="row">
-                        <div class="col-12 col-sm-6 mb-5">
-                            <label for="locationName">Enter Location Name</label>
-                            <input type="text" name="locationName" value="location name" />
-                        </div>
-                    </div>
-                    <div class="form-title mb-2">Parking Spots</div>
-                    <div class="row">
-                        <div class="col-12">
-                            <table class="pr-default-table mb-2">
-                                <thead>
-                                    <tr>
-                                        <th>Parking Spot</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            Level 2 - 214
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option selected>Rotating</option>
-                                                <option selected>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning remove-entry">remove</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Level 2 - 214
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option selected>Rotating</option>
-                                                <option>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning remove-entry">remove</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Level 2 - 214
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option>Rotating</option>
-                                                <option selected>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning remove-entry">remove</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Level 2 - 214
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option selected>Rotating</option>
-                                                <option>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning remove-entry">remove</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Level 2 - 214
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option selected>Rotating</option>
-                                                <option>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning remove-entry">remove</span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="row">
-                                <div class="col-12 col-sm-6 mb-5">
-                                    <label for="addSpot">Add New Parking Spot Number</label>
-                                    <div class="d-flex justify-content-between">
-                                        <input type="text" name="addSpot" />
-                                        <button id="add-spot" class="btn btn-primary fas fa-plus ml-2"></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-title mb-2">Add Parking Scheme</div>
-                    <div class="row">
-                        <div class="col-12 col-sm-6 mb-2">
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="customFile">
-                                <label class="custom-file-label" for="customFile">Choose file</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 mb-5">
-                            <div class="parking-sceheme-img">
-                                <img src="assets/images/BGopenparking.jpg" alt="parking scheme" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <button class="btn btn-primary mr-3">Save</button>
-                        <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancel</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- EDIT LOCATION END -->
-
-    <!-- SHOW MAP START -->
-    <div class="modal fade" id="locationLayout" tabindex="-1" role="dialog" aria-labelledby="locationLayout"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <div class="modal-title">{ location name } Layout</div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="fas fa-times-circle"></span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12 mb-5">
-                            <div class="parking-sceheme-img">
-                                <img src="assets/images/BGopenparking.jpg" alt="parking scheme" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- SHOW MAP END -->
-
-    <!-- DELETE LOCATION START -->
-    <div class="modal fade" id="deleteLocation" data-backdrop="static" tabindex="-1" role="dialog"
-        aria-labelledby="deleteLocation" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-md" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div>
-                        <div class="modal-title mb-2">Are you sure you want to delete { location name } parking
-                            location?
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <p class="mb-4">This action can not be undone!</p>
-                    <button class="btn btn-danger mr-3">Delete</button>
-                    <button class="btn btn-primary" data-dismiss="modal" aria-label="Close">Cancel</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- DELETE LOCATION END -->
-
     <!-- USER PROFILE START -->
     <div class="modal fade" id="userProfile" data-backdrop="static" tabindex="-1" role="dialog"
         aria-labelledby="userProfile" aria-hidden="true">
@@ -403,6 +76,484 @@
         </div>
     </div>
     <!-- USER PROFILE END -->
+
+    <!-- VIEW REPORT START -->
+    <div class="modal fade" id="viewReport" data-backdrop="static" tabindex="-1" role="dialog"
+        aria-labelledby="viewReport" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="modal-title">Campaign Report</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="fas fa-times-circle"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <span class="badge badge-secondary">Campaign: 03.06.2021 - 05.06.2021</span>
+                            <span class="badge badge-secondary">Parking: 08.06.2021 - 12.06.2021</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <label for="pkLocation">select location</label>
+                            <select name="pkLocation">
+                                <option value="1" selected>BG GTC Open Space</option>
+                                <option value="2">BG GTC GH</option>
+                                <option value="3">BG GTC 41</option>
+                                <option value="4">KG Open Space</option>
+                                <option value="5">NI Open Space</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mb-5">
+                            <div class="table-scroll">
+
+                            <table class="pr-default-table mb-2" id="bg-gtc-open">
+                                <thead>
+                                    <tr>
+                                        <th>parking spot</th>
+                                        <th>user</th>
+                                        <th>status</th>
+                                        <th>Licence plates</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            243
+                                        </td>
+                                        <td>
+                                            Milan Vasiljevic
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">confirmed</span>
+                                        </td>
+                                        <td>
+                                            BG1024GX, BG399AU
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            244
+                                        </td>
+                                        <td>
+                                            Dejan Dejanovic
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">reserved</span>
+                                        </td>
+                                        <td>
+                                            BG9999ER
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            244
+                                        </td>
+                                        <td>
+                                            Bogdan Perisic
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">confirmed</span>
+                                        </td>
+                                        <td>
+                                            BG1234AB
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            245
+                                        </td>
+                                        <td>
+                                            Miljana Vasiljkovic
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">confirmed</span>
+                                        </td>
+                                        <td>
+                                            BG2331BT, SD975ES
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            246
+                                        </td>
+                                        <td>
+                                            Miodrag Pavic
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">reserved</span>
+                                        </td>
+                                        <td>
+                                            BG1111EX
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            246
+                                        </td>
+                                        <td>
+                                            Bojana Kisic
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">confirmed</span>
+                                        </td>
+                                        <td>
+                                            BG4511CG
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="pr-default-table mb-2" id="bg-gtc-gh" style="display: none;">
+                                <thead>
+                                    <tr>
+                                        <th>parking spot</th>
+                                        <th>user</th>
+                                        <th>status</th>
+                                        <th>Licence plates</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            244
+                                        </td>
+                                        <td>
+                                            Name Last Name
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">reserved</span>
+                                        </td>
+                                        <td>
+                                            BG9999ER
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            244
+                                        </td>
+                                        <td>
+                                            Last Name
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">confirmed</span>
+                                        </td>
+                                        <td>
+                                            BG1234AB
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            245
+                                        </td>
+                                        <td>
+                                            Name Last Name
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">confirmed</span>
+                                        </td>
+                                        <td>
+                                            BG2331BT, SD975ES
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            246
+                                        </td>
+                                        <td>
+                                            Name Last Name
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">reserved</span>
+                                        </td>
+                                        <td>
+                                            BG1111EX
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            246
+                                        </td>
+                                        <td>
+                                            Name Last Name
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">reserved</span>
+                                        </td>
+                                        <td>
+                                            BG2222TU
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            246
+                                        </td>
+                                        <td>
+                                            
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-danger">free</span>
+                                        </td>
+                                        <td>
+                                            
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="pr-default-table mb-2" id="bg-gtc-41" style="display: none;">
+                                <thead>
+                                    <tr>
+                                        <th>parking spot</th>
+                                        <th>user</th>
+                                        <th>status</th>
+                                        <th>Licence plates</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            244
+                                        </td>
+                                        <td>
+                                            Dejan Dejanovic
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">reserved</span>
+                                        </td>
+                                        <td>
+                                            BG9999ER
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            244
+                                        </td>
+                                        <td>
+                                            Bogdan Perisic
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">confirmed</span>
+                                        </td>
+                                        <td>
+                                            BG1234AB
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            246
+                                        </td>
+                                        <td>
+                                            Miodrag Pavic
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">reserved</span>
+                                        </td>
+                                        <td>
+                                            BG1111EX
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            246
+                                        </td>
+                                        <td>
+                                            Bojana Kisic
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">confirmed</span>
+                                        </td>
+                                        <td>
+                                            BG4511CG
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="pr-default-table mb-2" id="kg-open" style="display: none;">
+                                <thead>
+                                    <tr>
+                                        <th>parking spot</th>
+                                        <th>user</th>
+                                        <th>status</th>
+                                        <th>Licence plates</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            244
+                                        </td>
+                                        <td>
+                                            Name Last Name
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">reserved</span>
+                                        </td>
+                                        <td>
+                                            BG9999ER
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            244
+                                        </td>
+                                        <td>
+                                            Last Name
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">confirmed</span>
+                                        </td>
+                                        <td>
+                                            BG1234AB
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            245
+                                        </td>
+                                        <td>
+                                            Name Last Name
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">confirmed</span>
+                                        </td>
+                                        <td>
+                                            BG2331BT, SD975ES
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            246
+                                        </td>
+                                        <td>
+                                            Name Last Name
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">reserved</span>
+                                        </td>
+                                        <td>
+                                            BG1111EX
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            246
+                                        </td>
+                                        <td>
+                                            Name Last Name
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">reserved</span>
+                                        </td>
+                                        <td>
+                                            BG2222TU
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            246
+                                        </td>
+                                        <td>
+                                            
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-danger">free</span>
+                                        </td>
+                                        <td>
+                                            
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="pr-default-table mb-2" id="ni-open" style="display: none;">
+                                <thead>
+                                    <tr>
+                                        <th>parking spot</th>
+                                        <th>user</th>
+                                        <th>status</th>
+                                        <th>Licence plates</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            244
+                                        </td>
+                                        <td>
+                                            Dejan Dejanovic
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">reserved</span>
+                                        </td>
+                                        <td>
+                                            BG9999ER
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            244
+                                        </td>
+                                        <td>
+                                            Bogdan Perisic
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">confirmed</span>
+                                        </td>
+                                        <td>
+                                            BG1234AB
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            246
+                                        </td>
+                                        <td>
+                                            Miodrag Pavic
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-warning">reserved</span>
+                                        </td>
+                                        <td>
+                                            BG1111EX
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            246
+                                        </td>
+                                        <td>
+                                            Bojana Kisic
+                                        </td>
+                                        <td>
+                                            <span class="badge badge-success">confirmed</span>
+                                        </td>
+                                        <td>
+                                            BG4511CG
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="mb-4">
+                        <button class="btn btn-primary mr-3">Print Report</button>
+                        <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- VIEW REPORT END -->
 
     <!------------------ MODALS END ------------------>
 
@@ -486,14 +637,18 @@
                                 <div class="pr-block-content">
                                     <small class="mb-4">campaign state</small>
                                     <div class="flipswitch mb-4">
-                                        <input type="checkbox" name="campaign-state" class="flipswitch-checkbox" id="campaign-state" checked>
+                                        <input type="checkbox" name="campaign-state" class="flipswitch-checkbox"
+                                            id="campaign-state" checked>
                                         <label class="flipswitch-label" for="campaign-state">
                                             <span class="flipswitch-inner"></span>
                                             <span class="flipswitch-switch"></span>
                                         </label>
                                     </div>
-                                    <p id="text-on">If you want to put the Parking App on hold and do not want to use it, please turn it OFF.</p>
-                                        <p id="text-off" style="display: none;">Campaign state if currently OFF and it will become completely inactive after ongoing campaing (if any) is done. if you want to use campaign scheduling again please turn it ON.</p>
+                                    <p id="text-on">If you want to put the Parking App on hold and do not want to use
+                                        it, please turn it OFF.</p>
+                                    <p id="text-off" style="display: none;">Campaign state if currently OFF and it will
+                                        become completely inactive after ongoing campaing (if any) gets finished. if you
+                                        want to use campaign scheduling again please turn the switch to ON.</p>
                                     <!-- BLOCK -->
                                     <!-- <div class="pr-block-menu fas fa-ellipsis-v">
                                         <div class="menu-items">
@@ -569,11 +724,12 @@
                                         <div class="row mb-3">
                                             <div class="col-7">
                                                 <label for="campaign-start-man">campaign start date</label>
-                                                <input type="text" name="campaign-start-man"/>
+                                                <input type="text" name="campaign-start-man" />
                                             </div>
                                             <div class="col-5">
                                                 <label for="campaign-start-time-man">start time</label>
-                                                <input type="text" class="w-100" name="campaign-start-time-man" required>
+                                                <input type="text" class="w-100" name="campaign-start-time-man"
+                                                    required>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -662,11 +818,11 @@
                                             <ul>
                                                 <li>
                                                     <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                        data-target="#viewReport">View Report</a>
+                                                        data-target="#viewReport" disabled>Current Status</a>
                                                 </li>
-                                                <li>
+                                                <!-- <li>
                                                     <a href="javascript:void(0)">Export Report as PDF</a>
-                                                </li>
+                                                </li> -->
                                             </ul>
                                         </div>
                                     </div>

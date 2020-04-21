@@ -114,5 +114,40 @@ $(function () {
         }
     });
 
+    //LOCATION SELECT
+    // $('select[name="pkLocation"]').change(function(){
+
+    //     if ($(this).val() == '1'){
+    //         alert("call the do something function on option 2");
+    //      }        
+    // });​
+
+    $('select[name="pkLocation"]').change(function(){
+        var value = $(this).find("option:selected").attr("value");
+      
+        switch (value){
+            case "2":
+            $('#bg-gtc-gh').show();
+            $('#bg-gtc-gh').siblings().hide()
+            break;
+            case "3":
+            $('#bg-gtc-41').show();
+            $('#bg-gtc-41').siblings().hide()
+            break;
+            case "4":
+            $('#kg-open').show();
+            $('#kg-open').siblings().hide()
+            break;
+            case "5":
+            $('#ni-open').show();
+            $('#ni-open').siblings().hide()
+            break;
+            default:
+            $('#bg-gtc-open').show();
+            $('#bg-gtc-open').siblings().hide()
+            break;
+        }
+      });
+
 
 });

@@ -84,6 +84,7 @@ body {
   cursor: pointer;
 }
 .pr-default-table {
+  width: 100%;
   thead{
     tr{
       background: fade-out($black, 0.95);
@@ -96,7 +97,6 @@ body {
         }
   width: 100%;
       th,td {
-          width: 50%;
           padding: 8px 10px;
           border-bottom: 1px solid fade-out($black, 0.75);
         th:last-of-type {

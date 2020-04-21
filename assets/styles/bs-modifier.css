@@ -19,13 +19,20 @@
   background-color: #272724;
 }
 
-.modal-content .modal-header .modal-title, .modal-content .modal-header .close, .modal-content .modal-header p {
+.modal-content .modal-header .modal-title,
+.modal-content .modal-header .close,
+.modal-content .modal-header p {
   color: white;
 }
 
 .modal-content .modal-body {
   padding: 24px;
   background-color: white;
+}
+
+.modal-content .modal-body .subtitle {
+  display: block;
+  color: #272724;
 }
 
 .modal-content .modal-title {
@@ -37,6 +44,10 @@
 
 .modal-content .close {
   font-size: 24px;
+}
+
+.modal-content .table-scroll {
+  overflow: auto;
 }
 
 .btn {

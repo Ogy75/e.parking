@@ -12,18 +12,24 @@
 //MODAL
 .modal-content {
   background: transparent;
-  border:none;
+  border: none;
   border-radius: $default-border-radius;
-  .modal-header{
+  .modal-header {
     padding: 24px;
     background-color: $secondary;
-    .modal-title, .close, p{
-      color:white;
+    .modal-title,
+    .close,
+    p {
+      color: white;
     }
   }
   .modal-body {
     padding: 24px;
-    background-color:white;
+    background-color: white;
+    .subtitle {
+      display: block;
+      color: $black;
+    }
   }
   .modal-title {
     font-size: 22px;
@@ -33,6 +39,9 @@
   }
   .close {
     font-size: 24px;
+  }
+  .table-scroll{
+    overflow: auto;
   }
 }
 //BUTTON
@@ -52,36 +61,41 @@
   border: 2px solid fade-out($black, 0.4);
 }
 .btn-primary {
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: $primary;
     border-color: $primary;
   }
-  &:disabled{
-      background-color: fade-out($black, 0.6) !important;
-      border-color:fade-out($black, 0.98);
+  &:disabled {
+    background-color: fade-out($black, 0.6) !important;
+    border-color: fade-out($black, 0.98);
   }
 }
 .btn-secondary {
-    &:hover, &:focus {
-      background-color: $secondary;
-      border-color: $secondary;
-    }
+  &:hover,
+  &:focus {
+    background-color: $secondary;
+    border-color: $secondary;
   }
-  .btn-warning {
-    &:hover, &:focus {
-      background-color: $warning;
-      border-color: $warning;
-    }
+}
+.btn-warning {
+  &:hover,
+  &:focus {
+    background-color: $warning;
+    border-color: $warning;
   }
-  .btn-success {
-    &:hover, &:focus {
-      background-color: $success;
-      border-color: $success;
-    }
+}
+.btn-success {
+  &:hover,
+  &:focus {
+    background-color: $success;
+    border-color: $success;
   }
-  .btn-danger {
-    &:hover, &:focus {
-      background-color: $danger;
-      border-color: $danger;
-    }
+}
+.btn-danger {
+  &:hover,
+  &:focus {
+    background-color: $danger;
+    border-color: $danger;
   }
+}
