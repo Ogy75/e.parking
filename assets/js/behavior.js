@@ -60,7 +60,7 @@ $(function () {
     });
 
     //ADD NEW PARKING SPOT
-    var pSpot = '<tr><td><input type="text" value="Level 2 - XXX"></td><td><select><option selected="">Rotating</option><option selected="">Permanent</option></select></td><td><span class="badge badge-warning remove-entry">remove</span></td></tr>';
+    var pSpot = '<tr><td>123</td><td><select><option selected="">Rotating</option><option selected="">Permanent</option></select></td><td><span class="badge badge-warning remove-entry">remove</span></td></tr>';
     $('#add-spot').on('click', function () {
         $('.pr-default-table tbody').append(pSpot);
     });
