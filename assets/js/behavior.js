@@ -164,7 +164,7 @@ $(function () {
 
     //REPORT TOGGLE RESERVED STATUS
     $(function () {
-        var reserved = $('.badge-warning');
+        var reserved = $('.reservation-spot');
         var allReserved = $('.pr-default-table').find(reserved);
         allReserved.parents('tr').hide();
         $('.js_reserved').on('click', function () {
