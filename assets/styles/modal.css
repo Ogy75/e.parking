@@ -8,6 +8,7 @@
 }
 
 .parking-sceheme-img {
+  position: relative;
   border: 1px solid rgba(39, 39, 36, 0.2);
   overflow: hidden;
 }
@@ -15,6 +16,19 @@
 .parking-sceheme-img img {
   width: 100%;
   height: auto;
+}
+
+.parking-sceheme-img .image-usage {
+  position: absolute;
+  bottom: 10px;
+  right: 50%;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+  font-size: 12px;
+  padding: 2px 5px;
+  background: rgba(39, 39, 36, 0.3);
+  border-radius: 2px;
+  color: white;
 }
 
 .user-img {
