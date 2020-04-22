@@ -30,6 +30,12 @@ input[type="email"]:disabled {
   background: rgba(39, 39, 36, 0.1);
 }
 
+input[type="text"].error,
+input[type="password"].error,
+input[type="email"].error {
+  border: 1px solid #d8483e;
+}
+
 .flipswitch {
   position: relative;
   width: 56px;

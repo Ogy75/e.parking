@@ -11,6 +11,8 @@ body {
   font-size: 14px;
   background: #ebf0f5;
   font-family: "Roboto", sans-serif;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
 }
 
 .pr-block-menu {
@@ -151,5 +153,46 @@ body {
 
 #go-top:hover {
   opacity: 1;
+}
+
+a.parking-type {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgba(39, 39, 36, 0.4);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 0px 12px 12px 12px;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+  text-align: center;
+  min-width: 100px;
+}
+
+a.parking-type.active {
+  color: #272724;
+  border-bottom: 3px solid #272724;
+}
+
+.input-icon {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  color: rgba(39, 39, 36, 0.5);
+}
+
+.error-msg {
+  visibility: hidden;
+  display: inline-block;
+  background: #d8483e;
+  color: white;
+  padding: 2px 4px;
+  width: auto;
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 2px;
+  border-radius: 2px;
 }
 /*# sourceMappingURL=global.css.map */

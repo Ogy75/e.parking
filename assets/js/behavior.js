@@ -1,5 +1,5 @@
 //SPINNER SIM
-$(window).on('load', function() {
+$(window).on('load', function () {
     $('.spinner-bg').fadeOut(700);
 });
 
@@ -60,7 +60,7 @@ $(function () {
     });
 
     //ADD NEW PARKING SPOT
-    var pSpot = '<tr><td>Level 2 - 215</td><td><select><option selected="">Rotating</option><option selected="">Permanent</option></select></td><td><span class="badge badge-warning remove-entry">remove</span></td></tr>';
+    var pSpot = '<tr><td><input type="text" value="Level 2 - XXX"></td><td><select><option selected="">Rotating</option><option selected="">Permanent</option></select></td><td><span class="badge badge-warning remove-entry">remove</span></td></tr>';
     $('#add-spot').on('click', function () {
         $('.pr-default-table tbody').append(pSpot);
     });
@@ -87,8 +87,8 @@ $(function () {
     });
 
     //TOGGLE CAMPAIGN MODE
-    $('#campaign-mode').click(function(){
-        if($(this).prop('checked') == true){
+    $('#campaign-mode').click(function () {
+        if ($(this).prop('checked') == true) {
             $('#manual').hide();
             $('#auto').show();
         }
@@ -99,62 +99,77 @@ $(function () {
     });
 
     //TOGGLE MODE BLOCK
-    $('#campaign-state').click(function(){
-        if($(this).prop('checked') == true){
-            console.log('checked');
-            $('#mode-block').show();
-            $('#text-on').show();
-            $('#text-off').hide();
-        }
-        else {
-            console.log('unchecked');
-            $('#mode-block').hide();
-            $('#text-on').hide();
-            $('#text-off').show();
+    // $('#campaign-state').click(function(){
+    //     if($(this).prop('checked') == true){
+    //         console.log('checked');
+    //         $('#mode-block').show();
+    //         $('#text-on').show();
+    //         $('#text-off').hide();
+    //     }
+    //     else {
+    //         console.log('unchecked');
+    //         $('#mode-block').hide();
+    //         $('#text-on').hide();
+    //         $('#text-off').show();
+    //     }
+    // });
+
+    //LOCATION SELECT
+    $('select[name="pkLocation"]').change(function () {
+        var value = $(this).find("option:selected").attr("value");
+
+        switch (value) {
+            case "2":
+                $('#bg-gtc-gh').show();
+                $('#bg-gtc-gh').siblings().hide()
+                break;
+            case "3":
+                $('#bg-gtc-41').show();
+                $('#bg-gtc-41').siblings().hide()
+                break;
+            case "4":
+                $('#kg-open').show();
+                $('#kg-open').siblings().hide()
+                break;
+            case "5":
+                $('#ni-open').show();
+                $('#ni-open').siblings().hide()
+                break;
+            default:
+                $('#bg-gtc-open').show();
+                $('#bg-gtc-open').siblings().hide()
+                break;
         }
     });
 
-    //LOCATION SELECT
-    $('select[name="pkLocation"]').change(function(){
-        var value = $(this).find("option:selected").attr("value");
-      
-        switch (value){
-            case "2":
-            $('#bg-gtc-gh').show();
-            $('#bg-gtc-gh').siblings().hide()
-            break;
-            case "3":
-            $('#bg-gtc-41').show();
-            $('#bg-gtc-41').siblings().hide()
-            break;
-            case "4":
-            $('#kg-open').show();
-            $('#kg-open').siblings().hide()
-            break;
-            case "5":
-            $('#ni-open').show();
-            $('#ni-open').siblings().hide()
-            break;
-            default:
-            $('#bg-gtc-open').show();
-            $('#bg-gtc-open').siblings().hide()
-            break;
+    //REPORT VIEW LOCATION
+    $('#view-location').on('click', function () {
+        var img = $('.parking-sceheme-img');
+        img.toggle();
+        if (img.hasClass('d-none')) {
+            img.toggleClass('d-none');
+            $(this).html('hide location');
         }
-      });
-
-      //REPORT VIEW LOCATION
-      $('#view-location').on('click', function(){
-          var img = $('.parking-sceheme-img');
-          img.toggle();
-          if(img.hasClass('d-none')){
-              img.toggleClass('d-none');
-              $(this).html('hide location');
-          }
-          else if(!img.hasClass('d-none')) {
+        else if (!img.hasClass('d-none')) {
             img.toggleClass('d-none');
             $(this).text('show location');
-          }
-      });
+        }
+    });
 
+    //SPOT TYPE SWITCH
+    $('.parking-type').on('click', function () {
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+    });
 
+    //REPORT TOGGLE RESERVED STATUS
+    $(function () {
+        var reserved = $('.badge-warning');
+        var allReserved = $('.pr-default-table').find(reserved);
+        allReserved.parents('tr').hide();
+        $('.js_reserved').on('click', function () {
+            allReserved.parents('tr').toggle();
+            $(this).text() === 'show reserved' ? $(this).text('hide reserved') : $(this).text('show reserved');
+        });
+    });
 });

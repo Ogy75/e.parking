@@ -56,9 +56,10 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-sm-6 mb-5">
+                        <div class="col-12 col-sm-6 mb-4">
                             <label for="locationName">Enter Location Name</label>
-                            <input type="text" name="locationName" />
+                            <input class="error" type="text" name="locationName" />
+                            <div class="error-msg" style="visibility: visible;">Error message</div>
                         </div>
                     </div>
                     <div class="form-title mb-2">Parking Spots</div>
@@ -162,6 +163,8 @@
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="customFile">
                                 <label class="custom-file-label" for="customFile">Choose file</label>
+                                <small>Supported file types: jpg, jpeg or png. Max. file size: 3Mb.</small>
+                                <div class="error-msg" style="visibility: visible;">File is more than 3Mb in size!</div>
                             </div>
                         </div>
                     </div>
@@ -173,7 +176,7 @@
                         </div>
                     </div>
                     <div class="mb-4">
-                        <button class="btn btn-primary mr-3" disabled>Save</button>
+                        <button class="btn btn-primary mr-3">Save</button>
                         <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancel</button>
                     </div>
                 </div>
@@ -196,9 +199,20 @@
                 <div class="modal-body">
                     <div class="form-title mb-2">Location Name</div>
                     <div class="row">
+                        <div class="col-12 col-sm-6 mb-3">
+                            <label for="locationCity">Select City</label>
+                            <select class="w-100" name="locationCity">
+                                <option selected="">Belgrade</option>
+                                <option>Kragujevac</option>
+                                <option>Nis</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-12 col-sm-6 mb-5">
                             <label for="locationName">Enter Location Name</label>
-                            <input type="text" name="locationName" value="location name" />
+                            <input class="error" type="text" name="locationName" />
+                            <div class="error-msg" style="visibility: visible;">Required field!</div>
                         </div>
                     </div>
                     <div class="form-title mb-2">Parking Spots</div>
@@ -215,7 +229,7 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            Level 2 - 214
+                                            <input type="text" value="Level 2 - 213"/>
                                         </td>
                                         <td>
                                             <select>
@@ -229,7 +243,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            Level 2 - 214
+                                            <input type="text" value="Level 2 - 214"/>
                                         </td>
                                         <td>
                                             <select>
@@ -243,7 +257,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            Level 2 - 214
+                                            <input type="text" value="Level 2 - 215"/>
                                         </td>
                                         <td>
                                             <select>
@@ -257,7 +271,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            Level 2 - 214
+                                            <input type="text" value="Level 2 - 216"/>
                                         </td>
                                         <td>
                                             <select>
@@ -271,7 +285,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            Level 2 - 214
+                                            <input type="text" value="Level 2 - 217"/>
                                         </td>
                                         <td>
                                             <select>
@@ -287,11 +301,16 @@
                             </table>
                             <div class="row">
                                 <div class="col-12 col-sm-6 mb-5">
-                                    <label for="addSpot">Add New Parking Spot</label>
-                                    <div class="d-flex justify-content-between">
-                                        <input type="text" name="addSpot" />
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <span class="w-100">
+                                        <label for="addSpot">Add New Parking Spot</label>
+                                        <input class="error" type="text" name="addSpot" />
+                                    </span>
+                                    <span>
                                         <button id="add-spot" class="btn btn-primary fas fa-plus ml-2"></button>
+                                    </span>
                                     </div>
+                                    <div class="error-msg" style="visibility: visible;">Required field!</div>
                                 </div>
                             </div>
                         </div>
@@ -302,6 +321,8 @@
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="customFile">
                                 <label class="custom-file-label" for="customFile">Choose file</label>
+                                <small>Supported file types: jpg, jpeg or png. Max. file size: 3Mb.</small>
+                                <div class="error-msg" style="visibility: visible;">File type is not supported!</div>
                             </div>
                         </div>
                     </div>
@@ -385,18 +406,20 @@
                 </div>
                 <div class="modal-body p-4 p-sm-5">
                     <div class="form-title mb-4">Please enter your profile data to be able to use the app</div>
-                    <div class="row mb-3">
-                        <div class="col-12 col-sm-6 mb-3 mb-sm-0">
+                    <div class="row mb-4">
+                        <div class="col-12 col-sm-6 mb-4 mb-sm-0">
                             <label for="licence-plate1">Licence plate 1</label>
-                            <input type="text" name="licence-plate1">
+                            <input class="error" type="text" name="licence-plate1">
+                            <div class="error-msg" style="visibility: visible;">Required field!</div>
                         </div>
                         <div class="col-12 col-sm-6">
                             <label for="licence-plate2">Licence plate 2 (optional)</label>
                             <input type="text" name="licence-plate2">
+                            <div class="error-msg">Enter without white space!</div>
                         </div>
                     </div>
                     <div class="row mb-5">
-                        <div class="col-12 col-sm-6">
+                        <div class="col-12 col-sm-6 mb-4 mb-sm-0">
                             <label for="preffered-location">preffered location</label>
                             <select class="w-100" name="preffered location">
                                 <option selected>Belgrade - GTC GH</option>
@@ -405,6 +428,21 @@
                                 <option>Kragujevac - Open Parking</option>
                                 <option>Nis - Open Parking</option>
                             </select>
+                        </div>
+                        <div class="col-12 col-sm-6 d-flex align-items-end">
+                            <div class="d-inline-flex align-items-center">
+                                <div>
+                                    <div class="flipswitch">
+                                        <input type="checkbox" name="use-campaign" class="flipswitch-checkbox"
+                                            id="use-campaign">
+                                        <label class="flipswitch-label m-0" for="use-campaign">
+                                            <span class="flipswitch-inner"></span>
+                                            <span class="flipswitch-switch"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <label class="pl-2 m-0">Participate in Parking Campaigns</label>
+                            </div>
                         </div>
                     </div>
                     <button class="btn btn-primary" data-dismiss="modal" aria-label="Close">Continue</button>
@@ -441,8 +479,7 @@
                         <a href="campaign.html"><i class="fas fa-dice-six pr-3"></i>Campaign</a>
                     </li>
                     <li>
-                        <a href="location.html" class="active"><i
-                                class="fas fa-map-marked-alt pr-3"></i>Location</a>
+                        <a href="location.html" class="active"><i class="fas fa-map-marked-alt pr-3"></i>Location</a>
                     </li>
                     <li>
                         <a href="stats.html"><i class="fas fa-chart-pie pr-3"></i>Stats</a>
@@ -462,13 +499,13 @@
                     <!-- LOCATION BLOCK -->
                     <div class="col-12 col-sm-6 col-lg-4 col-xl-3 pr-block">
                         <div class="pr-block-content add">
-                        <a href="javascript:void(0))" class="d-flex justify-content-center align-items-center h-100" data-toggle="modal"
-                        data-target="#addLocation">
-                            <div>
-                            <i class="fas fa-plus-circle"></i>
-                            <div>add new location</div>
-                        </div>
-                        </a>
+                            <a href="javascript:void(0))" class="d-flex justify-content-center align-items-center h-100"
+                                data-toggle="modal" data-target="#addLocation">
+                                <div>
+                                    <i class="fas fa-plus-circle"></i>
+                                    <div>add new location</div>
+                                </div>
+                            </a>
                         </div>
 
                     </div>

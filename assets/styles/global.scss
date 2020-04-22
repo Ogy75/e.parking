@@ -10,6 +10,7 @@ body {
   font-size: 14px;
   background: $bg-color;
   font-family: "Roboto", sans-serif;
+  transition: $default-transition;
 }
 .pr-block-menu {
   margin: 12px 8px;
@@ -128,4 +129,40 @@ body {
     &:hover{
         opacity: 1;
     }
+}
+a.parking-type{
+  text-decoration: none;
+  text-transform: uppercase;
+  color:fade-out($black, 0.6);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 0px 12px 12px 12px;
+  border-bottom: 3px solid transparent;
+  transition: $default-transition;
+  text-align: center;
+  min-width: 100px;
+  &.active{
+    color: $black;
+    border-bottom: 3px solid $black;
+  }
+}
+.input-icon{
+  position: absolute;
+  top:11px;
+  right: 11px;
+  color:fade-out($black, .5)
+}
+.error-msg{
+  visibility: hidden;
+  display: inline-block;
+  background:$danger;
+  color:white;
+  padding: 2px 4px;
+  width: auto;
+  font-size: 12px;
+  line-height: 14px;
+  margin-top:2px;
+  border-radius: $default-border-radius;
 }

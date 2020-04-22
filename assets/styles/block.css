@@ -59,4 +59,29 @@
 .pr-block .pr-block-content .period {
   font-weight: 700;
 }
+
+.pr-block .pr-block-content .pr-user-name {
+  font-weight: 500;
+}
+
+.pr-block .pr-block-content .pr-user-licence-plates {
+  color: rgba(39, 39, 36, 0.5);
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.pr-block .pr-block-content .pr-profile {
+  display: block;
+  width: 64px;
+  height: 64px;
+  background: #ccc;
+  border-radius: 50%;
+  float: right;
+  overflow: hidden;
+}
+
+.pr-block .pr-block-content .pr-profile img {
+  width: 64px;
+  height: auto;
+}
 /*# sourceMappingURL=block.css.map */
