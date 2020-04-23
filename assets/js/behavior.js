@@ -60,9 +60,21 @@ $(function () {
     });
 
     //ADD NEW PARKING SPOT
-    var pSpot = '<tr><td>123</td><td><select><option selected="">Rotating</option><option selected="">Permanent</option></select></td><td><span class="badge badge-warning remove-entry">remove</span></td></tr>';
     $('#add-spot').on('click', function () {
-        $('.pr-default-table tbody').append(pSpot);
+        var spotName = $('#spot-name');
+        var spotNameVal = $('#spot-name').val();
+        if(spotName.val() === ''){
+            $(this).parents('.row').find('.error-msg').css('visibility', 'visible');
+            spotName.addClass('error');
+            spotName.val('').focus();
+        }
+        else{
+            $(this).parents('.row').find('.error-msg').css('visibility', 'hidden');
+            var pSpot = '<tr><td>' + spotNameVal + '</td><td><select><option selected="">Rotating</option><option selected="">Permanent</option></select></td><td><span class="badge badge-warning remove-entry">remove</span></td></tr>';
+            $('.pr-default-table tbody').append(pSpot);
+            spotName.removeClass('error');
+            spotName.val('').focus();
+        }
     });
 
     //REMOVE ENTRY ITEM
@@ -173,3 +185,5 @@ $(function () {
         });
     });
 });
+
+$('.parking-sceheme-img').zoom()

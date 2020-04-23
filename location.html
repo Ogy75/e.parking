@@ -148,11 +148,16 @@
                             </table>
                             <div class="row">
                                 <div class="col-12 col-sm-6 mb-5">
-                                    <label for="addSpot">Add New Parking Spot</label>
-                                    <div class="d-flex justify-content-between">
-                                        <input type="text" name="addSpot" />
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <span class="w-100">
+                                        <label for="addSpot">Add New Parking Spot</label>
+                                        <input type="text" name="addSpot" id="spot-name" />
+                                    </span>
+                                    <span>
                                         <button id="add-spot" class="btn btn-primary fas fa-plus ml-2"></button>
+                                    </span>
                                     </div>
+                                    <div class="error-msg">Required field!</div>
                                 </div>
                             </div>
                         </div>
@@ -650,9 +655,6 @@
     </div>
 
     <script src="assets/js/behavior.js"></script>
-    <script>
-        $('.parking-sceheme-img').zoom()
-    </script>
 </body>
 
 </html>
