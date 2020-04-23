@@ -52,6 +52,11 @@
   padding: 9px 20px;
 }
 
+.btn-square {
+  width: 36px;
+  padding: 9px 0px;
+}
+
 .btn-primary,
 .btn-secondary,
 .btn-warning,

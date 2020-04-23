@@ -155,7 +155,6 @@ $(function () {
     });
 
     //REPORT VIEW LOCATION
-    $('.parking-sceheme-img').hide();
     $('#view-location').on('click', function () {
         var img = $('.parking-sceheme-img');
         $(this).parents('.modal-body').find(img).slideToggle();

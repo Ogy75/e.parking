@@ -15,17 +15,6 @@
         width: 100%;
         height: auto;
     }
-    .image-usage{
-        position: absolute;
-        bottom:10px;
-        right:50%;
-        transform: translate(50%, 0);
-        font-size: 12px;
-        padding: 2px 5px;
-        background: transparentize($black, 0.7);
-        border-radius: $default-border-radius;
-        color: white;
-    }
 }
 .user-img{
     width:64px;
