@@ -46,10 +46,6 @@
   font-size: 24px;
 }
 
-.modal-content .table-scroll {
-  overflow: auto;
-}
-
 .btn {
   min-width: 100px;
   font-size: 14px;

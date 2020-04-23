@@ -155,17 +155,11 @@ $(function () {
     });
 
     //REPORT VIEW LOCATION
+    $('.parking-sceheme-img').hide();
     $('#view-location').on('click', function () {
         var img = $('.parking-sceheme-img');
-        img.toggle();
-        if (img.hasClass('d-none')) {
-            img.toggleClass('d-none');
-            $(this).html('hide location');
-        }
-        else if (!img.hasClass('d-none')) {
-            img.toggleClass('d-none');
-            $(this).text('show location');
-        }
+        $(this).parents('.modal-body').find(img).slideToggle();
+        $(this).find('i').toggleClass('fa-times');
     });
 
     //SPOT TYPE SWITCH
@@ -175,15 +169,13 @@ $(function () {
     });
 
     //REPORT TOGGLE RESERVED STATUS
-    $(function () {
-        var reserved = $('.reservation-spot');
-        var allReserved = $('.pr-default-table').find(reserved);
-        allReserved.parents('tr').hide();
-        $('.js_reserved').on('click', function () {
-            allReserved.parents('tr').toggle();
-            $(this).text() === 'show reserved' ? $(this).text('hide reserved') : $(this).text('show reserved');
+    $('.spot-history').hide();
+        $('.js_history').on('click', function () {
+            $(this).parents('.pr-block-content').find('.spot-history').slideToggle(200);
+            // $(this).toggleClass('fa-chev');
+            $(this).toggleClass('fa-chevron-up');
         });
-    });
+
 });
 
 $('.parking-sceheme-img').zoom()

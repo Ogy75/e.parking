@@ -74,7 +74,7 @@ body {
           transition: $default-transition;
           &:hover {
             background: $parking-blue;
-            color:white;
+            color: white;
           }
         }
       }
@@ -86,54 +86,63 @@ body {
 }
 .pr-default-table {
   width: 100%;
-  thead{
-    tr{
-      background: fade-out($black, 0.95);
+  min-width: 400px;
+  thead {
+    tr {
+      //background: fade-out($black, 0.95);
       border-bottom: none;
     }
   }
-    tr{
-        &:hover{
-            background: fade-out($black, 0.95);
-        }
-  width: 100%;
-      th,td {
-          padding: 8px 10px;
-          border-bottom: 1px solid fade-out($black, 0.75);
-        th:last-of-type {
-          text-align: right;
-        }
-      }
-      th{
-        color: fade-out($black, 0.6);
-        font-weight: 400;
+  tr {
+    &:hover {
+      background: fade-out($black, 0.95);
+    }
+    width: 100%;
+    th,
+    td {
+      padding: 8px 10px;
+      border-bottom: 1px solid fade-out($black, 0.75);
+      &:last-of-type {
+        text-align: right;
       }
     }
+    th {
+      color: fade-out($black, 0.6);
+      font-weight: 400;
+      font-size: 12px;
     }
-#go-top {
-    display: none;
-    position: fixed;
-    bottom: 16px;
-    right: 24px;
-    z-index: 10;
-    background: $black;
-    color: white;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    line-height: 48px;
-    text-align: center;
-    transition: $default-transition;
-    opacity: 0.4;
-    cursor: pointer;
-    &:hover{
-        opacity: 1;
-    }
+  }
 }
-a.parking-type{
+@media (max-width: $screen-md) {
+  .pr-default-table {
+    font-size: 12px;
+  }
+}
+
+#go-top {
+  display: none;
+  position: fixed;
+  bottom: 16px;
+  right: 24px;
+  z-index: 10;
+  background: $black;
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  line-height: 48px;
+  text-align: center;
+  transition: $default-transition;
+  opacity: 0.4;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+}
+a.parking-type {
   text-decoration: none;
   text-transform: uppercase;
-  color:fade-out($black, 0.6);
+  color: fade-out($black, 0.6);
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -143,26 +152,29 @@ a.parking-type{
   transition: $default-transition;
   text-align: center;
   min-width: 100px;
-  &.active{
+  &.active {
     color: $black;
     border-bottom: 3px solid $black;
   }
 }
-.input-icon{
+.input-icon {
   position: absolute;
-  top:11px;
+  top: 11px;
   right: 11px;
-  color:fade-out($black, .5)
+  color: fade-out($black, 0.5);
 }
-.error-msg{
+.error-msg {
   visibility: hidden;
   display: inline-block;
-  background:$danger;
-  color:white;
+  background: $danger;
+  color: white;
   padding: 2px 4px;
   width: auto;
   font-size: 12px;
   line-height: 14px;
-  margin-top:2px;
+  margin-top: 2px;
   border-radius: $default-border-radius;
+}
+.table-scroll {
+  overflow: auto;
 }

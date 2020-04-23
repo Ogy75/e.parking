@@ -103,10 +103,10 @@ body {
 
 .pr-default-table {
   width: 100%;
+  min-width: 400px;
 }
 
 .pr-default-table thead tr {
-  background: rgba(39, 39, 36, 0.05);
   border-bottom: none;
 }
 
@@ -118,18 +118,27 @@ body {
   background: rgba(39, 39, 36, 0.05);
 }
 
-.pr-default-table tr th, .pr-default-table tr td {
+.pr-default-table tr th,
+.pr-default-table tr td {
   padding: 8px 10px;
   border-bottom: 1px solid rgba(39, 39, 36, 0.25);
 }
 
-.pr-default-table tr th th:last-of-type, .pr-default-table tr td th:last-of-type {
+.pr-default-table tr th:last-of-type,
+.pr-default-table tr td:last-of-type {
   text-align: right;
 }
 
 .pr-default-table tr th {
   color: rgba(39, 39, 36, 0.4);
   font-weight: 400;
+  font-size: 12px;
+}
+
+@media (max-width: 991.98px) {
+  .pr-default-table {
+    font-size: 12px;
+  }
 }
 
 #go-top {
@@ -194,5 +203,9 @@ a.parking-type.active {
   line-height: 14px;
   margin-top: 2px;
   border-radius: 2px;
+}
+
+.table-scroll {
+  overflow: auto;
 }
 /*# sourceMappingURL=global.css.map */
