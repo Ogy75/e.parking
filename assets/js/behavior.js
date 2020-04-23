@@ -171,9 +171,9 @@ $(function () {
     //REPORT TOGGLE RESERVED STATUS
     $('.spot-history').hide();
         $('.js_history').on('click', function () {
-            $(this).parents('.pr-block-content').find('.spot-history').slideToggle(200);
+            $(this).find('.spot-history').slideToggle(200);
             // $(this).toggleClass('fa-chev');
-            $(this).toggleClass('fa-chevron-up');
+            $(this).find('.js_toggleButton').toggleClass('fa-chevron-up');
         });
 
 });

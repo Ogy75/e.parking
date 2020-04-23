@@ -147,8 +147,10 @@
                                 </div>
 
                                 <div class="row">
+
+                                    <!-- REPORT PARKING SPOT -->
                                     <div class="col-12 pr-block mb-2">
-                                        <div class="pr-block-content border px-3 py-2">
+                                        <div class="pr-block-content border px-3 py-2 cursor-pointer js_history">
                                             <div class="active-user">
                                                 <div class="row align-items-top align-items-lg-center">
                                                     <div class="col-6 col-lg-2 mb-1 mb-lg-0">
@@ -169,7 +171,7 @@
                                                         <div class="badge badge-secondary">08.06 - 12.06.</div>
                                                     </div>
                                                     <div class="col-12 col-lg-1 mt-1 mt-lg-0 text-center text-lg-right">
-                                                        <a href="#" class="p-3 fas fa-chevron-down d-inline-block js_history"></a>
+                                                        <a href="#" class="p-3 fas fa-chevron-down d-inline-block js_toggleButton"></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -191,18 +193,16 @@
                                                             <td>
                                                                 <span class="badge badge-warning">uncomfirmed</span>
                                                             </td>
-                                                            <td>
-                                                                -
-                                                            </td>
+                                                            <td></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
                                         </div>
                                     </div>
-
+                                    <!-- REPORT PARKING SPOT -->
                                     <div class="col-12 pr-block mb-2">
-                                        <div class="pr-block-content border px-3 py-2">
+                                        <div class="pr-block-content border px-3 py-2 cursor-pointer js_history">
                                             <div class="active-user">
                                                 <div class="row align-items-top align-items-lg-center">
                                                     <div class="col-6 col-lg-2 mb-1 mb-lg-0">
@@ -223,7 +223,167 @@
                                                         <div class="badge badge-secondary">10.06 - 12.06.</div>
                                                     </div>
                                                     <div class="col-12 col-lg-1 mt-1 mt-lg-0 text-center text-lg-right">
-                                                        <a href="#" class="p-3 fas fa-chevron-down d-inline-block js_history"></a>
+                                                        <a href="#" class="p-3 fas fa-chevron-down d-inline-block js_toggleButton"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="table-scroll spot-history">
+                                                <table class="pr-default-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>user</th>
+                                                            <th>status</th>
+                                                            <th>period</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="pr-user-name text-truncate">Dragan Jovanovic</div>
+                                                                <div class="small text-truncate">BG1024GX, BG2144UA</div>
+                                                            </td>
+                                                            <td>
+                                                                <span class="badge badge-secondary">canceled</span>
+                                                            </td>
+                                                            <td>
+                                                                09.06.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="pr-user-name text-truncate">Dragan Jovanovic</div>
+                                                                <div class="small text-truncate">BG1024GX, BG2144UA</div>
+                                                            </td>
+                                                            <td>
+                                                                <span class="badge badge-success">confirmed</span>
+                                                            </td>
+                                                            <td>
+                                                                08.06. - 12.06.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="pr-user-name text-truncate">Bogdan Peric</div>
+                                                                <div class="small text-truncate">BG118TG</div>
+                                                            </td>
+                                                            <td>
+                                                                <span class="badge badge-warning ">unconfirmed</span>
+                                                            </td>
+                                                            <td>
+                                                                -
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- REPORT PARKING SPOT -->
+                                    <div class="col-12 pr-block mb-2">
+                                        <div class="pr-block-content border px-3 py-2 cursor-pointer js_history">
+                                            <div class="active-user">
+                                                <div class="row align-items-top align-items-lg-center">
+                                                    <div class="col-6 col-lg-2 mb-1 mb-lg-0">
+                                                        <div class="small">parking spot</div>
+                                                        <div class="badge badge-primary">level 2 - 123</div>
+                                                    </div>
+                                                    <div class="col-6 col-lg-4 mb-1 mb-lg-0">
+                                                        <div class="small">user</div>
+                                                        <div class="pr-user-name text-truncate">Zeljko Varagic</div>
+                                                        <div class="small text-truncate mb-1">BG2818TR</div>
+                                                    </div>
+                                                    <div class="col-6 col-lg-2 mb-1 mb-lg-0">
+                                                        <div class="small">status</div>
+                                                        <div class="badge badge-success">confirmed</div>
+                                                    </div>
+                                                    <div class="col-6 col-lg-3 mb-1 mb-lg-0">
+                                                        <div class="small">period</div>
+                                                        <div class="badge badge-secondary">10.06 - 12.06.</div>
+                                                    </div>
+                                                    <div class="col-12 col-lg-1 mt-1 mt-lg-0 text-center text-lg-right">
+                                                        <a href="#" class="p-3 fas fa-chevron-down d-inline-block js_toggleButton"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="table-scroll spot-history">
+                                                <table class="pr-default-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>user</th>
+                                                            <th>status</th>
+                                                            <th>period</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="pr-user-name text-truncate">Dragan Jovanovic</div>
+                                                                <div class="small text-truncate">BG1024GX, BG2144UA</div>
+                                                            </td>
+                                                            <td>
+                                                                <span class="badge badge-secondary">canceled</span>
+                                                            </td>
+                                                            <td>
+                                                                09.06.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="pr-user-name text-truncate">Dragan Jovanovic</div>
+                                                                <div class="small text-truncate">BG1024GX, BG2144UA</div>
+                                                            </td>
+                                                            <td>
+                                                                <span class="badge badge-success">confirmed</span>
+                                                            </td>
+                                                            <td>
+                                                                08.06. - 12.06.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="pr-user-name text-truncate">Bogdan Peric</div>
+                                                                <div class="small text-truncate">BG118TG</div>
+                                                            </td>
+                                                            <td>
+                                                                <span class="badge badge-warning ">unconfirmed</span>
+                                                            </td>
+                                                            <td>
+                                                                -
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- REPORT PARKING SPOT -->
+                                    <div class="col-12 pr-block mb-2">
+                                        <div class="pr-block-content border px-3 py-2 cursor-pointer js_history">
+                                            <div class="active-user">
+                                                <div class="row align-items-top align-items-lg-center">
+                                                    <div class="col-6 col-lg-2 mb-1 mb-lg-0">
+                                                        <div class="small">parking spot</div>
+                                                        <div class="badge badge-primary">level 2 - 123</div>
+                                                    </div>
+                                                    <div class="col-6 col-lg-4 mb-1 mb-lg-0">
+                                                        <div class="small">user</div>
+                                                        <div class="pr-user-name text-truncate">Miroslava Ilic</div>
+                                                        <div class="small text-truncate mb-1">BG3321OI</div>
+                                                    </div>
+                                                    <div class="col-6 col-lg-2 mb-1 mb-lg-0">
+                                                        <div class="small">status</div>
+                                                        <div class="badge badge-success">confirmed</div>
+                                                    </div>
+                                                    <div class="col-6 col-lg-3 mb-1 mb-lg-0">
+                                                        <div class="small">period</div>
+                                                        <div class="badge badge-secondary">10.06 - 12.06.</div>
+                                                    </div>
+                                                    <div class="col-12 col-lg-1 mt-1 mt-lg-0 text-center text-lg-right">
+                                                        <a href="#" class="p-3 fas fa-chevron-down d-inline-block js_toggleButton"></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -280,67 +440,7 @@
                                         </div>
                                     </div>
                                     
-                                    
-
                                 </div>
-
-                                <!-- <table class="pr-default-table">
-                                    <thead>
-                                        <tr>
-                                            <th>parking spot</th>
-                                            <th>user</th>
-                                            <th>status</th>
-                                            <th>Licence plates</th>
-                                            <th>Period</th>
-                                            <th>History</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><span class="badge badge-primary">243</span></td>
-                                            <td>Milan Vasiljevic</td>
-                                            <td><span class="badge badge-success">confirmed</span></td>
-                                            <td>BG1024GX, BG399AU</td>
-                                            <td>10.06 - 12.06</td>
-                                            <td><a href="javascript:void(0)" class="badge badge-secondary js_history"><i class="fas fa-history"></i></i></a></td>
-                                        </tr>
-                                        
-                                        <tr class="spot-history">
-                                            <td></td>
-                                            <td>Bogdan Drzic</td>
-                                            <td><span class="badge badge-secondary">disabled</span></td>
-                                            <td>BG2012TU</td>
-                                            <td>08.06 - 10.06</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr class="spot-history">
-                                            <td></td>
-                                            <td>Jovan Jovanovic</td>
-                                            <td><span class="badge badge-warning">reserved</span></td>
-                                            <td>BG999AS</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr class="spot-history">
-                                            <td></td>
-                                            <td>Dejan Dejanovic</td>
-                                            <td><span class="badge badge-warning">reserved</span></td>
-                                            <td>BG9999ER</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr class="spot-history">
-                                            <td></td>
-                                            <td>Bogdan Perisic</td>
-                                            <td><span class="badge badge-secondary">canceled</span></td>
-                                            <td>BG1234AB</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                </table> -->
-
-
                             </div>
 
                             <div id="bg-gtc-gh" style="display: none;">
