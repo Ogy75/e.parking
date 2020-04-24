@@ -75,88 +75,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- <tr>
-                                        <td>
-                                            Level 2 - 214
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option selected>Rotating</option>
-                                                <option selected>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning cursor-pointer">remove</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Level 2 - 214
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option selected>Rotating</option>
-                                                <option>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning cursor-pointer">remove</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Level 2 - 214
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option>Rotating</option>
-                                                <option selected>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning cursor-pointer">remove</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Level 2 - 214
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option selected>Rotating</option>
-                                                <option>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning cursor-pointer">remove</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Level 2 - 214
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option selected>Rotating</option>
-                                                <option>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning cursor-pointer">remove</span>
-                                        </td>
-                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>
                             <div class="row">
                                 <div class="col-12 col-lg-6 mb-4">
-                                    <div class="d-flex justify-content-between align-items-end">
+                                    <div class="d-flex justify-content-between align-items-end js_parent">
                                         <span class="w-100">
                                         <label for="addSpot">Add New Parking Spot</label>
-                                        <input type="text" name="addSpot" id="spot-name" />
+                                        <input class="spot-name-input" type="text" name="addSpot" />
                                     </span>
                                     <span>
-                                        <button id="add-spot" class="btn btn-primary btn-square fas fa-plus ml-2"></button>
+                                        <button class="btn btn-primary btn-square fas fa-plus ml-2 js_addSpot"></button>
                                     </span>
                                     </div>
                                     <div class="error-msg">Required field!</div>
@@ -244,7 +174,7 @@
                                             </select>
                                         </td>
                                         <td>
-                                            <span class="badge badge-warning cursor-pointer">remove</span>
+                                            <span class="badge badge-warning cursor-pointer js_removeEntry">remove</span>
                                         </td>
                                     </tr>
                                     <tr>
@@ -258,7 +188,7 @@
                                             </select>
                                         </td>
                                         <td>
-                                            <span class="badge badge-warning cursor-pointer">remove</span>
+                                            <span class="badge badge-warning cursor-pointer js_removeEntry">remove</span>
                                         </td>
                                     </tr>
                                     <tr>
@@ -272,7 +202,7 @@
                                             </select>
                                         </td>
                                         <td>
-                                            <span class="badge badge-warning cursor-pointer">remove</span>
+                                            <span class="badge badge-warning cursor-pointer js_removeEntry">remove</span>
                                         </td>
                                     </tr>
                                     <tr>
@@ -286,7 +216,7 @@
                                             </select>
                                         </td>
                                         <td>
-                                            <span class="badge badge-warning cursor-pointer">remove</span>
+                                            <span class="badge badge-warning cursor-pointer js_removeEntry">remove</span>
                                         </td>
                                     </tr>
                                     <tr>
@@ -300,7 +230,7 @@
                                             </select>
                                         </td>
                                         <td>
-                                            <span class="badge badge-warning cursor-pointer">remove</span>
+                                            <span class="badge badge-warning cursor-pointer js_removeEntry">remove</span>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -308,16 +238,16 @@
                         </div>
                             <div class="row">
                                 <div class="col-12 col-lg-6 mb-4">
-                                    <div class="d-flex justify-content-between align-items-end">
+                                    <div class="d-flex justify-content-between align-items-end js_parent">
                                         <span class="w-100">
                                         <label for="addSpot">Add New Parking Spot</label>
-                                        <input class="error" type="text" name="addSpot" />
+                                        <input class="spot-name-input" type="text" name="addSpot" />
                                     </span>
                                     <span>
-                                        <button id="add-spot" class="btn btn-primary btn-square fas fa-plus ml-2"></button>
+                                        <button class="btn btn-primary btn-square fas fa-plus ml-2 js_addSpot"></button>
                                     </span>
                                     </div>
-                                    <div class="error-msg" style="visibility: visible;">Required field!</div>
+                                    <div class="error-msg">Required field!</div>
                                 </div>
                             </div>
                         </div>

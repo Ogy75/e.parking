@@ -60,9 +60,10 @@ $(function () {
     });
 
     //ADD NEW PARKING SPOT
-    $('#add-spot').on('click', function () {
-        var spotName = $('#spot-name');
-        var spotNameVal = $('#spot-name').val();
+    $('.js_addSpot').on('click', function () {
+        var input = $('.spot-name-input');
+        console.log(input);
+        var spotName = $(this).parents('.js_parent').find(input);
         if(spotName.val() === ''){
             $(this).parents('.row').find('.error-msg').css('visibility', 'visible');
             spotName.addClass('error');
@@ -70,7 +71,7 @@ $(function () {
         }
         else{
             $(this).parents('.row').find('.error-msg').css('visibility', 'hidden');
-            var pSpot = '<tr><td>' + spotNameVal + '</td><td><select><option selected="">Rotating</option><option selected="">Permanent</option></select></td><td><span class="badge badge-warning remove-entry">remove</span></td></tr>';
+            var pSpot = '<tr><td>' + spotName.val() + '</td><td><select><option selected>Rotating</option><option>Permanent</option></select></td><td><span class="badge badge-warning cursor-pointer  js_removeEntry">remove</span></td></tr>';
             $('.pr-default-table tbody').append(pSpot);
             spotName.removeClass('error');
             spotName.val('').focus();
@@ -78,7 +79,7 @@ $(function () {
     });
 
     //REMOVE ENTRY ITEM
-    $('.remove-entry').on('click', function () {
+    $('.js_removeEntry').on('click', function () {
         $(this).parents('tr').remove();
     });
 
