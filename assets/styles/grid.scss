@@ -128,7 +128,19 @@
   min-height: 100vh;
   transition: $default-transition;
   .pr-container-content {
-    padding: 70px 24px 100px 24px;
+    padding: 70px 24px 50px 24px;
+    .unassigned-user-list{
+      display: block;
+      height:calc(100vh - 360px);
+      overflow: auto;
+      //padding-right:20px;
+    }
+    .campaign-history-list{
+      display: block;
+      height:calc(100vh - 308px);
+      overflow: auto;
+      //padding-right:20px;
+    }
   }
 }
 @media (max-width: $screen-xl) {

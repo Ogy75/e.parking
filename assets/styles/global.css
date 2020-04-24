@@ -208,4 +208,8 @@ a.parking-type.active {
 .table-scroll {
   overflow: auto;
 }
+
+.results-message {
+  display: none;
+}
 /*# sourceMappingURL=global.css.map */

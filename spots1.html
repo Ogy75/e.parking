@@ -17,7 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-        <script src="assets/vendor/zoom-master/jquery.zoom.min.js"></script>
+    <script src="assets/vendor/zoom-master/jquery.zoom.min.js"></script>
 </head>
 
 <body>
@@ -655,17 +655,30 @@
         <!-- CONTENT -->
         <div class="pr-wrapper-right">
             <div class="pr-container-content">
-                <div class="d-flex justify-content-center align-items-center mb-5">
+                <div class="d-flex justify-content-center align-items-center mb-4">
                     <a class="parking-type active" href="javascript:void(0)">rotating</a>
                     <a class="parking-type" href="javascript:void(0)">guest</a>
                     <a class="parking-type" href="javascript:void(0)">permanent</a>
                 </div>
-                <!-- <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h5>Rotating Parking Spots</h5>
-                </div> -->
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5>Rotating Spots Management</h5>
+                    <div class="d-inline-flex align-items-center">
+                        <div>
+                            <div class="flipswitch">
+                                <input type="checkbox" name="campaign-view-mode" class="flipswitch-checkbox"
+                                    id="campaign-view-mode">
+                                <label class="flipswitch-label m-0" for="campaign-view-mode">
+                                    <span class="flipswitch-inner"></span>
+                                    <span class="flipswitch-switch"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <label class="pl-2 m-0">Campaign View</label>
+                    </div>
+                </div>
                 <div class="row">
                     <!-- LEFT BLOCK START -->
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-5">
                         <div class="row">
 
                             <!-- UNNASIGNED USERS -->
@@ -696,86 +709,345 @@
                                     </div> -->
                                 </div>
                             </div>
-                            <!-- FIND USER -->
-                            <div class="col-12 mb-2 mb-sm-3">
-                                <div class="position-relative">
-                                    <input type="text" placeholder="Find user / user status / licence plate no." />
-                                    <span class="input-icon fas fa-search"></span>
-                                </div>
-                            </div>
-                            
-                                <div class="pk-user-list w-100">
-                                <!-- USER -->
-                                <div class="col-12 pr-block mb-2">
-                                    <div class="pr-block-content py-3">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="pr-profile">
-                                                        <img src="assets/images/profile-1.jpg" alt="user name">
-                                                    </div>
-                                                    <span class="ml-2">
-                                                        <div class="pr-user-name">Milan Milanovic</div>
-                                                        <div class="pr-user-licence-plates mb-1">BG1024GX, BG944AX</div>
-                                                        <span class="badge badge-success">active</span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- BLOCK -->
-                                        <div class="pr-block-menu fas fa-ellipsis-v">
-                                            <div class="menu-items" style="display: none;">
-                                                <div class="pointer"></div>
-                                                <ul>
-                                                    <li>
-                                                        <a href="javascript:void(0)" class="menu-item"
-                                                            data-toggle="modal" data-target="#viewReport"
-                                                            aria-disabled="true">View Report</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0)" class="menu-item">Export Report as
-                                                            PDF</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
+
+
+                            <div class="col-12 pk-user-list">
+
+                                <!-- FIND USER -->
+                                <div class="mb-2 mb-sm-3">
+                                    <div class="position-relative">
+                                        <input type="text" id="filter-users"
+                                            placeholder="Find user / user status / licence plate no." value="" />
+                                        <span class="input-icon fas fa-search"></span>
                                     </div>
                                 </div>
 
-                                <!-- USER -->
-                                <div class="col-12 pr-block mb-2">
-                                    <div class="pr-block-content py-3">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="pr-profile">
-                                                        <img src="assets/images/profile-1.jpg" alt="user name">
+                                <div class="unassigned-user-list">
+                                    <!-- USER -->
+                                    <div class="pr-block mb-2">
+                                        <div class="pr-block-content py-3">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center unnasigned-user-data">
+                                                <div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="pr-profile">
+                                                            <img src="assets/images/profile-1.jpg" alt="user name">
+                                                        </div>
+                                                        <span class="ml-2">
+                                                            <div class="pr-user-name">Milan Milanovic</div>
+                                                            <div class="pr-user-licence-plates mb-1">BG1024GX, BG944AX
+                                                            </div>
+                                                            <span class="badge badge-success">active</span>
+                                                        </span>
                                                     </div>
-                                                    <span class="ml-2">
-                                                        <div class="pr-user-name">Goran Goranovic</div>
-                                                        <div class="pr-user-licence-plates mb-1">BG999AH</div>
-                                                        <span class="badge badge-danger">disabled</span>
-                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!-- BLOCK -->
+                                            <div class="pr-block-menu fas fa-ellipsis-v">
+                                                <div class="menu-items" style="display: none;">
+                                                    <div class="pointer"></div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item"
+                                                                data-toggle="modal" data-target="#viewReport"
+                                                                aria-disabled="true">View Report</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item">Export Report
+                                                                as
+                                                                PDF</a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
 
-                                        <!-- BLOCK -->
-                                        <div class="pr-block-menu fas fa-ellipsis-v">
-                                            <div class="menu-items" style="display: none;">
-                                                <div class="pointer"></div>
-                                                <ul>
-                                                    <li>
-                                                        <a href="javascript:void(0)" class="menu-item"
-                                                            data-toggle="modal" data-target="#viewReport"
-                                                            aria-disabled="true">View Report</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0)" class="menu-item">Export Report as
-                                                            PDF</a>
-                                                    </li>
-                                                </ul>
+                                    <!-- USER -->
+                                    <div class="pr-block mb-2">
+                                        <div class="pr-block-content py-3">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center unnasigned-user-data">
+                                                <div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="pr-profile">
+                                                            <img src="assets/images/profile-1.jpg" alt="user name">
+                                                        </div>
+                                                        <span class="ml-2">
+                                                            <div class="pr-user-name">Goran Goranovic</div>
+                                                            <div class="pr-user-licence-plates mb-1">BG999AH</div>
+                                                            <span class="badge badge-danger">disabled</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
                                             </div>
+
+                                            <!-- BLOCK -->
+                                            <div class="pr-block-menu fas fa-ellipsis-v">
+                                                <div class="menu-items" style="display: none;">
+                                                    <div class="pointer"></div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item"
+                                                                data-toggle="modal" data-target="#viewReport"
+                                                                aria-disabled="true">View Report</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item">Export Report
+                                                                as
+                                                                PDF</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- USER -->
+                                    <div class="pr-block mb-2">
+                                        <div class="pr-block-content py-3">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center unnasigned-user-data">
+                                                <div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="pr-profile">
+                                                            <img src="assets/images/profile-1.jpg" alt="user name">
+                                                        </div>
+                                                        <span class="ml-2">
+                                                            <div class="pr-user-name">Milan Milanovic</div>
+                                                            <div class="pr-user-licence-plates mb-1">BG1024GX, BG944AX
+                                                            </div>
+                                                            <span class="badge badge-success">active</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- BLOCK -->
+                                            <div class="pr-block-menu fas fa-ellipsis-v">
+                                                <div class="menu-items" style="display: none;">
+                                                    <div class="pointer"></div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item"
+                                                                data-toggle="modal" data-target="#viewReport"
+                                                                aria-disabled="true">View Report</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item">Export Report
+                                                                as
+                                                                PDF</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- USER -->
+                                    <div class="pr-block mb-2">
+                                        <div class="pr-block-content py-3">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center unnasigned-user-data">
+                                                <div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="pr-profile">
+                                                            <img src="assets/images/profile-1.jpg" alt="user name">
+                                                        </div>
+                                                        <span class="ml-2">
+                                                            <div class="pr-user-name">Goran Goranovic</div>
+                                                            <div class="pr-user-licence-plates mb-1">BG999AH</div>
+                                                            <span class="badge badge-danger">disabled</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- BLOCK -->
+                                            <div class="pr-block-menu fas fa-ellipsis-v">
+                                                <div class="menu-items" style="display: none;">
+                                                    <div class="pointer"></div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item"
+                                                                data-toggle="modal" data-target="#viewReport"
+                                                                aria-disabled="true">View Report</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item">Export Report
+                                                                as
+                                                                PDF</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- USER -->
+                                    <div class="pr-block mb-2">
+                                        <div class="pr-block-content py-3">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center unnasigned-user-data">
+                                                <div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="pr-profile">
+                                                            <img src="assets/images/profile-1.jpg" alt="user name">
+                                                        </div>
+                                                        <span class="ml-2">
+                                                            <div class="pr-user-name">Milan Milanovic</div>
+                                                            <div class="pr-user-licence-plates mb-1">BG1024GX, BG944AX
+                                                            </div>
+                                                            <span class="badge badge-success">active</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- BLOCK -->
+                                            <div class="pr-block-menu fas fa-ellipsis-v">
+                                                <div class="menu-items" style="display: none;">
+                                                    <div class="pointer"></div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item"
+                                                                data-toggle="modal" data-target="#viewReport"
+                                                                aria-disabled="true">View Report</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item">Export Report
+                                                                as
+                                                                PDF</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- USER -->
+                                    <div class="pr-block mb-2">
+                                        <div class="pr-block-content py-3">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center unnasigned-user-data">
+                                                <div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="pr-profile">
+                                                            <img src="assets/images/profile-1.jpg" alt="user name">
+                                                        </div>
+                                                        <span class="ml-2">
+                                                            <div class="pr-user-name">Goran Goranovic</div>
+                                                            <div class="pr-user-licence-plates mb-1">BG999AH</div>
+                                                            <span class="badge badge-danger">disabled</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- BLOCK -->
+                                            <div class="pr-block-menu fas fa-ellipsis-v">
+                                                <div class="menu-items" style="display: none;">
+                                                    <div class="pointer"></div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item"
+                                                                data-toggle="modal" data-target="#viewReport"
+                                                                aria-disabled="true">View Report</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item">Export Report
+                                                                as
+                                                                PDF</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- USER -->
+                                    <div class="pr-block mb-2">
+                                        <div class="pr-block-content py-3">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center unnasigned-user-data">
+                                                <div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="pr-profile">
+                                                            <img src="assets/images/profile-1.jpg" alt="user name">
+                                                        </div>
+                                                        <span class="ml-2">
+                                                            <div class="pr-user-name">Milan Milanovic</div>
+                                                            <div class="pr-user-licence-plates mb-1">BG1024GX, BG944AX
+                                                            </div>
+                                                            <span class="badge badge-success">active</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- BLOCK -->
+                                            <div class="pr-block-menu fas fa-ellipsis-v">
+                                                <div class="menu-items" style="display: none;">
+                                                    <div class="pointer"></div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item"
+                                                                data-toggle="modal" data-target="#viewReport"
+                                                                aria-disabled="true">View Report</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item">Export Report
+                                                                as
+                                                                PDF</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- USER -->
+                                    <div class="pr-block mb-2">
+                                        <div class="pr-block-content py-3">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center unnasigned-user-data">
+                                                <div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="pr-profile">
+                                                            <img src="assets/images/profile-1.jpg" alt="user name">
+                                                        </div>
+                                                        <span class="ml-2">
+                                                            <div class="pr-user-name">Goran Goranovic</div>
+                                                            <div class="pr-user-licence-plates mb-1">BG999AH</div>
+                                                            <span class="badge badge-danger">disabled</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- BLOCK -->
+                                            <div class="pr-block-menu fas fa-ellipsis-v">
+                                                <div class="menu-items" style="display: none;">
+                                                    <div class="pointer"></div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item"
+                                                                data-toggle="modal" data-target="#viewReport"
+                                                                aria-disabled="true">View Report</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item">Export Report
+                                                                as
+                                                                PDF</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- NO RESULTS MSG -->
+                                    <div class="results-message text-center">
+                                        <div class="p-5">
+                                            <h5>No Results Match your Search Criteria</h5>
+                                            <p>Please modify your query</p>
                                         </div>
                                     </div>
                                 </div>
@@ -788,26 +1060,13 @@
                     <!-- LEFT BLOCK END -->
 
                     <!-- RIGHT BLOCK START -->
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-7">
                         <div class="row">
                             <!-- CAMPAIGN HISTORY HEADER -->
                             <div class="col-12 pr-block mt-4 mt-lg-0 mb-2 mb-lg-3">
                                 <div class="pr-block-content py-3">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="title">Parking Spots</div>
-                                        <div class="d-inline-flex align-items-center">
-                                            <div>
-                                                <div class="flipswitch">
-                                                    <input type="checkbox" name="campaign-view-mode"
-                                                        class="flipswitch-checkbox" id="campaign-view-mode">
-                                                    <label class="flipswitch-label m-0" for="campaign-view-mode">
-                                                        <span class="flipswitch-inner"></span>
-                                                        <span class="flipswitch-switch"></span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <label class="pl-2 m-0">Campaign View</label>
-                                        </div>
                                         <select>
                                             <option selected>BG Open Parking</option>
                                             <option>BG GTC GH</option>
@@ -833,110 +1092,154 @@
                                 </div>
                             </div>
 
-                            <!-- CAMPAIGN HISTORY ENTRY -->
-                            <div class="col-12 pr-block mb-2">
-                                <div class="pr-block-content py-3">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">10.06.- 12.06.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <small>parking period</small>
-                                            <span class="period">15.06. - 19.06.</span>
-                                        </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-success mr-1 my-1">running</span>
+                            <div class="col-12">
+                                <div class="campaign-history-list">
+                
+                                    <!-- CAMPAIGN HISTORY ENTRY -->
+                                    <div class="pr-block mb-2">
+                                        <div class="pr-block-content py-3">
+                                            <div class="row align-items-start align-items-md-center">
+                                                <div class="col-6 col-md-3 order-2 order-md-1">
+                                                    <div class="small">parking spot</div>
+                                                    <span class="badge badge-primary pk-spot-prefix">123</span>
+                                                </div>
+                                                <div class="col-6 col-md-3 order-3 order-md-2">
+                                                    <div class="small">status</div>
+                                                    <span class="badge badge-primary">spot in use</span>
+                                                </div>
+                                                <div class="col-12 col-md-5 mb-3 mb-md-0 order-1 order-md-3">
+                                                    <div>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="pr-profile">
+                                                                <img src="assets/images/profile-1.jpg" alt="user name">
+                                                            </div>
+                                                            <span class="ml-2">
+                                                                <div class="small">user</div>
+                                                                <div class="pr-user-name">Milan Milanovic</div>
+                                                                <div class="pr-user-licence-plates mb-1">BG1024GX, BG944AX
+                                                                </div>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- BLOCK -->
+                                            <div class="pr-block-menu fas fa-ellipsis-v">
+                                                <div class="menu-items">
+                                                    <div class="pointer"></div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item"
+                                                                data-toggle="modal" data-target="#viewReport"
+                                                                aria-disabled="true">View Report</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item">Export Report
+                                                                as
+                                                                PDF</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <!-- BLOCK -->
-                                    <!-- <div class="pr-block-menu fas fa-ellipsis-v">
-                                        <div class="menu-items">
-                                            <div class="pointer"></div>
-                                            <ul>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                        data-target="#viewReport" disabled>Current Status</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)">Export Report as PDF</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div> -->
-                                </div>
-                            </div>
 
-                            <!-- CAMPAIGN HISTORY ENTRY -->
-                            <div class="col-12 pr-block mb-2">
-                                <div class="pr-block-content py-3">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">03.06.- 05.06.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <small>parking period</small>
-                                            <span class="period">08.06. - 12.06.</span>
-                                        </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
-                                            <span class="badge badge-primary mr-1 my-1">parking in use</span>
+                                    <!-- CAMPAIGN HISTORY ENTRY -->
+                                    <div class="pr-block mb-2">
+                                        <div class="pr-block-content py-3">
+                                            <div class="row align-items-start align-items-md-center">
+                                                <div class="col-6 col-md-3 order-2 order-md-1">
+                                                    <div class="small">parking spot</div>
+                                                    <span class="badge badge-primary pk-spot-prefix">124</span>
+                                                </div>
+                                                <div class="col-6 col-md-3 order-3 order-md-2">
+                                                    <div class="small">status</div>
+                                                    <span class="badge badge-danger">free spot</span>
+                                                </div>
+                                                <div class="col-12 col-md-5 mb-3 mb-md-0 order-1 order-md-3">
+                                                    <div>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="pr-profile">
+                                                                <img src="assets/images/P-avatar.png"  alt="Free Parking Spot"></div>
+                                                            <span class="ml-2">
+                                                                <div class="small"></div>
+                                                                <div class="pr-user-name">Not assigned</div>
+                                                                <div class="pr-user-licence-plates mb-1"></div>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- BLOCK -->
+                                            <div class="pr-block-menu fas fa-ellipsis-v">
+                                                <div class="menu-items">
+                                                    <div class="pointer"></div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item"
+                                                                data-toggle="modal" data-target="#viewReport"
+                                                                aria-disabled="true">View Report</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item">Export Report
+                                                                as
+                                                                PDF</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <!-- BLOCK -->
-                                    <div class="pr-block-menu fas fa-ellipsis-v">
-                                        <div class="menu-items">
-                                            <div class="pointer"></div>
-                                            <ul>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                        data-target="#viewReport" aria-disabled="true">View Report</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="menu-item">Export Report
-                                                        as
-                                                        PDF</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <!-- CAMPAIGN HISTORY ENTRY -->
-                            <div class="col-12 pr-block mb-2">
-                                <div class="pr-block-content py-3">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
-                                        </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
+                                    <!-- CAMPAIGN HISTORY ENTRY -->
+                                    <div class="pr-block mb-2">
+                                        <div class="pr-block-content py-3">
+                                            <div class="row align-items-start align-items-md-center">
+                                                <div class="col-6 col-md-3 order-2 order-md-1">
+                                                    <div class="small">parking spot</div>
+                                                    <span class="badge badge-primary pk-spot-prefix">124</span>
+                                                </div>
+                                                <div class="col-6 col-md-3 order-3 order-md-2">
+                                                    <div class="small">status</div>
+                                                    <span class="badge badge-primary">spot in use</span>
+                                                </div>
+                                                <div class="col-12 col-md-5 mb-3 mb-md-0 order-1 order-md-3">
+                                                    <div>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="pr-profile">
+                                                                <img src="assets/images/profile-1.jpg" alt="user name">
+                                                            </div>
+                                                            <span class="ml-2">
+                                                                <div class="small">user</div>
+                                                                <div class="pr-user-name">Milan Milanovic</div>
+                                                                <div class="pr-user-licence-plates mb-1">BG1024GX, BG944AX
+                                                                </div>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- BLOCK -->
+                                            <div class="pr-block-menu fas fa-ellipsis-v">
+                                                <div class="menu-items">
+                                                    <div class="pointer"></div>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item"
+                                                                data-toggle="modal" data-target="#viewReport"
+                                                                aria-disabled="true">View Report</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)" class="menu-item">Export Report
+                                                                as
+                                                                PDF</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <!-- BLOCK -->
-                                    <div class="pr-block-menu fas fa-ellipsis-v">
-                                        <div class="menu-items">
-                                            <div class="pointer"></div>
-                                            <ul>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal"
-                                                        data-target="#viewReport" aria-disabled="true">View Report</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="menu-item">Export Report
-                                                        as
-                                                        PDF</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
 

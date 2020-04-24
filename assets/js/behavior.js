@@ -64,12 +64,12 @@ $(function () {
         var input = $('.spot-name-input');
         console.log(input);
         var spotName = $(this).parents('.js_parent').find(input);
-        if(spotName.val() === ''){
+        if (spotName.val() === '') {
             $(this).parents('.row').find('.error-msg').css('visibility', 'visible');
             spotName.addClass('error');
             spotName.val('').focus();
         }
-        else{
+        else {
             $(this).parents('.js_parent').find('.error-msg').css('visibility', 'hidden');
             var pSpot = '<tr><td>' + spotName.val() + '</td><td><select><option selected>Rotating</option><option>Permanent</option></select></td><td><span class="badge badge-warning cursor-pointer  js_removeEntry">remove</span></td></tr>';
             $('.pr-default-table tbody').append(pSpot);
@@ -110,22 +110,6 @@ $(function () {
             $('#auto').hide();
         }
     });
-
-    //TOGGLE MODE BLOCK
-    // $('#campaign-state').click(function(){
-    //     if($(this).prop('checked') == true){
-    //         console.log('checked');
-    //         $('#mode-block').show();
-    //         $('#text-on').show();
-    //         $('#text-off').hide();
-    //     }
-    //     else {
-    //         console.log('unchecked');
-    //         $('#mode-block').hide();
-    //         $('#text-on').hide();
-    //         $('#text-off').show();
-    //     }
-    // });
 
     //LOCATION SELECT
     $('select[name="pkLocation"]').change(function () {
@@ -170,12 +154,39 @@ $(function () {
 
     //REPORT TOGGLE RESERVED STATUS
     $('.spot-history').hide();
-        $('.js_history').on('click', function () {
-            $(this).find('.spot-history').slideToggle(200);
-            // $(this).toggleClass('fa-chev');
-            $(this).find('.js_toggleButton').toggleClass('fa-chevron-up');
-        });
+    $('.js_history').on('click', function () {
+        $(this).find('.spot-history').slideToggle(200);
+        // $(this).toggleClass('fa-chev');
+        $(this).find('.js_toggleButton').toggleClass('fa-chevron-up');
+    });
 
+    //FILTER USERS
+    $('#filter-users').keyup(function () {
+        var input = $(this);
+        var filter = $(this).val(),
+            count = 0;
+        var user = $(this).parents('.pk-user-list').find('.unnasigned-user-data');
+        var block = $(this).parents('.pk-user-list').find('.pr-block');
+        $(user).each(function () {
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).closest(block).hide();
+            } else {
+                $(this).closest(block).show();
+                count++;
+            }
+            $('.input-icon').on('click', function () {
+                if ($(this).hasClass('fa-times')) {
+                    input.val('');
+                    input.focus();
+                    $(this).removeClass('fa-times');
+                    block.show();
+                    $('.results-message').hide()
+                }
+            });
+        });
+        (filter.length > 0) ? $('.input-icon').addClass('fa-times') : $('.input-icon').removeClass('fa-times');
+        (count > 0) ? $('.results-message').hide() : $('.results-message').show();
+    });
 });
 
 $('.parking-sceheme-img').zoom()
