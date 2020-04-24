@@ -8,6 +8,22 @@
   background: #0000b4;
 }
 
+.badge.badge-secondary {
+  background: #272724;
+}
+
+.badge.badge-warning {
+  background: #ffc107;
+}
+
+.badge.badge-success {
+  background: #1f9c26;
+}
+
+.badge.badge-danger {
+  background: #d8483e;
+}
+
 .modal-content {
   background: transparent;
   border: none;

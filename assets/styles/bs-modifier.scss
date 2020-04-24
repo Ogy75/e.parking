@@ -8,6 +8,18 @@
   &.badge-primary {
     background: $primary;
   }
+  &.badge-secondary {
+    background: $secondary;
+  }
+  &.badge-warning {
+    background: $warning;
+  }
+  &.badge-success {
+    background: $success;
+  }
+  &.badge-danger {
+    background: $danger;
+  }
 }
 //MODAL
 .modal-content {
