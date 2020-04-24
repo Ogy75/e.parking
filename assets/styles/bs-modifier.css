@@ -46,6 +46,46 @@
   font-size: 24px;
 }
 
+.modal-content .form-title {
+  font-size: 16px;
+}
+
+.modal-content .parking-spot {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(39, 39, 36, 0.25);
+}
+
+.modal-content .parking-sceheme-img {
+  position: relative;
+  border: 1px solid rgba(39, 39, 36, 0.2);
+  overflow: hidden;
+}
+
+.modal-content .parking-sceheme-img img {
+  width: 100%;
+  height: auto;
+}
+
+.modal-content .user-img {
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.modal-content .user-img img {
+  width: 64px;
+  height: auto;
+}
+
+.modal-content .welcome-msg {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  width: 100%;
+}
+
 .btn {
   font-size: 14px;
   line-height: 14px;

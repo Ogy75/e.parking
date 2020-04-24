@@ -70,7 +70,7 @@ $(function () {
             spotName.val('').focus();
         }
         else{
-            $(this).parents('.row').find('.error-msg').css('visibility', 'hidden');
+            $(this).parents('.js_parent').find('.error-msg').css('visibility', 'hidden');
             var pSpot = '<tr><td>' + spotName.val() + '</td><td><select><option selected>Rotating</option><option>Permanent</option></select></td><td><span class="badge badge-warning cursor-pointer  js_removeEntry">remove</span></td></tr>';
             $('.pr-default-table tbody').append(pSpot);
             spotName.removeClass('error');
