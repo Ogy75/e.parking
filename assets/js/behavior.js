@@ -125,7 +125,7 @@ $(function () {
 
     //LOCATION SELECT
     $('select[name="pkLocation"]').change(function () {
-        var value = $(this).find("option:selected").attr("value");
+        var value = $(this).find('option:selected').attr('value');
 
         switch (value) {
             case "2":
@@ -147,6 +147,29 @@ $(function () {
             default:
                 $('#bg-gtc-open').show();
                 $('#bg-gtc-open').siblings().hide()
+                break;
+        }
+    });
+
+    //UNNASIGNED USERS FILTER
+    $('select[name="unassignedStatus"]').change(function () {
+        var value = $(this).find('option:selected').attr('value');
+
+        switch (value) {
+            case "2":
+                $('.unassigned-user-list').find('.badge-success').parents('.pr-block').show();
+                $('.unassigned-user-list').find('.badge-warning, .badge-danger').parents('.pr-block').hide();
+                break;
+            case "3":
+                $('.unassigned-user-list').find('.badge-warning').parents('.pr-block').show();
+                $('.unassigned-user-list').find('.badge-success, .badge-danger').parents('.pr-block').hide();
+                break;
+            case "4":
+                $('.unassigned-user-list').find('.badge-danger').parents('.pr-block').show();
+                $('.unassigned-user-list').find('.badge-warning, .badge-success').parents('.pr-block').hide();
+                break;
+            default:
+                $('.unassigned-user-list').find('.pr-block').show();
                 break;
         }
     });
