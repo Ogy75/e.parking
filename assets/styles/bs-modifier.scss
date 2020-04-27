@@ -44,7 +44,9 @@
     }
   }
   .modal-title {
-    font-size: 22px;
+    font-size: 20px;
+    letter-spacing: -.2px;
+    padding-right: 10%;
     line-height: 28px;
     font-weight: 400;
     color: black;
@@ -79,13 +81,37 @@
 
     }
 }
-.welcome-msg{
-    display: inline-block;
-    font-size: 18px;
-    line-height: 22px;
-    color:white;
-    width:100%
-}
+  .welcome-msg{
+      display: inline-block;
+      font-size: 18px;
+      line-height: 22px;
+      color:white;
+      width:100%
+  }
+  .pr-profile {
+    display: block;
+    width: 96px;
+    height: 96px;
+    background: #ccc;
+    border-radius: 50%;
+    float: right;
+    overflow: hidden;
+    img {
+      width: 96px;
+      height: auto;
+    }
+  }
+  .pr-user-name{
+    color: white;
+    font-weight:500;
+    font-size: 16px;
+  }
+  .pr-user-licence-plates{
+    color: white;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+  }
 }
 //BUTTON
 .btn {

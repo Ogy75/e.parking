@@ -151,7 +151,7 @@
   padding: 70px 24px 50px 24px;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 991.98px) {
   .pr-wrapper-right .pr-container-content .unassigned-user-list {
     display: block;
     max-height: 400px;

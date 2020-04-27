@@ -17,7 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-        <script src="assets/vendor/zoom-master/jquery.zoom.min.js"></script>
+    <script src="assets/vendor/zoom-master/jquery.zoom.min.js"></script>
 </head>
 
 <body>
@@ -35,7 +35,7 @@
     <!-- ADD LOCATION START -->
     <div class="modal fade" id="addLocation" data-backdrop="static" tabindex="-1" role="dialog"
         aria-labelledby="addLocation" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-dialog  modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header border-0">
                     <div class="modal-title">Add New Location</div>
@@ -65,28 +65,29 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="table-scroll">
-                            <table class="pr-default-table mb-3">
-                                <thead>
-                                    <tr>
-                                        <th>Parking Spot</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
-                        </div>
+                                <table class="pr-default-table mb-3">
+                                    <thead>
+                                        <tr>
+                                            <th>Parking Spot</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
                             <div class="row">
                                 <div class="col-12 col-lg-6 mb-4">
                                     <div class="d-flex justify-content-between align-items-end js_parent">
                                         <span class="w-100">
-                                        <label for="addSpot">Add New Parking Spot</label>
-                                        <input class="spot-name-input" type="text" name="addSpot" />
-                                    </span>
-                                    <span>
-                                        <button class="btn btn-primary btn-square fas fa-plus ml-2 js_addSpot"></button>
-                                    </span>
+                                            <label for="addSpot">Add New Parking Spot</label>
+                                            <input class="spot-name-input" type="text" name="addSpot" />
+                                        </span>
+                                        <span>
+                                            <button
+                                                class="btn btn-primary btn-square fas fa-plus ml-2 js_addSpot"></button>
+                                        </span>
                                     </div>
                                     <div class="error-msg">Required field!</div>
                                 </div>
@@ -99,19 +100,20 @@
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="customFile">
                                 <label class="custom-file-label" for="customFile">Choose file</label>
-                                <small class="d-block">Supported file types: jpg, jpeg or png. Max. file size: 3Mb.</small>
+                                <small class="d-block">Supported file types: jpg, jpeg or png. Max. file size:
+                                    3Mb.</small>
                                 <div class="error-msg" style="visibility: visible;">File is more than 3Mb in size!</div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 mb-5">
+                        <div class="col-12">
                             <div class="parking-sceheme-img">
                                 <!-- <img src="assets/images/BGopenparking.jpg" alt="parking scheme" /> -->
                             </div>
                         </div>
                     </div>
-                    <div class="mb-4">
+                    <div class="mt-5 mb-3">
                         <button class="btn btn-primary mr-3">Save</button>
                         <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancel</button>
                     </div>
@@ -124,7 +126,7 @@
     <!-- EDIT LOCATION START -->
     <div class="modal fade" id="editLocation" data-backdrop="static" tabindex="-1" role="dialog"
         aria-labelledby="editLocation" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-dialog  modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header border-0">
                     <div class="modal-title">Edit Location</div>
@@ -153,98 +155,104 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="table-scroll">
-                            <table class="pr-default-table mb-3">
-                                <thead>
-                                    <tr>
-                                        <th>Parking Spot</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <span class="badge badge-primary">Level 2 - 213</span>
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option selected>Rotating</option>
-                                                <option selected>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning cursor-pointer js_removeEntry">remove</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="badge badge-primary">Level 2 - 214</span>
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option selected>Rotating</option>
-                                                <option>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning cursor-pointer js_removeEntry">remove</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="badge badge-primary">Level 2 - 215</span>
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option>Rotating</option>
-                                                <option selected>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning cursor-pointer js_removeEntry">remove</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="badge badge-primary">Level 2 - 216</span>
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option selected>Rotating</option>
-                                                <option>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning cursor-pointer js_removeEntry">remove</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="badge badge-primary">Level 2 - 217</span>
-                                        </td>
-                                        <td>
-                                            <select>
-                                                <option selected>Rotating</option>
-                                                <option>Permanent</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <span class="badge badge-warning cursor-pointer js_removeEntry">remove</span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                                <table class="pr-default-table mb-3">
+                                    <thead>
+                                        <tr>
+                                            <th>Parking Spot</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="badge badge-primary">Level 2 - 213</span>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option selected>Rotating</option>
+                                                    <option selected>Permanent</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="badge badge-warning cursor-pointer js_removeEntry">remove</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="badge badge-primary">Level 2 - 214</span>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option selected>Rotating</option>
+                                                    <option>Permanent</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="badge badge-warning cursor-pointer js_removeEntry">remove</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="badge badge-primary">Level 2 - 215</span>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option>Rotating</option>
+                                                    <option selected>Permanent</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="badge badge-warning cursor-pointer js_removeEntry">remove</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="badge badge-primary">Level 2 - 216</span>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option selected>Rotating</option>
+                                                    <option>Permanent</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="badge badge-warning cursor-pointer js_removeEntry">remove</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="badge badge-primary">Level 2 - 217</span>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option selected>Rotating</option>
+                                                    <option>Permanent</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <span
+                                                    class="badge badge-warning cursor-pointer js_removeEntry">remove</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                             <div class="row">
                                 <div class="col-12 col-lg-6 mb-4">
                                     <div class="d-flex justify-content-between align-items-end js_parent">
                                         <span class="w-100">
-                                        <label for="addSpot">Add New Parking Spot</label>
-                                        <input class="spot-name-input" type="text" name="addSpot" />
-                                    </span>
-                                    <span>
-                                        <button class="btn btn-primary btn-square fas fa-plus ml-2 js_addSpot"></button>
-                                    </span>
+                                            <label for="addSpot">Add New Parking Spot</label>
+                                            <input class="spot-name-input" type="text" name="addSpot" />
+                                        </span>
+                                        <span>
+                                            <button
+                                                class="btn btn-primary btn-square fas fa-plus ml-2 js_addSpot"></button>
+                                        </span>
                                     </div>
                                     <div class="error-msg">Required field!</div>
                                 </div>
@@ -257,19 +265,20 @@
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="customFile">
                                 <label class="custom-file-label" for="customFile">Choose file</label>
-                                <small class="d-block">Supported file types: jpg, jpeg or png. Max. file size: 3Mb.</small>
+                                <small class="d-block">Supported file types: jpg, jpeg or png. Max. file size:
+                                    3Mb.</small>
                                 <div class="error-msg" style="visibility: visible;">File type is not supported!</div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 mb-5">
+                        <div class="col-12">
                             <div class="parking-sceheme-img">
                                 <img src="assets/images/BGopenparking.jpg" alt="parking scheme" />
                             </div>
                         </div>
                     </div>
-                    <div class="mb-4">
+                    <div class="mt-5 mb-3">
                         <button class="btn btn-primary mr-3">Save</button>
                         <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancel</button>
                     </div>
@@ -282,7 +291,7 @@
     <!-- SHOW MAP START -->
     <div class="modal fade" id="locationLayout" tabindex="-1" role="dialog" aria-labelledby="locationLayout"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-dialog  modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header border-0">
                     <div class="modal-title">{ location name } Layout</div>
@@ -317,9 +326,11 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <p class="mb-4">This action can not be undone!</p>
-                    <button class="btn btn-danger mr-3">Delete</button>
-                    <button class="btn btn-primary" data-dismiss="modal" aria-label="Close">Cancel</button>
+                    <p>This action can not be undone!</p>
+                    <div class="my-3">
+                        <button class="btn btn-danger mr-3">Delete</button>
+                        <button class="btn btn-primary" data-dismiss="modal" aria-label="Close">Cancel</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -329,7 +340,7 @@
     <!-- USER PROFILE START -->
     <div class="modal fade" id="userProfile" data-backdrop="static" tabindex="-1" role="dialog"
         aria-labelledby="userProfile" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-dialog  modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header py-5 px-4 p-sm-5">
                     <div class="d-flex justify-content-start align-items-center">

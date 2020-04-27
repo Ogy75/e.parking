@@ -129,7 +129,7 @@
   transition: $default-transition;
   .pr-container-content {
     padding: 70px 24px 50px 24px;
-    @media (max-width: $screen-xl) {
+    @media (max-width: $screen-md) {
       .unassigned-user-list{
         display: block;
         max-height:400px;

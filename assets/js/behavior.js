@@ -158,12 +158,6 @@ $(function () {
         $(this).find('i').toggleClass('fa-times');
     });
 
-    //SPOT TYPE SWITCH
-    $('.parking-type').on('click', function () {
-        $(this).addClass('active');
-        $(this).siblings().removeClass('active');
-    });
-
     //REPORT TOGGLE RESERVED STATUS
     $('.spot-history').hide();
     $('.js_history').on('click', function () {
@@ -199,6 +193,26 @@ $(function () {
         (filter.length > 0) ? $('.input-icon').addClass('fa-times') : $('.input-icon').removeClass('fa-times');
         (count > 0) ? $('.results-message').hide() : $('.results-message').show();
     });
+    //TOGLE DISABLED (DEACTIVATE USER PERMANENTLY)
+    $('#permanent-deactivate-user').click(function () {
+        if ($(this).prop('checked') == true) {
+            $(this).parents('.modal-body').find('input[type=datetime]').prop('disabled', true);
+        }
+        else {
+            $(this).parents('.modal-body').find('input[type=datetime]').prop('disabled', false);
+        }
+    });
+
+    //PARKING TYPE TAB
+    $('.panel-tabs a').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('.panel-tabs a').removeClass('active');
+		$('.tab-content').hide();
+
+		$(this).addClass('active');
+		$("#"+tab_id).show();
+	})
 });
 
 $('.parking-sceheme-img').zoom()

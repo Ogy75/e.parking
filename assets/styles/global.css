@@ -178,6 +178,7 @@ a.parking-type {
   transition: all 0.15s linear;
   text-align: center;
   min-width: 100px;
+  z-index: 100;
 }
 
 a.parking-type.active {

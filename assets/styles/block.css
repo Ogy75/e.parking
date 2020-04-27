@@ -69,6 +69,7 @@
   color: rgba(39, 39, 36, 0.5);
   font-size: 12px;
   line-height: 12px;
+  text-transform: uppercase;
 }
 
 .pr-block .pr-block-content .pr-profile {

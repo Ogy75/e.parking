@@ -7,7 +7,8 @@ label {
 
 input[type="text"],
 input[type="password"],
-input[type="email"] {
+input[type="email"],
+input[type="datetime"] {
   display: block;
   width: 100%;
   font-size: 14px;
@@ -20,19 +21,22 @@ input[type="email"] {
 
 input[type="text"]:focus,
 input[type="password"]:focus,
-input[type="email"]:focus {
+input[type="email"]:focus,
+input[type="datetime"]:focus {
   border: 1px solid #272724;
 }
 
 input[type="text"]:disabled,
 input[type="password"]:disabled,
-input[type="email"]:disabled {
+input[type="email"]:disabled,
+input[type="datetime"]:disabled {
   background: rgba(39, 39, 36, 0.1);
 }
 
 input[type="text"].error,
 input[type="password"].error,
-input[type="email"].error {
+input[type="email"].error,
+input[type="datetime"].error {
   border: 1px solid #d8483e;
 }
 

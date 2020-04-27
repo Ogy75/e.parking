@@ -152,6 +152,7 @@ a.parking-type {
   transition: $default-transition;
   text-align: center;
   min-width: 100px;
+  z-index: 100;
   &.active {
     color: $black;
     border-bottom: 3px solid $black;
