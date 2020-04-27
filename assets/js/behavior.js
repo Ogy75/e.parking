@@ -14,35 +14,47 @@ $(function () {
     });
 
     //TOP BAR SCROLL
-    var didScroll;
-    var lastScrollTop = 0;
-    var delta = 5;
-    var navbarHeight = $('.pr-top-bar').outerHeight();
-
-    $(window).scroll(function (event) {
-        didScroll = true;
-    });
-    setInterval(function () {
-        if (didScroll) {
-            hasScrolled();
-            didScroll = false;
-        }
-    }, 100);
-    function hasScrolled() {
-        var st = $(this).scrollTop();
-        if (Math.abs(lastScrollTop - st) <= delta)
-            return;
-        if (st > lastScrollTop && st > navbarHeight) {
-            $('.pr-nav-button').removeClass('nav-down').addClass('nav-up');
-            $('.pr-top-bar').removeClass('nav-down').addClass('nav-up');
+    $(window).scroll(function () {
+        var height = $(window).scrollTop();
+        var scrolled = $('.pr-top-bar, .pr-nav-button')
+        if (height > 80) {
+            scrolled.removeClass('nav-down');
+            scrolled.addClass('nav-up');
         } else {
-            if (st + $(window).height() < $(document).height()) {
-                $('.pr-nav-button').removeClass('nav-up').addClass('nav-down');
-                $('.pr-top-bar').removeClass('nav-up').addClass('nav-down');
-            }
+            scrolled.add('nav-down');
+            scrolled.removeClass('nav-up');
         }
-        lastScrollTop = st;
-    }
+    });
+
+    // var didScroll;
+    // var lastScrollTop = 0;
+    // var delta = 5;
+    // var navbarHeight = $('.pr-top-bar').outerHeight();
+
+    // $(window).scroll(function (event) {
+    //     didScroll = true;
+    // });
+    // setInterval(function () {
+    //     if (didScroll) {
+    //         hasScrolled();
+    //         didScroll = false;
+    //     }
+    // }, 100);
+    // function hasScrolled() {
+    //     var st = $(this).scrollTop();
+    //     if (Math.abs(lastScrollTop - st) <= delta)
+    //         return;
+    //     if (st > lastScrollTop && st > navbarHeight) {
+    //         $('.pr-nav-button').removeClass('nav-down').addClass('nav-up');
+    //         $('.pr-top-bar').removeClass('nav-down').addClass('nav-up');
+    //     } else {
+    //         if (st + $(window).height() < $(document).height()) {
+    //             $('.pr-nav-button').removeClass('nav-up').addClass('nav-down');
+    //             $('.pr-top-bar').removeClass('nav-up').addClass('nav-down');
+    //         }
+    //     }
+    //     lastScrollTop = st;
+    // }
 
     //BLOCK MENU
     $('.pr-block-menu').on('click', function () {
@@ -71,7 +83,7 @@ $(function () {
         }
         else {
             $(this).parents('.js_parent').find('.error-msg').css('visibility', 'hidden');
-            var pSpot = '<tr><td>' + spotName.val() + '</td><td><select><option selected>Rotating</option><option>Permanent</option></select></td><td><span class="badge badge-warning cursor-pointer  js_removeEntry">remove</span></td></tr>';
+            var pSpot = '<tr><td><span class="badge badge-primary pk-spot-prefix">' + spotName.val() + '</span></td><td><select><option selected>Rotating</option><option>Permanent</option></select></td><td><span class="badge badge-warning cursor-pointer  js_removeEntry">remove</span></td></tr>';
             $('.pr-default-table tbody').append(pSpot);
             spotName.removeClass('error');
             spotName.val('').focus();
