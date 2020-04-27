@@ -21,7 +21,7 @@ $(function () {
             scrolled.removeClass('nav-down');
             scrolled.addClass('nav-up');
         } else {
-            scrolled.add('nav-down');
+            scrolled.addClass('nav-down');
             scrolled.removeClass('nav-up');
         }
     });
