@@ -392,6 +392,350 @@
     </div>
     <!-- ASSIGN SPOT TO USER END -->
 
+    <!-- SPOT HISTORY START -->
+    <div class="modal fade" id="spotHistory" tabindex="-1" role="dialog" aria-labelledby="spotHistory" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="modal-title">Parking Spot History</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="fas fa-times-circle"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <span class="badge badge-primary">BG Open space</span>
+                            <span class="badge badge-primary ml-1">123</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <label>select period</label>
+                                <select>
+                                    <option selected>2021</option>
+                                    <option>2020</option>
+                                </select>
+                                <select class="ml-2">
+                                    <option>past month</option>
+                                    <option selected>past 3 months</option>
+                                    <option>past 6 months</option>
+                                    <option>all</option>
+
+                                </select>
+                            </div>
+                            <div class="text-right">
+                                <a href="javascript:void(0)" class="badge badge-secondary p-2" id="view-location"><i class="fas fa-map-marker-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="parking-sceheme-img mb-3" style="display: none;">
+                                <img src="assets/images/BGopenparking.jpg" alt="parking scheme">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+
+                            <div class="table-scroll">
+                                <div>
+                                    <table class="pr-default-table mb-2">
+                                        <thead>
+                                            <tr>
+                                                <th>parking period</th>
+                                                <th>user</th>
+                                                <th>status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    22.06. - 26.06.
+                                                </td>
+                                                <td>
+                                                    <div>Milan Mirkovic</div>
+                                                    <div class="small">BG1024GX, BG911AU</div>
+
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-primary">spot in use</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    15.06. - 19.06.
+                                                </td>
+                                                <td>
+                                                    <div>Dejan Blagojevic</div>
+                                                    <div class="small">BG1223TU</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-success">confirmed</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    11.06. - 12.06.
+                                                </td>
+                                                <td>
+                                                    <div>Ljubomir Karaklajic</div>
+                                                    <div class="small">BG1122ER, BG3344AS</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-success">confirmed</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    10.06.
+                                                </td>
+                                                <td>
+                                                    <div>Bojan Kisic</div>
+                                                    <div class="small">B8877HG</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-secondary">canceled</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    08.06. - 12.06.
+                                                </td>
+                                                <td>
+                                                    <div>Bojan Kisic</div>
+                                                    <div class="small">B8877HG</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-success">confirmed</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    08.06. - 12.06.
+                                                </td>
+                                                <td>
+                                                    <div>Milica Ruzic</div>
+                                                    <div class="small">BG677TY</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-success">confirmed</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    04.06. - 05.06.
+                                                </td>
+                                                <td>
+                                                    <div>Danijela Vlasic</div>
+                                                    <div class="small">BG9971BH</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-success">confirmed</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    01.06. - 03.06.
+                                                </td>
+                                                <td>
+                                                    <div>Bogdan Perisic</div>
+                                                    <div class="small">KG887SD</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-primary">guest</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    28.05. - 29.05
+                                                </td>
+                                                <td>
+                                                    <div>N/A</div>
+                                                    <div class="small">N/A</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-danger">free</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    27.05.
+                                                </td>
+                                                <td>
+                                                    <div>Milorad Zeljic</div>
+                                                    <div class="small">BG1112ER</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-secondary">canceled</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    25.05. - 29.05.
+                                                </td>
+                                                <td>
+                                                    <div>Milorad Zeljic</div>
+                                                    <div class="small">BG1112ER</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-success">confirmed</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    18.05. - 22.05.
+                                                </td>
+                                                <td>
+                                                    <div>Dejan Bodrozic</div>
+                                                    <div class="small">BG233ER, BG9788JH</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-success">confirmed</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    11.05. - 15.05.
+                                                </td>
+                                                <td>
+                                                    <div>Zorana Zoric</div>
+                                                    <div class="small">BG3583RE</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-success">confirmed</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    04.05. - 08.05.
+                                                </td>
+                                                <td>
+                                                    <div>Goran Mitrovic</div>
+                                                    <div class="small">BG9855FF</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-success">confirmed</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    01.05.
+                                                </td>
+                                                <td>
+                                                    <div>N/A</div>
+                                                    <div class="small">N/A</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-danger">public holiday</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    27.04. - 30.04.
+                                                </td>
+                                                <td>
+                                                    <div>Luka Bokovic</div>
+                                                    <div class="small">BG7665VB</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-success">assigned</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    20.04. - 24.04.
+                                                </td>
+                                                <td>
+                                                    <div>Mirjana Lalic</div>
+                                                    <div class="small">BG7655DF</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-success">assigned</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    13.04. - 17.04.
+                                                </td>
+                                                <td>
+                                                    <div>Nenad Peric</div>
+                                                    <div class="small">BG5543JL</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-success">assigned</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    06.04. - 10.04.
+                                                </td>
+                                                <td>
+                                                    <div>Predrag Tomic</div>
+                                                    <div class="small">BG1877GH, BG1944OP</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-success">assigned</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    30.03. - 03.04.
+                                                </td>
+                                                <td>
+                                                    <div>Milan Borkovic</div>
+                                                    <div class="small">BG1755ER</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-success">assigned</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="mt-5 mb-3">
+                        <button class="btn btn-primary mr-3">Export as PDF</button>
+                        <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SPOT HISTORY END -->
+
+        <!-- SHOW MAP START -->
+        <div class="modal fade" id="locationLayout" tabindex="-1" role="dialog" aria-labelledby="locationLayout"
+        aria-hidden="true">
+        <div class="modal-dialog  modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="modal-title">{ location name } Layout</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="fas fa-times-circle"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 mb-5">
+                            <div class="parking-sceheme-img">
+                                <img src="assets/images/BGopenparking.jpg" alt="parking scheme" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SHOW MAP END -->
+
     <!------------------ MODALS END ------------------>
 
 
@@ -498,7 +842,7 @@
                                     <div class="mb-2 mb-sm-3">
                                         <div class="position-relative">
                                             <input type="text" id="filter-users"
-                                                placeholder="Find user / user status / licence plate no." value="" />
+                                                placeholder="Find user or licence plate no." value="" />
                                             <span class="input-icon fas fa-search"></span>
                                         </div>
                                     </div>
@@ -854,7 +1198,7 @@
                             <div class="row">
                                 <!-- CAMPAIGN HISTORY HEADER -->
                                 <div class="col-12 pr-block mt-4 mt-lg-0 mb-2 mb-lg-3">
-                                    <div class="pr-block-content py-3">
+                                    <div class="pr-block-content p-3">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div>
                                                 <span class="badge badge-danger mr-1">1 free</span>
@@ -870,7 +1214,7 @@
                                         </div>
 
                                         <!-- BLOCK -->
-                                        <div class="pr-block-menu fas fa-ellipsis-v">
+                                        <!-- <div class="pr-block-menu fas fa-ellipsis-v">
                                             <div class="menu-items">
                                                 <div class="pointer"></div>
                                                 <ul>
@@ -881,7 +1225,7 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
 
@@ -890,11 +1234,11 @@
 
                                         <!-- CAMPAIGN HISTORY ENTRY -->
                                         <div class="pr-block mb-2">
-                                            <div class="pr-block-content py-3">
+                                            <div class="pr-block-content p-3">
                                                 <div class="row align-items-start align-items-md-center">
                                                     <div class="col-6 col-md-3 order-2 order-md-1">
                                                         <div class="small">parking spot</div>
-                                                        <span class="badge badge-primary">123</span>
+                                                        <span class="badge badge-primary cursor-pointer" data-toggle="modal" data-target="#locationLayout">123</span>
                                                     </div>
                                                     <div class="col-6 col-md-3 order-3 order-md-2">
                                                         <div class="small">status</div>
@@ -909,9 +1253,9 @@
                                                                 </div>
                                                                 <span class="ml-2">
                                                                     <div class="small">user</div>
-                                                                    <div class="pr-user-name">Milan Milanovic</div>
-                                                                    <div class="pr-user-licence-plates mb-1">BG1024GX,
-                                                                        BG944AX
+                                                                    <div class="pr-user-name">Bogdan Peric</div>
+                                                                    <div class="pr-user-licence-plates mb-1">BG7656KL,
+                                                                        BG4533OI
                                                                     </div>
                                                                 </span>
                                                             </div>
@@ -925,14 +1269,8 @@
                                                         <ul>
                                                             <li>
                                                                 <a href="javascript:void(0)" class="menu-item"
-                                                                    data-toggle="modal" data-target="#userHistory"
-                                                                    aria-disabled="true">User History</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="javascript:void(0)" class="menu-item">Export
-                                                                    Report
-                                                                    as
-                                                                    PDF</a>
+                                                                    data-toggle="modal" data-target="#spotHistory"
+                                                                    aria-disabled="true">Parking Spot History</a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -946,7 +1284,7 @@
                                                 <div class="row align-items-start align-items-md-center">
                                                     <div class="col-6 col-md-3 order-2 order-md-1">
                                                         <div class="small">parking spot</div>
-                                                        <span class="badge badge-primary">124</span>
+                                                        <span class="badge badge-primary cursor-pointer" data-toggle="modal" data-target="#locationLayout">124</span>
                                                     </div>
                                                     <div class="col-6 col-md-3 order-3 order-md-2">
                                                         <div class="small">status</div>
@@ -974,14 +1312,8 @@
                                                         <ul>
                                                             <li>
                                                                 <a href="javascript:void(0)" class="menu-item"
-                                                                    data-toggle="modal" data-target="#userHistory"
-                                                                    aria-disabled="true">User History</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="javascript:void(0)" class="menu-item">Export
-                                                                    Report
-                                                                    as
-                                                                    PDF</a>
+                                                                    data-toggle="modal" data-target="#spotHistory"
+                                                                    aria-disabled="true">Parking Spot History</a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -995,7 +1327,7 @@
                                                 <div class="row align-items-start align-items-md-center">
                                                     <div class="col-6 col-md-3 order-2 order-md-1">
                                                         <div class="small">parking spot</div>
-                                                        <span class="badge badge-primary">124</span>
+                                                        <span class="badge badge-primary cursor-pointer" data-toggle="modal" data-target="#locationLayout">125</span>
                                                     </div>
                                                     <div class="col-6 col-md-3 order-3 order-md-2">
                                                         <div class="small">status</div>
@@ -1010,9 +1342,9 @@
                                                                 </div>
                                                                 <span class="ml-2">
                                                                     <div class="small">user</div>
-                                                                    <div class="pr-user-name">Milan Milanovic</div>
-                                                                    <div class="pr-user-licence-plates mb-1">BG1024GX,
-                                                                        BG944AX
+                                                                    <div class="pr-user-name">Vladimir Milanovic</div>
+                                                                    <div class="pr-user-licence-plates mb-1">BG102TU
+
                                                                     </div>
                                                                 </span>
                                                             </div>
@@ -1026,14 +1358,8 @@
                                                         <ul>
                                                             <li>
                                                                 <a href="javascript:void(0)" class="menu-item"
-                                                                    data-toggle="modal" data-target="#userHistory"
-                                                                    aria-disabled="true">User History</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="javascript:void(0)" class="menu-item">Export
-                                                                    Report
-                                                                    as
-                                                                    PDF</a>
+                                                                    data-toggle="modal" data-target="#spotHistory"
+                                                                    aria-disabled="true">Parking Spot History</a>
                                                             </li>
                                                         </ul>
                                                     </div>

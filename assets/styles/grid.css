@@ -152,19 +152,13 @@
 }
 
 @media (max-width: 991.98px) {
-  .pr-wrapper-right .pr-container-content .unassigned-user-list {
+  .pr-wrapper-right .pr-container-content .unassigned-user-list,
+  .pr-wrapper-right .pr-container-content .campaign-history-list {
     display: block;
     max-height: 400px;
     overflow-y: auto;
     overflow-x: hidden;
   }
-}
-
-.pr-wrapper-right .pr-container-content .campaign-history-list {
-  display: block;
-  min-height: calc(100vh - 308px);
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 @media (max-width: 1199.98px) {
