@@ -152,26 +152,30 @@ $(function () {
     });
 
     //UNNASIGNED USERS FILTER
-    $('select[name="unassignedStatus"]').change(function () {
-        var value = $(this).find('option:selected').attr('value');
+    $(function () {
+        $('.unassigned-user-list').find('.badge-success').parents('.pr-block').show();
+        $('.unassigned-user-list').find('.badge-warning, .badge-danger').parents('.pr-block').hide();
+        $('select[name="unassignedStatus"]').change(function () {
+            var value = $(this).find('option:selected').attr('value');
 
-        switch (value) {
-            case "2":
-                $('.unassigned-user-list').find('.badge-success').parents('.pr-block').show();
-                $('.unassigned-user-list').find('.badge-warning, .badge-danger').parents('.pr-block').hide();
-                break;
-            case "3":
-                $('.unassigned-user-list').find('.badge-warning').parents('.pr-block').show();
-                $('.unassigned-user-list').find('.badge-success, .badge-danger').parents('.pr-block').hide();
-                break;
-            case "4":
-                $('.unassigned-user-list').find('.badge-danger').parents('.pr-block').show();
-                $('.unassigned-user-list').find('.badge-warning, .badge-success').parents('.pr-block').hide();
-                break;
-            default:
-                $('.unassigned-user-list').find('.pr-block').show();
-                break;
-        }
+            switch (value) {
+                case "2":
+                    $('.unassigned-user-list').find('.pr-block').show();
+                    break;
+                case "3":
+                    $('.unassigned-user-list').find('.badge-warning').parents('.pr-block').show();
+                    $('.unassigned-user-list').find('.badge-success, .badge-danger').parents('.pr-block').hide();
+                    break;
+                case "4":
+                    $('.unassigned-user-list').find('.badge-danger').parents('.pr-block').show();
+                    $('.unassigned-user-list').find('.badge-warning, .badge-success').parents('.pr-block').hide();
+                    break;
+                default:
+                    $('.unassigned-user-list').find('.badge-success').parents('.pr-block').show();
+                    $('.unassigned-user-list').find('.badge-warning, .badge-danger').parents('.pr-block').hide();
+                    break;
+            }
+        });
     });
 
     //REPORT VIEW LOCATION
@@ -227,15 +231,15 @@ $(function () {
     });
 
     //PARKING TYPE TAB
-    $('.panel-tabs a').click(function(){
-		var tab_id = $(this).attr('data-tab');
+    $('.panel-tabs a').click(function () {
+        var tab_id = $(this).attr('data-tab');
 
-		$('.panel-tabs a').removeClass('active');
-		$('.tab-content').hide();
+        $('.panel-tabs a').removeClass('active');
+        $('.tab-content').hide();
 
-		$(this).addClass('active');
-		$("#"+tab_id).show();
-	})
+        $(this).addClass('active');
+        $("#" + tab_id).show();
+    })
 });
 
 $('.parking-sceheme-img').zoom()
