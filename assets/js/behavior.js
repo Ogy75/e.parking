@@ -123,6 +123,24 @@ $(function () {
         }
     });
 
+    //TOGGLE CAMPAIGN VIEW
+    $('#campaign-view-mode').click(function () {
+        if ($(this).prop('checked') == true) {
+            $('.current-list').hide();
+            $('.campaign-list').show();
+            $('#spots-header').find('span.title').text('Ongoing Campaign Status');
+            $('#free-spot-count').hide();
+            $('#unnasigned-active-count').text('3 active');
+        }
+        else {
+            $('.campaign-list').hide();
+            $('.current-list').show();
+            $('#spots-header').find('span.title').text('Parking Spots');
+            $('#free-spot-count').show();
+            $('#unnasigned-active-count').text('8 active');
+        }
+    });
+
     //LOCATION SELECT
     $('select[name="pkLocation"]').change(function () {
         var value = $(this).find('option:selected').attr('value');

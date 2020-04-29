@@ -177,7 +177,7 @@
                                                     01.06. - 5.06.
                                                 </td>
                                                 <td>
-                                                    <span class="badge badge-warning">uncomfirmed</span>
+                                                    <span class="badge badge-warning">unconfirmed</span>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -808,7 +808,7 @@
                                     <div class="pr-block-content p-3">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div>
-                                                <span class="badge badge-success mr-1">8 active</span>
+                                                <span class="badge badge-success mr-1" id="unnasigned-active-count">8 active</span>
                                                 <span class="title">Unnasigned Users</span>
                                             </div>
                                             <span>
@@ -847,7 +847,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="unassigned-user-list">
+                                    <div class="unassigned-user-list current-list">
                                         <!-- USER -->
                                         <div class="pr-block mb-2">
                                             <div class="pr-block-content py-3">
@@ -996,47 +996,6 @@
                                                                 <img src="assets/images/profile-1.jpg" alt="user name">
                                                             </div>
                                                             <span class="ml-2">
-                                                                <div class="pr-user-name">Jovan Deretic</div>
-                                                                <div class="pr-user-licence-plates mb-1">BG3451ER</div>
-                                                                <span class="badge badge-warning">inactive until
-                                                                    22.07.2021</span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!-- BLOCK -->
-                                                <div class="pr-block-menu fas fa-ellipsis-v">
-                                                    <div class="menu-items" style="display: none;">
-                                                        <div class="pointer"></div>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="javascript:void(0)" class="menu-item"
-                                                                    data-toggle="modal" data-target="#userHistory"
-                                                                    aria-disabled="false">User History</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="javascript:void(0)" class="menu-item"
-                                                                    data-toggle="modal" data-target="#activateUser"
-                                                                    aria-disabled="false">Activate User</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- USER -->
-                                        <div class="pr-block mb-2">
-                                            <div class="pr-block-content py-3">
-                                                <div
-                                                    class="d-flex justify-content-between align-items-center unnasigned-user-data">
-                                                    <div>
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="pr-profile">
-                                                                <img src="assets/images/profile-1.jpg" alt="user name">
-                                                            </div>
-                                                            <span class="ml-2">
                                                                 <div class="pr-user-name">Anita Celic</div>
                                                                 <div class="pr-user-licence-plates mb-1">BG7742NM
                                                                 </div>
@@ -1167,11 +1126,186 @@
                                                                 <img src="assets/images/profile-1.jpg" alt="user name">
                                                             </div>
                                                             <span class="ml-2">
+                                                                <div class="pr-user-name">Jovan Deretic</div>
+                                                                <div class="pr-user-licence-plates mb-1">BG3451ER</div>
+                                                                <span class="badge badge-warning">inactive until
+                                                                    22.07.2021</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- BLOCK -->
+                                                <div class="pr-block-menu fas fa-ellipsis-v">
+                                                    <div class="menu-items" style="display: none;">
+                                                        <div class="pointer"></div>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="javascript:void(0)" class="menu-item"
+                                                                    data-toggle="modal" data-target="#userHistory"
+                                                                    aria-disabled="false">User History</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0)" class="menu-item"
+                                                                    data-toggle="modal" data-target="#activateUser"
+                                                                    aria-disabled="false">Activate User</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- USER -->
+                                        <div class="pr-block mb-2">
+                                            <div class="pr-block-content py-3">
+                                                <div
+                                                    class="d-flex justify-content-between align-items-center unnasigned-user-data">
+                                                    <div>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="pr-profile">
+                                                                <img src="assets/images/profile-1.jpg" alt="user name">
+                                                            </div>
+                                                            <span class="ml-2">
                                                                 <div class="pr-user-name">Tihomir Lazic</div>
                                                                 <div class="pr-user-licence-plates mb-1">BG885PK
                                                                 </div>
                                                                 <span class="badge badge-danger">permanently
                                                                     inactive</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- BLOCK -->
+                                                <div class="pr-block-menu fas fa-ellipsis-v">
+                                                    <div class="menu-items" style="display: none;">
+                                                        <div class="pointer"></div>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="javascript:void(0)" class="menu-item"
+                                                                    data-toggle="modal" data-target="#userHistory"
+                                                                    aria-disabled="false">User History</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0)" class="menu-item"
+                                                                    data-toggle="modal" data-target="#activateUser"
+                                                                    aria-disabled="false">Activate User</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- NO RESULTS MSG -->
+                                        <div class="results-message text-center">
+                                            <div class="p-5">
+                                                <h5>No Results Match your Search Criteria</h5>
+                                                <p>Please modify your query</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="unassigned-user-list campaign-list" style="display: none;">
+                                        <!-- USER -->
+                                        <div class="pr-block mb-2">
+                                            <div class="pr-block-content py-3">
+                                                <div
+                                                    class="d-flex justify-content-between align-items-center unnasigned-user-data">
+                                                    <div>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="pr-profile">
+                                                                <img src="assets/images/profile-1.jpg" alt="user name">
+                                                            </div>
+                                                            <span class="ml-2">
+                                                                <div class="pr-user-name">Svetislav Ilic</div>
+                                                                <div class="pr-user-licence-plates mb-1">BG7775MN</div>
+                                                                <span class="badge badge-success">active</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- BLOCK -->
+                                                <div class="pr-block-menu fas fa-ellipsis-v">
+                                                    <div class="menu-items" style="display: none;">
+                                                        <div class="pointer"></div>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="javascript:void(0)" class="menu-item"
+                                                                    data-toggle="modal" data-target="#assignSpot"
+                                                                    aria-disabled="true">Assign Parking Spot</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0)" class="menu-item"
+                                                                    data-toggle="modal" data-target="#userHistory"
+                                                                    aria-disabled="false">User History</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0)" class="menu-item"
+                                                                    data-toggle="modal" data-target="#deactivateUser"
+                                                                    aria-disabled="false">Deactivate User</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- USER -->
+                                        <div class="pr-block mb-2">
+                                            <div class="pr-block-content py-3">
+                                                <div
+                                                    class="d-flex justify-content-between align-items-center unnasigned-user-data">
+                                                    <div>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="pr-profile">
+                                                                <img src="assets/images/profile-1.jpg" alt="user name">
+                                                            </div>
+                                                            <span class="ml-2">
+                                                                <div class="pr-user-name">Nemanja Dukic</div>
+                                                                <div class="pr-user-licence-plates mb-1">BG2332PO</div>
+                                                                <span class="badge badge-success">active</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- BLOCK -->
+                                                <div class="pr-block-menu fas fa-ellipsis-v">
+                                                    <div class="menu-items" style="display: none;">
+                                                        <div class="pointer"></div>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="javascript:void(0)" class="menu-item"
+                                                                    data-toggle="modal" data-target="#userHistory"
+                                                                    aria-disabled="false">User History</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:void(0)" class="menu-item"
+                                                                    data-toggle="modal" data-target="#deactivateUser"
+                                                                    aria-disabled="false">Deactivate User</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- USER -->
+                                        <div class="pr-block mb-2">
+                                            <div class="pr-block-content py-3">
+                                                <div
+                                                    class="d-flex justify-content-between align-items-center unnasigned-user-data">
+                                                    <div>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="pr-profile">
+                                                                <img src="assets/images/profile-1.jpg" alt="user name">
+                                                            </div>
+                                                            <span class="ml-2">
+                                                                <div class="pr-user-name">Jelena Canic</div>
+                                                                <div class="pr-user-licence-plates mb-1">BG9822FG</div>
+                                                                <span class="badge badge-success">active</span>
                                                             </span>
                                                         </div>
                                                     </div>
@@ -1218,10 +1352,10 @@
                             <div class="row">
                                 <!-- CAMPAIGN HISTORY HEADER -->
                                 <div class="col-12 pr-block mt-4 mt-lg-0 mb-2 mb-lg-3">
-                                    <div class="pr-block-content p-3">
+                                    <div class="pr-block-content p-3" id="spots-header">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div>
-                                                <span class="badge badge-danger mr-1">1 free</span>
+                                                <span class="badge badge-danger mr-1" id="free-spot-count">1 free</span>
                                                 <span class="title">Parking Spots</span>
                                             </div>
                                             <select>
@@ -1250,7 +1384,7 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <div class="campaign-history-list">
+                                    <div class="campaign-history-list current-list">
 
                                         <!-- CAMPAIGN HISTORY ENTRY -->
                                         <div class="pr-block mb-2">
@@ -1388,6 +1522,103 @@
                                         </div>
 
                                     </div>
+
+                                    <div class="campaign-history-list campaign-list" style="display: none;">
+
+                                        <!-- CAMPAIGN HISTORY ENTRY -->
+                                        <div class="pr-block mb-2">
+                                            <div class="pr-block-content py-3">
+                                                <div class="row align-items-start align-items-md-center">
+                                                    <div class="col-6 col-md-3 order-2 order-md-1">
+                                                        <div class="small">parking spot</div>
+                                                        <span class="badge badge-primary cursor-pointer" data-toggle="modal" data-target="#locationLayout">123</span>
+                                                    </div>
+                                                    <div class="col-6 col-md-3 order-3 order-md-2">
+                                                        <div class="small">status</div>
+                                                        <span class="badge badge-warning">unconfirmed</span>
+                                                    </div>
+                                                    <div class="col-12 col-md-5 mb-3 mb-md-0 order-1 order-md-3">
+                                                        <div>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="pr-profile">
+                                                                    <img src="assets/images/profile-1.jpg"
+                                                                        alt="user name">
+                                                                </div>
+                                                                <span class="ml-2">
+                                                                    <div class="small">user</div>
+                                                                    <div class="pr-user-name">Lazar Dasic</div>
+                                                                    <div class="pr-user-licence-plates mb-1">BG4755ER
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- BLOCK -->
+                                                <div class="pr-block-menu fas fa-ellipsis-v">
+                                                    <div class="menu-items">
+                                                        <div class="pointer"></div>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="javascript:void(0)" class="menu-item"
+                                                                    data-toggle="modal" data-target="#spotHistory"
+                                                                    aria-disabled="true">Parking Spot History</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- CAMPAIGN HISTORY ENTRY -->
+                                        <div class="pr-block mb-2">
+                                            <div class="pr-block-content py-3">
+                                                <div class="row align-items-start align-items-md-center">
+                                                    <div class="col-6 col-md-3 order-2 order-md-1">
+                                                        <div class="small">parking spot</div>
+                                                        <span class="badge badge-primary cursor-pointer" data-toggle="modal" data-target="#locationLayout">125</span>
+                                                    </div>
+                                                    <div class="col-6 col-md-3 order-3 order-md-2">
+                                                        <div class="small">status</div>
+                                                        <span class="badge badge-success">confirmed</span>
+                                                    </div>
+                                                    <div class="col-12 col-md-5 mb-3 mb-md-0 order-1 order-md-3">
+                                                        <div>
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="pr-profile">
+                                                                    <img src="assets/images/profile-1.jpg"
+                                                                        alt="user name">
+                                                                </div>
+                                                                <span class="ml-2">
+                                                                    <div class="small">user</div>
+                                                                    <div class="pr-user-name">Dejana Lukovic</div>
+                                                                    <div class="pr-user-licence-plates mb-1">BG955CV
+
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- BLOCK -->
+                                                <div class="pr-block-menu fas fa-ellipsis-v">
+                                                    <div class="menu-items">
+                                                        <div class="pointer"></div>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="javascript:void(0)" class="menu-item"
+                                                                    data-toggle="modal" data-target="#spotHistory"
+                                                                    aria-disabled="true">Parking Spot History</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
                                 </div>
 
                             </div>
