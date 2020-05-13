@@ -188,4 +188,8 @@ a#load-more{
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
+  transition: $default-transition;
+  &:hover{
+    color: fade-out($black, 0.3);
+  }
 }

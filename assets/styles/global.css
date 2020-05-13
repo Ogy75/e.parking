@@ -220,5 +220,11 @@ a#load-more {
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
+  -webkit-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+
+a#load-more:hover {
+  color: rgba(39, 39, 36, 0.7);
 }
 /*# sourceMappingURL=global.css.map */
