@@ -213,4 +213,12 @@ a.parking-type.active {
 .results-message {
   display: none;
 }
+
+a#load-more {
+  display: block;
+  color: rgba(39, 39, 36, 0.35);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
 /*# sourceMappingURL=global.css.map */

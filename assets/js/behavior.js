@@ -257,7 +257,36 @@ $(function () {
 
         $(this).addClass('active');
         $("#" + tab_id).show();
-    })
+    });
+
+    //LOAD MORE
+    $('.history-item').hide();
+
+    if ($(window).height() < 640){
+        $(function () {
+            $('.history-item').slice(0, 6).show();
+            $('#load-more').on('click', function (e) {
+                e.preventDefault();
+                $('.history-item:hidden').slice(0, 10).slideDown();
+                if ($('.history-item:hidden').length == 0) {
+                    $('#load-more').hide();
+                }
+            });
+        });
+    }
+    else{
+        $(function () {
+            $('.history-item').slice(0, 10).show();
+            $('#load-more').on('click', function (e) {
+                e.preventDefault();
+                $('.history-item:hidden').slice(0, 10).slideDown();
+                if ($('.history-item:hidden').length == 0) {
+                    $('#load-more').hide();
+                }
+            });
+        });
+    }
+    
 });
 
 $('.parking-sceheme-img').zoom()

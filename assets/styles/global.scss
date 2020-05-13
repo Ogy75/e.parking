@@ -182,3 +182,10 @@ a.parking-type {
 .results-message{
   display: none;
 }
+a#load-more{
+  display: block;
+  color: fade-out($black, 0.65);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
