@@ -527,8 +527,8 @@
                                     <div class="title my-3">Campaign is <span class="badge badge-success">ACTIVE</span>
                                         until Friday 12.06.2020.</div>
                                     <span class="badge badge-primary">46 users</span>
-                                    <span class="badge badge-warning">30 unconfirmed</span>
-                                    <span class="badge badge-success">21 confirmed</span>
+                                    <span class="badge badge-warning">10 unconfirmed</span>
+                                    <span class="badge badge-success">12 confirmed</span>
                                     <!-- BLOCK MENU -->
                                     <!-- <div class="pr-block-menu fas fa-ellipsis-v">
                                         <div class="menu-items">
@@ -594,29 +594,48 @@
                                             <div class="col-7">
                                                 <label for="campaign-start">campaign start day</label>
                                                 <select name="campaign-start" class="w-100">
+                                                    <option selected>Select day</option>
                                                     <option>Monday</option>
                                                     <option>Tuesday</option>
-                                                    <option selected>Wednesday</option>
+                                                    <option>Wednesday</option>
                                                     <option>Thursday</option>
                                                     <option>Friday</option>
                                                 </select>
                                             </div>
                                             <div class="col-5">
                                                 <label for="campaign-start-time">start time</label>
-                                                <input type="text" class="w-100" name="campaign-start-time" required>
+                                                <select class="w-100" name="campaign-start-time">
+                                                    <option>07:00</option>
+                                                    <option>08:00</option>
+                                                    <option>09:00</option>
+                                                    <option selected>10:00</option>
+                                                    <option>11:00</option>
+                                                    <option>12:00</option>
+                                                    <option>13:00</option>
+                                                    <option>14:00</option>
+                                                    <option>15:00</option>
+                                                    <option>16:00</option>
+                                                    <option>17:00</option>
+                                                </select>
                                                 <div class="error-msg">error msg!</div>
                                             </div>
                                         </div>
-                                        <div class="row">
+                                        <div class="row mb-4">
                                             <div class="col-7">
                                                 <label for="campaign-start">campaign end day</label>
                                                 <select name="campaign-start" class="w-100">
+                                                    <option selected>Select day</option>
                                                     <option>Monday</option>
                                                     <option>Tuesday</option>
                                                     <option>Wednesday</option>
                                                     <option>Thursday</option>
-                                                    <option selected>Friday</option>
+                                                    <option >Friday</option>
                                                 </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <button class="btn btn-primary">Save</button>
                                             </div>
                                         </div>
                                     </div>
@@ -642,12 +661,12 @@
                                                 <input type="text" name="campaign-end-man">
                                                 <div class="error-msg">error msg!</div>
                                             </div>
-                                            <div class="col-5">
+                                            <!-- <div class="col-5">
                                                 <label for="campaign-end-time-man">end time</label>
                                                 <input class="error" type="text" class="w-100"
                                                     name="campaign-end-time-man" required>
                                                 <div class="error-msg" style="visibility: visible;">error msg!</div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <div class="row">
                                             <div class="col-12">
