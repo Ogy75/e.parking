@@ -1,9 +1,50 @@
-//SPINNER SIM
-$(window).on('load', function () {
-    $('.spinner-bg').fadeOut(700);
+//NOTIF MESSAGES
+var error = {
+    dataLoad :'Error Loading Data! Please try Again.',
+    incomplete : 'Please select required data.',
+    other : 'Bla, bla, bla...',
+}
+var success = {
+    save :'Sucessfully Saved.',
+    add : 'Successfully added',
+}
+var info = {
+    general :'Lep je dan napolju!',
+    reccuringModeOff: 'Reccuring Mode has been turned Off. Campaigns will not repeat weekly.',
+    reccuringModeOn: 'Reccuring Mode has been turned On. Campaigns will repeat on selected days.',
+    general:'some info',
+};
+
+//NOTIFICATION INIT
+Notiflix.Notify.Init({
+    width:'300px',
+    fontSize:'13px',
+    fontFamily:'Arial',
+    timeout:5000,
+    messageMaxLength:200,
+    success: {
+        background:'#1f9c26',
+        childClassName:'success',
+        notiflixIconColor:'rgba(255,255,255,0.4)',
+    },
+    failure: {
+        background:'#d8483e',
+        childClassName:'failure',
+        notiflixIconColor:'rgba(255,255,255,0.4)',
+    },
+    info: {
+        background:'#0000b4',
+        childClassName:'info',
+        notiflixIconColor:'rgba(255,255,255,0.4)',
+    },
 });
 
 $(function () {
+
+    //SPINNER SIM
+    $(window).on('load', function () {
+        $('.spinner-bg').fadeOut(700);
+    });
 
     //MAIN NAV
     var navTrigger = $('.pr-nav-button');
@@ -71,25 +112,6 @@ $(function () {
         }
     });
 
-    //ADD NEW PARKING SPOT
-    $('.js_addSpot').on('click', function () {
-        var input = $('.spot-name-input');
-        console.log(input);
-        var spotName = $(this).parents('.js_parent').find(input);
-        if (spotName.val() === '') {
-            $(this).parents('.row').find('.error-msg').css('visibility', 'visible');
-            spotName.addClass('error');
-            spotName.val('').focus();
-        }
-        else {
-            $(this).parents('.js_parent').find('.error-msg').css('visibility', 'hidden');
-            var pSpot = '<tr><td><span class="badge badge-primary pk-spot-prefix">' + spotName.val() + '</span></td><td><select><option selected>Rotating</option><option>Permanent</option></select></td><td><span class="badge badge-warning cursor-pointer  js_removeEntry">remove</span></td></tr>';
-            $('.pr-default-table tbody').append(pSpot);
-            spotName.removeClass('error');
-            spotName.val('').focus();
-        }
-    });
-
     //REMOVE ENTRY ITEM
     $('.js_removeEntry').on('click', function () {
         $(this).parents('tr').remove();
@@ -113,19 +135,21 @@ $(function () {
 
     //TOGGLE CAMPAIGN MODE
     $('#campaign-mode').click(function () {
-        if ($(this).prop('checked') == true) {
+        if ($(this).prop('checked') === true) {
             $('#manual').hide();
             $('#auto').show();
+            Notiflix.Notify.Info(info.reccuringModeOn);
         }
         else {
             $('#manual').show();
             $('#auto').hide();
+            Notiflix.Notify.Info(info.reccuringModeOff);
         }
     });
 
     //TOGGLE CAMPAIGN VIEW
     $('#campaign-view-mode').click(function () {
-        if ($(this).prop('checked') == true) {
+        if ($(this).prop('checked') === true) {
             $('.current-list').hide();
             $('.campaign-list').show();
             $('#spots-header').find('span.title').text('Ongoing Campaign Status');
@@ -262,7 +286,7 @@ $(function () {
     //LOAD MORE
     $('.history-item').hide();
 
-    if ($(window).height() < 640){
+    if ($(window).height() < 640) {
         $(function () {
             $('.history-item').slice(0, 6).show();
             $('#load-more').on('click', function (e) {
@@ -274,7 +298,7 @@ $(function () {
             });
         });
     }
-    else{
+    else {
         $(function () {
             $('.history-item').slice(0, 10).show();
             $('#load-more').on('click', function (e) {
@@ -286,7 +310,35 @@ $(function () {
             });
         });
     }
-    
+
+    //ADD NEW PARKING SPOT
+    $('.js_addSpot').on('click', function () {
+        var input = $('.spot-name-input');
+        console.log(input);
+        var spotName = $(this).parents('.js_parent').find(input);
+        if (spotName.val() === '') {
+            $(this).parents('.row').find('.error-msg').css('visibility', 'visible');
+            spotName.addClass('error');
+            spotName.val('').focus();
+        }
+        else {
+            $(this).parents('.js_parent').find('.error-msg').css('visibility', 'hidden');
+            var pSpot = '<tr><td><span class="badge badge-primary pk-spot-prefix">' + spotName.val() + '</span></td><td><select><option selected>Rotating</option><option>Permanent</option></select></td><td><span class="badge badge-warning cursor-pointer  js_removeEntry">remove</span></td></tr>';
+            $('.pr-default-table tbody').append(pSpot);
+            spotName.removeClass('error');
+            spotName.val('').focus();
+        }
+    });
+
+    //NOTIFICATIONS DEMO
+    $('.js_success').on('click', function () {
+        Notiflix.Notify.Failure(error.dataLoad);
+        Notiflix.Notify.Failure(error.incomplete);
+        Notiflix.Notify.Failure(error.other);
+        Notiflix.Notify.Success(success.save);
+        Notiflix.Notify.Info(info.general);
+    });
+
 });
 
 $('.parking-sceheme-img').zoom()
