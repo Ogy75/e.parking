@@ -1,45 +1,47 @@
-//NOTIF MESSAGES
-var error = {
-    dataLoad :'Error Loading Data! Please try Again.',
-    incomplete : 'Please select required data.',
-    other : 'Bla, bla, bla...',
-}
-var success = {
-    save :'Sucessfully Saved.',
-    add : 'Successfully added',
-}
-var info = {
-    general :'Lep je dan napolju!',
-    reccuringModeOff: 'Reccuring Mode has been turned Off. Campaigns will not repeat weekly.',
-    reccuringModeOn: 'Reccuring Mode has been turned On. Campaigns will repeat on selected days.',
-    general:'some info',
-};
 
-//NOTIFICATION INIT
-Notiflix.Notify.Init({
-    width:'300px',
-    fontSize:'13px',
-    fontFamily:'Arial',
-    timeout:5000,
-    messageMaxLength:200,
-    success: {
-        background:'#1f9c26',
-        childClassName:'success',
-        notiflixIconColor:'rgba(255,255,255,0.4)',
-    },
-    failure: {
-        background:'#d8483e',
-        childClassName:'failure',
-        notiflixIconColor:'rgba(255,255,255,0.4)',
-    },
-    info: {
-        background:'#0000b4',
-        childClassName:'info',
-        notiflixIconColor:'rgba(255,255,255,0.4)',
-    },
-});
 
 $(function () {
+
+    //NOTIF MESSAGES
+    var error = {
+        dataLoad: 'Error Loading Data! Please try Again.',
+        incomplete: 'Please select required data.',
+        other: 'Bla, bla, bla...',
+    }
+    var success = {
+        save: 'Sucessfully Saved.',
+        add: 'Successfully added',
+    }
+    var info = {
+        general: 'Lep je dan napolju!',
+        reccuringModeOff: 'Reccuring Mode has been turned Off. Campaigns will not repeat weekly.',
+        reccuringModeOn: 'Reccuring Mode has been turned On. Campaigns will repeat on selected days.',
+        general: 'some info',
+    };
+
+    //NOTIFICATION INIT
+    Notiflix.Notify.Init({
+        width: '300px',
+        fontSize: '13px',
+        fontFamily: 'Arial',
+        timeout: 5000,
+        messageMaxLength: 200,
+        success: {
+            background: '#1f9c26',
+            childClassName: 'success',
+            notiflixIconColor: 'rgba(255,255,255,0.4)',
+        },
+        failure: {
+            background: '#d8483e',
+            childClassName: 'failure',
+            notiflixIconColor: 'rgba(255,255,255,0.4)',
+        },
+        info: {
+            background: '#0000b4',
+            childClassName: 'info',
+            notiflixIconColor: 'rgba(255,255,255,0.4)',
+        },
+    });
 
     //SPINNER SIM
     $(window).on('load', function () {
