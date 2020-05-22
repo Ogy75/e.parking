@@ -71,6 +71,16 @@
         height: auto;
       }
     }
+    .campaign-period-arrow, .current-period-arrow{
+      display: block;
+      width:42px;
+      height:42px;
+      line-height: 42px;
+      cursor: pointer;
+      &.inactive{
+        color: fade-out($black, 0.85);
+      }
+    }
   }
 }
 .history-item{

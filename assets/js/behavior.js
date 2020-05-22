@@ -1,6 +1,4 @@
-
-
-$(function () {
+$( document).ready(function() {
 
     //NOTIF MESSAGES
     var error = {
@@ -69,36 +67,6 @@ $(function () {
         }
     });
 
-    // var didScroll;
-    // var lastScrollTop = 0;
-    // var delta = 5;
-    // var navbarHeight = $('.pr-top-bar').outerHeight();
-
-    // $(window).scroll(function (event) {
-    //     didScroll = true;
-    // });
-    // setInterval(function () {
-    //     if (didScroll) {
-    //         hasScrolled();
-    //         didScroll = false;
-    //     }
-    // }, 100);
-    // function hasScrolled() {
-    //     var st = $(this).scrollTop();
-    //     if (Math.abs(lastScrollTop - st) <= delta)
-    //         return;
-    //     if (st > lastScrollTop && st > navbarHeight) {
-    //         $('.pr-nav-button').removeClass('nav-down').addClass('nav-up');
-    //         $('.pr-top-bar').removeClass('nav-down').addClass('nav-up');
-    //     } else {
-    //         if (st + $(window).height() < $(document).height()) {
-    //             $('.pr-nav-button').removeClass('nav-up').addClass('nav-down');
-    //             $('.pr-top-bar').removeClass('nav-up').addClass('nav-down');
-    //         }
-    //     }
-    //     lastScrollTop = st;
-    // }
-
     //BLOCK MENU
     $('.pr-block-menu').on('click', function () {
         var trigger = event.target;
@@ -150,21 +118,29 @@ $(function () {
     });
 
     //TOGGLE CAMPAIGN VIEW
-    $('#campaign-view-mode').click(function () {
-        if ($(this).prop('checked') === true) {
-            $('.current-list').hide();
-            $('.campaign-list').show();
-            $('#spots-header').find('span.title').text('Ongoing Campaign Status');
+    $('.campaign-period-arrow').on('click',function () {
+        if (!$(this).hasClass('inactive')){
+            $('.current-period-arrow').removeClass('inactive');
+            $(this).addClass('inactive');
+            $('.campaign-period-list').show();
+            $('.campaign-period-date').show();
+            $('.current-period-list').hide();
+            $('.current-period-date').hide();
+            $('#spots-header').find('span.title').text('Campaign Status');
             $('#free-spot-count').hide();
-            $('#unnasigned-active-count').text('3 active');
-        }
-        else {
-            $('.campaign-list').hide();
-            $('.current-list').show();
+            }
+    });
+    $('.current-period-arrow').on('click',function () {
+        if (!$(this).hasClass('inactive')){
+            $(this).addClass('inactive');
+            $('.campaign-period-arrow').removeClass('inactive');
+            $('.current-period-list').show();
+            $('.current-period-date').show();
+            $('.campaign-period-list').hide();
+            $('.campaign-period-date').hide();
             $('#spots-header').find('span.title').text('Parking Spots');
             $('#free-spot-count').show();
-            $('#unnasigned-active-count').text('8 active');
-        }
+            }
     });
 
     //LOCATION SELECT
@@ -287,7 +263,6 @@ $(function () {
 
     //LOAD MORE
     $('.history-item').hide();
-
     if ($(window).height() < 640) {
         $(function () {
             $('.history-item').slice(0, 6).show();
@@ -311,7 +286,7 @@ $(function () {
                 }
             });
         });
-    }
+    };
 
     //ADD NEW PARKING SPOT
     $('.js_addSpot').on('click', function () {
@@ -339,7 +314,11 @@ $(function () {
         Notiflix.Notify.Failure(error.other);
         Notiflix.Notify.Success(success.save);
         Notiflix.Notify.Info(info.general);
+        $('.js_showDates').show();
     });
+
+    
+    $("#appRestart").modal();
 
 });
 

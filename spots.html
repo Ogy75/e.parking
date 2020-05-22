@@ -393,7 +393,8 @@
     <!-- ASSIGN SPOT TO USER END -->
 
     <!-- SPOT HISTORY START -->
-    <div class="modal fade" id="spotHistory" tabindex="-1" role="dialog" aria-labelledby="spotHistory" aria-hidden="true">
+    <div class="modal fade" id="spotHistory" tabindex="-1" role="dialog" aria-labelledby="spotHistory"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header border-0">
@@ -426,7 +427,8 @@
                                 </select>
                             </div>
                             <div class="text-right">
-                                <a href="javascript:void(0)" class="badge badge-secondary p-2" id="view-location"><i class="fas fa-map-marker-alt"></i></a>
+                                <a href="javascript:void(0)" class="badge badge-secondary p-2" id="view-location"><i
+                                        class="fas fa-map-marker-alt"></i></a>
                             </div>
                         </div>
                     </div>
@@ -711,8 +713,8 @@
     </div>
     <!-- SPOT HISTORY END -->
 
-        <!-- SHOW MAP START -->
-        <div class="modal fade" id="locationLayout" tabindex="-1" role="dialog" aria-labelledby="locationLayout"
+    <!-- SHOW MAP START -->
+    <div class="modal fade" id="locationLayout" tabindex="-1" role="dialog" aria-labelledby="locationLayout"
         aria-hidden="true">
         <div class="modal-dialog  modal-lg" role="document">
             <div class="modal-content">
@@ -784,7 +786,7 @@
                 <div id="tab-1" class="tab-content">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h5>Rotating Spots Management</h5>
-                        <div class="d-inline-flex align-items-center">
+                        <!-- <div class="d-inline-flex align-items-center">
                             <div>
                                 <div class="flipswitch">
                                     <input type="checkbox" name="campaign-view-mode" class="flipswitch-checkbox"
@@ -796,6 +798,26 @@
                                 </div>
                             </div>
                             <label class="pl-2 m-0">Campaign View</label>
+                        </div> -->
+                    </div>
+                    <div class="row mb-1">
+                        <div class="col-12 pr-block mb-3">
+                            <div class="pr-block-content text-center p-2 bg-white">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="current-period-arrow inactive fas fa-chevron-left"></span>
+                                    <div class="current-period-date">
+                                        <span class="title">Current Parking Period</span>
+                                        <p class="m-0">19.06.2020 - 22.06.2020</p>
+                                        <span class="badge badge-primary">parking in use</span>
+                                    </div>
+                                    <div class="campaign-period-date" style="display: none;">
+                                        <span class="title">Next Parking Period</span>
+                                        <p class="m-0">25.06.2020 - 03.06.2020</p>
+                                        <span class="badge badge-warning">camapaign is running</span>
+                                    </div>
+                                    <span class="campaign-period-arrow fas fa-chevron-right"></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -808,7 +830,8 @@
                                     <div class="pr-block-content p-3">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div>
-                                                <span class="badge badge-success mr-1" id="unnasigned-active-count">8 active</span>
+                                                <span class="badge badge-success mr-1" id="unnasigned-active-count">8
+                                                    active</span>
                                                 <span class="title">Unnasigned Users</span>
                                             </div>
                                             <span>
@@ -847,7 +870,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="unassigned-user-list current-list">
+                                    <div class="unassigned-user-list current-period-list">
                                         <!-- USER -->
                                         <div class="pr-block mb-2">
                                             <div class="pr-block-content py-3">
@@ -1206,7 +1229,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="unassigned-user-list campaign-list" style="display: none;">
+                                    <div class="unassigned-user-list campaign-period-list" style="display: none;">
                                         <!-- USER -->
                                         <div class="pr-block mb-2">
                                             <div class="pr-block-content py-3">
@@ -1384,7 +1407,7 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <div class="campaign-history-list current-list">
+                                    <div class="campaign-history-list current-period-list">
 
                                         <!-- CAMPAIGN HISTORY ENTRY -->
                                         <div class="pr-block mb-2">
@@ -1392,7 +1415,8 @@
                                                 <div class="row align-items-start align-items-md-center">
                                                     <div class="col-6 col-md-3 order-2 order-md-1">
                                                         <div class="small">parking spot</div>
-                                                        <span class="badge badge-primary cursor-pointer" data-toggle="modal" data-target="#locationLayout">123</span>
+                                                        <span class="badge badge-primary cursor-pointer"
+                                                            data-toggle="modal" data-target="#locationLayout">123</span>
                                                     </div>
                                                     <div class="col-6 col-md-3 order-3 order-md-2">
                                                         <div class="small">status</div>
@@ -1438,7 +1462,8 @@
                                                 <div class="row align-items-start align-items-md-center">
                                                     <div class="col-6 col-md-3 order-2 order-md-1">
                                                         <div class="small">parking spot</div>
-                                                        <span class="badge badge-primary cursor-pointer" data-toggle="modal" data-target="#locationLayout">124</span>
+                                                        <span class="badge badge-primary cursor-pointer"
+                                                            data-toggle="modal" data-target="#locationLayout">124</span>
                                                     </div>
                                                     <div class="col-6 col-md-3 order-3 order-md-2">
                                                         <div class="small">status</div>
@@ -1481,7 +1506,8 @@
                                                 <div class="row align-items-start align-items-md-center">
                                                     <div class="col-6 col-md-3 order-2 order-md-1">
                                                         <div class="small">parking spot</div>
-                                                        <span class="badge badge-primary cursor-pointer" data-toggle="modal" data-target="#locationLayout">125</span>
+                                                        <span class="badge badge-primary cursor-pointer"
+                                                            data-toggle="modal" data-target="#locationLayout">125</span>
                                                     </div>
                                                     <div class="col-6 col-md-3 order-3 order-md-2">
                                                         <div class="small">status</div>
@@ -1523,7 +1549,7 @@
 
                                     </div>
 
-                                    <div class="campaign-history-list campaign-list" style="display: none;">
+                                    <div class="campaign-history-list campaign-period-list" style="display: none;">
 
                                         <!-- CAMPAIGN HISTORY ENTRY -->
                                         <div class="pr-block mb-2">
@@ -1531,7 +1557,8 @@
                                                 <div class="row align-items-start align-items-md-center">
                                                     <div class="col-6 col-md-3 order-2 order-md-1">
                                                         <div class="small">parking spot</div>
-                                                        <span class="badge badge-primary cursor-pointer" data-toggle="modal" data-target="#locationLayout">123</span>
+                                                        <span class="badge badge-primary cursor-pointer"
+                                                            data-toggle="modal" data-target="#locationLayout">123</span>
                                                     </div>
                                                     <div class="col-6 col-md-3 order-3 order-md-2">
                                                         <div class="small">status</div>
@@ -1577,7 +1604,8 @@
                                                 <div class="row align-items-start align-items-md-center">
                                                     <div class="col-6 col-md-3 order-2 order-md-1">
                                                         <div class="small">parking spot</div>
-                                                        <span class="badge badge-primary cursor-pointer" data-toggle="modal" data-target="#locationLayout">125</span>
+                                                        <span class="badge badge-primary cursor-pointer"
+                                                            data-toggle="modal" data-target="#locationLayout">125</span>
                                                     </div>
                                                     <div class="col-6 col-md-3 order-3 order-md-2">
                                                         <div class="small">status</div>

@@ -87,6 +87,18 @@
   height: auto;
 }
 
+.pr-block .pr-block-content .campaign-period-arrow, .pr-block .pr-block-content .current-period-arrow {
+  display: block;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  cursor: pointer;
+}
+
+.pr-block .pr-block-content .campaign-period-arrow.inactive, .pr-block .pr-block-content .current-period-arrow.inactive {
+  color: rgba(39, 39, 36, 0.15);
+}
+
 .history-item {
   display: none;
 }
