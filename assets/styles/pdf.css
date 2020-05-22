@@ -1,0 +1,111 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+title::after {
+  content: " Time Log";
+}
+
+@page {
+  margin-top: 2cm;
+  margin-bottom: 2cm;
+}
+
+.doc-container {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  float: none;
+  padding: 40px;
+}
+
+.doc-container .signature {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  padding: 20px;
+  font-size: 11px;
+  margin-top: 50px;
+}
+
+.doc-container .signature:before {
+  display: inline-block;
+  content: "Report generated with Enjoy.ing Parking Manager | ";
+  margin-right: 4px;
+}
+
+.doc-container h1 {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -.3px;
+  font-weight: 600;
+}
+
+.doc-container hr {
+  color: lightgray;
+}
+
+.doc-container table.data {
+  width: 100%;
+}
+
+.doc-container table.data tr {
+  border-bottom: 1px solid lightgray;
+}
+
+.doc-container table.data tr:nth-child(even) {
+  background: #f3f3f3;
+}
+
+.doc-container table.data th {
+  font-size: 12px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: normal;
+}
+
+.doc-container table.data td {
+  font-size: 14px;
+  padding: 4px 10px;
+  font-weight: normal;
+  vertical-align: top;
+}
+
+.doc-container table.data td:first-of-type, .doc-container table.data td:last-of-type {
+  font-weight: bold;
+}
+
+.doc-container table.data td.project-description {
+  width: 60%;
+}
+
+.doc-container table.data td.project-description span {
+  font-weight: normal;
+}
+
+.doc-container table.data td.project-description p {
+  font-size: 12px;
+  margin: 0;
+  line-height: 14px;
+}
+
+.doc-container .period:before {
+  display: inline-table;
+  vertical-align: middle;
+  content: url("/assets/images/ico-calendar.svg");
+  height: 24px;
+  width: 24px;
+  margin-right: 6px;
+}
+
+.doc-container .time:before {
+  display: inline-table;
+  vertical-align: middle;
+  content: url("/assets/images/ico-clock.svg");
+  height: 24px;
+  width: 24px;
+  margin-right: 6px;
+}
+/*# sourceMappingURL=pdf.css.map */

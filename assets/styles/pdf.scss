@@ -1,0 +1,100 @@
+@import "variables";
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+title::after{
+    content:" Time Log"
+}
+@page {
+    margin-top: 2cm;
+    margin-bottom: 2cm;
+ }
+.doc-container{
+    position: relative;
+    max-width:960px;
+    margin:0 auto;
+    float: none;
+    padding:40px;
+
+    .signature{
+        display: inline-block;
+        position: absolute;
+        bottom:0;
+        right:20px;
+        padding: 20px;
+        font-size: 11px;
+        margin-top:50px;
+        &:before{
+            display: inline-block;
+            content:"Report generated with Enjoy.ing Parking Manager | ";
+            margin-right:4px;
+        }
+    }
+    h1{
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: -.3px;
+        font-weight: 600;
+    }
+    hr{
+        color:lightgray;
+    }
+
+    table.data{
+        width:100%;
+        tr{
+            border-bottom: 1px solid lightgray;
+            &:nth-child(even){
+                background:rgb(243,243,243);
+            }
+        }
+        th{
+            font-size: 12px;
+            padding: 5px 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: normal;
+        }
+        td{
+            font-size: 14px;
+            padding: 4px 10px;
+            font-weight: normal;
+            vertical-align: top;
+            &:first-of-type, &:last-of-type{
+                font-weight: bold;
+            }
+            &.project-description{
+                width: 60%;
+                span{
+                    font-weight: normal;
+                }
+                p{
+                    font-size: 12px;
+                    margin: 0;
+                    line-height: 14px;
+                }
+            }
+        }
+    }
+    .period{
+        &:before{
+            display: inline-table;
+            vertical-align: middle;
+            content:url("/assets/images/ico-calendar.svg");
+            height:24px;
+            width:24px;
+            margin-right: 6px;
+        }
+    }
+    .time{
+        &:before{
+            display: inline-table;
+            vertical-align: middle;
+            content:url("/assets/images/ico-clock.svg");
+            height:24px;
+            width:24px;
+            margin-right: 6px;
+        }
+    }
+}
