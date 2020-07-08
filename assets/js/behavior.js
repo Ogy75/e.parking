@@ -1,4 +1,4 @@
-$( document).ready(function() {
+$(document).ready(function () {
 
     //NOTIF MESSAGES
     var error = {
@@ -9,8 +9,9 @@ $( document).ready(function() {
     var success = {
         save: 'Sucessfully Saved.',
         add: 'Successfully added',
-        appActive:'Parking App successfuly activated',
-        appInactive:'Parking App sucessfulu Paused'
+        appActive: 'Parking App successfuly activated',
+        appInactive: 'Parking App sucessfulu Paused',
+        spotInUse: 'Great! Now you have a parking spot for the next week'
     }
     var info = {
         general: 'Lep je dan napolju!',
@@ -120,8 +121,8 @@ $( document).ready(function() {
     });
 
     //TOGGLE CAMPAIGN VIEW
-    $('.campaign-period-arrow').on('click',function () {
-        if (!$(this).hasClass('inactive')){
+    $('.campaign-period-arrow').on('click', function () {
+        if (!$(this).hasClass('inactive')) {
             $('.current-period-arrow').removeClass('inactive');
             $(this).addClass('inactive');
             $('.campaign-period-list').show();
@@ -130,10 +131,10 @@ $( document).ready(function() {
             $('.current-period-date').hide();
             $('#spots-header').find('span.title').text('Campaign Status');
             $('#free-spot-count').hide();
-            }
+        }
     });
-    $('.current-period-arrow').on('click',function () {
-        if (!$(this).hasClass('inactive')){
+    $('.current-period-arrow').on('click', function () {
+        if (!$(this).hasClass('inactive')) {
             $(this).addClass('inactive');
             $('.campaign-period-arrow').removeClass('inactive');
             $('.current-period-list').show();
@@ -142,7 +143,7 @@ $( document).ready(function() {
             $('.campaign-period-date').hide();
             $('#spots-header').find('span.title').text('Parking Spots');
             $('#free-spot-count').show();
-            }
+        }
     });
 
     //LOCATION SELECT
@@ -319,36 +320,39 @@ $( document).ready(function() {
         $('.js_showDates').show();
     });
 
-    
-    $("#appRestart").modal();
+
+    $('#appRestart').modal();
+    //OPEN WINNING MODAL with timeout
+    $(function () {
+        setTimeout(function () {
+            $('#userAssigned').modal();
+        }, 3000);
+    });
+
     $('.parking-sceheme-img').zoom()
 
-    //LICENCE PLATE display (My Parking)
-    //var dot = ;
-    var p1Last2 = $('#plate-data1').text().split(/(?=.{2}$)/).join('‧');
-    $('#plate-data1').text(p1Last2);
-    var p2Last2 = $('#plate-data2').text().split(/(?=.{2}$)/).join('‧');
-    $('#plate-data2').text(p2Last2);
-
     $(function () {
-        if ($('.js_status').hasClass('paused')){
-            $('#status-active').hide();
-            $('#parking-status-use').hide();
-            $('#parking-status-nouse').hide();
-        }
-            $('#activate-app').on('click', function () {
-                $('.js_status').removeClass('paused').hide();
-                $('#status-active').show();
-                //$('#parking-status-use').show();
-                $('#parking-status-nouse').show();
-                Notiflix.Notify.Success(success.appActive);
-            });
-        $('#pauseApp').on('click', function(){
+        $('.js_status').hide();
+        $('#status-active').show();
+        $('#parking-status-use').hide();
+        $('#parking-status-nouse').show();
+        $('#activate-app').on('click', function () {
+            $('.js_status').removeClass('paused').hide();
+            $('#status-active').show();
+            $('#parking-status-nouse').show();
+            Notiflix.Notify.Success(success.appActive);
+        });
+        $('#pauseApp').on('click', function () {
             $('.js_status').addClass('paused').show();
             $('#status-active').hide();
             $('#parking-status-use').hide();
             $('#parking-status-nouse').hide();
             Notiflix.Notify.Success(success.appInactive);
+        });
+        $('#useSpot').on('click',function(){
+            $('#parking-status-use').show();
+            $('#parking-status-nouse').hide();
+            Notiflix.Notify.Success(success.spotInUse);
         });
     });
 
