@@ -9,6 +9,8 @@ $( document).ready(function() {
     var success = {
         save: 'Sucessfully Saved.',
         add: 'Successfully added',
+        appActive:'Parking App successfuly activated',
+        appInactive:'Parking App sucessfulu Paused'
     }
     var info = {
         general: 'Lep je dan napolju!',
@@ -328,5 +330,26 @@ $( document).ready(function() {
     var p2Last2 = $('#plate-data2').text().split(/(?=.{2}$)/).join('‧');
     $('#plate-data2').text(p2Last2);
 
-});
+    $(function () {
+        if ($('.js_status').hasClass('paused')){
+            $('#status-active').hide();
+            $('#parking-status-use').hide();
+            $('#parking-status-nouse').hide();
+        }
+            $('#activate-app').on('click', function () {
+                $('.js_status').removeClass('paused').hide();
+                $('#status-active').show();
+                //$('#parking-status-use').show();
+                $('#parking-status-nouse').show();
+                Notiflix.Notify.Success(success.appActive);
+            });
+        $('#pauseApp').on('click', function(){
+            $('.js_status').addClass('paused').show();
+            $('#status-active').hide();
+            $('#parking-status-use').hide();
+            $('#parking-status-nouse').hide();
+            Notiflix.Notify.Success(success.appInactive);
+        });
+    });
 
+});

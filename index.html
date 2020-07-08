@@ -100,459 +100,8 @@
     </div>
     <!-- SHOW MAP END -->
 
-    <!-- VIEW REPORT START -->
-    <div class="modal fade" id="viewReport" tabindex="-1" role="dialog" aria-labelledby="viewReport" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <div class="modal-title">Campaign Report</div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="fas fa-times-circle"></span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-12 mb-4">
-                            <span class="badge badge-secondary">Campaign: 03.06.2021 - 05.06.2021</span>
-                            <span class="badge badge-secondary">Parking: 08.06.2021 - 12.06.2021</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 d-flex justify-content-between align-items-end mb-2">
-                            <div>
-                                <label for="pkLocation">select location</label>
-                                <select name="pkLocation">
-                                    <option value="1" selected>BG GTC Open Space</option>
-                                    <option value="2">BG GTC GH</option>
-                                    <option value="3">BG GTC 41</option>
-                                    <option value="4">KG Open Space</option>
-                                    <option value="5">NI Open Space</option>
-                                </select>
-                            </div>
-                            <div class="text-right">
-                                <a href="javascript:void(0)" class="badge badge-secondary p-2" id="view-location"><i class="fas fa-map-marker-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="parking-sceheme-img" style="display: none;">
-                                <img src="assets/images/BGopenparking.jpg" alt="parking scheme">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-
-
-                            <div id="bg-gtc-open">
-                                <div class="mt-3 mb-1">
-                                    <span class="badge badge-primary mr-1 mb-1">4 total</span>
-                                    <span class="badge badge-success mr-1 mb-1">4 confirmed</span>
-                                    <span class="badge badge-danger mr-1 mb-1">1 free</span>
-                                </div>
-                                <div class="row">
-                                    <!-- REPORT PARKING SPOT -->
-                                    <div class="col-12 pr-block mb-2">
-                                        <div class="pr-block-content border px-3 py-2 cursor-pointer js_history">
-                                            <div class="active-user">
-                                                <div class="row align-items-top align-items-lg-center">
-                                                    <div class="col-6 col-lg-2 mb-1 mb-lg-0">
-                                                        <div class="small">parking spot</div>
-                                                        <div class="badge badge-primary">level 2 - 122</div>
-                                                    </div>
-                                                    <div class="col-6 col-lg-4 mb-1 mb-lg-0">
-                                                        <div class="small">user</div>
-                                                        <div class="text-truncate">Milos Dragic</div>
-                                                    </div>
-                                                    <div class="col-6 col-lg-2 mb-1 mb-lg-0">
-                                                        <div class="small">status</div>
-                                                        <div class="badge badge-success">confirmed</div>
-                                                    </div>
-                                                    <div class="col-6 col-lg-3 mb-1 mb-lg-0">
-                                                        <div class="small">period</div>
-                                                        <div>08.06 - 12.06.</div>
-                                                    </div>
-                                                    <div class="col-12 col-lg-1 mt-1 mt-lg-0 text-center text-lg-right">
-                                                        <a href="#" class="p-3 fas fa-chevron-down d-inline-block js_toggleButton"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="table-scroll spot-history">
-                                                <table class="pr-default-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>user</th>
-                                                            <th>status</th>
-                                                            <th>period</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="text-truncate">Jovana Trubic</div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="badge badge-warning">unconfirmed</span>
-                                                            </td>
-                                                            <td></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- REPORT PARKING SPOT -->
-                                    <div class="col-12 pr-block mb-2">
-                                        <div class="pr-block-content border px-3 py-2 cursor-pointer js_history">
-                                            <div class="active-user">
-                                                <div class="row align-items-top align-items-lg-center">
-                                                    <div class="col-6 col-lg-2 mb-1 mb-lg-0">
-                                                        <div class="small">parking spot</div>
-                                                        <div class="badge badge-primary">level 2 - 123</div>
-                                                    </div>
-                                                    <div class="col-6 col-lg-4 mb-1 mb-lg-0">
-                                                        <div class="small">user</div>
-                                                        <div class="text-truncate">Jovan Markovic</div>
-                                                    </div>
-                                                    <div class="col-6 col-lg-2 mb-1 mb-lg-0">
-                                                        <div class="small">status</div>
-                                                        <div class="badge badge-success">confirmed</div>
-                                                    </div>
-                                                    <div class="col-6 col-lg-3 mb-1 mb-lg-0">
-                                                        <div class="small">period</div>
-                                                        <div>10.06 - 12.06.</div>
-                                                    </div>
-                                                    <div class="col-12 col-lg-1 mt-1 mt-lg-0 text-center text-lg-right">
-                                                        <a href="#" class="p-3 fas fa-chevron-down d-inline-block js_toggleButton"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="table-scroll spot-history">
-                                                <table class="pr-default-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>user</th>
-                                                            <th>status</th>
-                                                            <th>period</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="text-truncate">Dragan Jovanovic</div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="badge badge-secondary">canceled</span>
-                                                            </td>
-                                                            <td>
-                                                                09.06.
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="text-truncate">Dragan Jovanovic</div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="badge badge-success">confirmed</span>
-                                                            </td>
-                                                            <td>
-                                                                08.06. - 12.06.
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="text-truncate">Bogdan Peric</div>
-                                                                <div class="small text-truncate">BG118TG</div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="badge badge-warning ">unconfirmed</span>
-                                                            </td>
-                                                            <td>
-                                                                08.06. - 12.06.
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- REPORT PARKING SPOT -->
-                                    <div class="col-12 pr-block mb-2">
-                                        <div class="pr-block-content border px-3 py-2 cursor-pointer js_history">
-                                            <div class="active-user">
-                                                <div class="row align-items-top align-items-lg-center">
-                                                    <div class="col-6 col-lg-2 mb-1 mb-lg-0">
-                                                        <div class="small">parking spot</div>
-                                                        <div class="badge badge-primary">level 2 - 124</div>
-                                                    </div>
-                                                    <div class="col-6 col-lg-4 mb-1 mb-lg-0">
-                                                        <div class="small">user</div>
-                                                        <div class="text-truncate">Zeljko Varagic</div>
-                                                    </div>
-                                                    <div class="col-6 col-lg-2 mb-1 mb-lg-0">
-                                                        <div class="small">status</div>
-                                                        <div class="badge badge-success">confirmed</div>
-                                                    </div>
-                                                    <div class="col-6 col-lg-3 mb-1 mb-lg-0">
-                                                        <div class="small">period</div>
-                                                        <div>08.06 - 12.06.</div>
-                                                    </div>
-                                                    <div class="col-12 col-lg-1 mt-1 mt-lg-0 text-center text-lg-right">
-                                                        <a href="#" class="p-3 fas fa-chevron-down d-inline-block js_toggleButton"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="table-scroll spot-history">
-                                                <table class="pr-default-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>user</th>
-                                                            <th>status</th>
-                                                            <th>period</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="text-truncate">Dragan Jovanovic</div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="badge badge-secondary">canceled</span>
-                                                            </td>
-                                                            <td>
-                                                                09.06.
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="text-truncate">Dragan Jovanovic</div>
-                                                                <div class="small text-truncate">BG1024GX, BG2144UA
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="badge badge-success">confirmed</span>
-                                                            </td>
-                                                            <td>
-                                                                08.06. - 12.06.
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="text-truncate">Bogdan Peric</div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="badge badge-warning ">unconfirmed</span>
-                                                            </td>
-                                                            <td>
-                                                                08.06. - 12.06.
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- REPORT PARKING SPOT -->
-                                    <div class="col-12 pr-block mb-2">
-                                        <div class="pr-block-content border px-3 py-2 cursor-pointer js_history">
-                                            <div class="active-user">
-                                                <div class="row align-items-top align-items-lg-center">
-                                                    <div class="col-6 col-lg-2 mb-1 mb-lg-0">
-                                                        <div class="small">parking spot</div>
-                                                        <div class="badge badge-primary">level 2 - 125</div>
-                                                    </div>
-                                                    <div class="col-6 col-lg-4 mb-1 mb-lg-0">
-                                                        <div class="small">user</div>
-                                                        <div class="text-truncate">Miroslava Ilic</div>
-                                                    </div>
-                                                    <div class="col-6 col-lg-2 mb-1 mb-lg-0">
-                                                        <div class="small">status</div>
-                                                        <div class="badge badge-success">confirmed</div>
-                                                    </div>
-                                                    <div class="col-6 col-lg-3 mb-1 mb-lg-0">
-                                                        <div class="small">period</div>
-                                                        <div>08.06 - 12.06.</div>
-                                                    </div>
-                                                    <div class="col-12 col-lg-1 mt-1 mt-lg-0 text-center text-lg-right">
-                                                        <a href="#" class="p-3 fas fa-chevron-down d-inline-block js_toggleButton"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="table-scroll spot-history">
-                                                <table class="pr-default-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>user</th>
-                                                            <th>status</th>
-                                                            <th>period</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="text-truncate">Dragan Jovanovic</div>
-                                                                <div class="small text-truncate">BG1024GX, BG2144UA
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="badge badge-secondary">canceled</span>
-                                                            </td>
-                                                            <td>
-                                                                09.06.
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="text-truncate">Dragan Jovanovic</div>
-                                                                <div class="small text-truncate">BG1024GX, BG2144UA
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="badge badge-success">confirmed</span>
-                                                            </td>
-                                                            <td>
-                                                                08.06. - 12.06.
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="text-truncate">Bogdan Peric</div>
-                                                                <div class="small text-truncate">BG118TG</div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="badge badge-warning ">unconfirmed</span>
-                                                            </td>
-                                                            <td>
-                                                                08.06. - 12.06.
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- REPORT PARKING SPOT -->
-                                    <div class="col-12 pr-block mb-2">
-                                        <div class="pr-block-content border px-3 py-2">
-                                            <div class="active-user">
-                                                <div class="row align-items-top align-items-lg-center">
-                                                    <div class="col-6 col-lg-2 mb-1 mb-lg-0">
-                                                        <div class="small">parking spot</div>
-                                                        <div class="badge badge-primary">level 2 - 126</div>
-                                                    </div>
-                                                    <div class="col-6 col-lg-4 mb-1 mb-lg-0">
-                                                        <div class="small">user</div>
-                                                        <div class="text-truncate">-</div>
-                                                    </div>
-                                                    <div class="col-6 col-lg-2 mb-1 mb-lg-0">
-                                                        <div class="small">status</div>
-                                                        <div class="badge badge-danger">free</div>
-                                                    </div>
-                                                    <div class="col-6 col-lg-3 mb-1 mb-lg-0">
-                                                        <div class="small">period</div>
-                                                        <div>08.06 - 12.06.</div>
-                                                    </div>
-                                                    <div class="col-12 col-lg-1 mt-1 mt-lg-0 text-center text-lg-right">
-                                                        <a href="#" class="p-3 fas fa-chevron-down d-inline-block js_toggleButton" style="visibility: hidden;"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- <div class="table-scroll spot-history">
-                                                <table class="pr-default-table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>user</th>
-                                                            <th>status</th>
-                                                            <th>period</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="text-truncate">Dragan Jovanovic</div>
-                                                                <div class="small text-truncate">BG1024GX, BG2144UA</div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="badge badge-secondary">canceled</span>
-                                                            </td>
-                                                            <td>
-                                                                09.06.
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="text-truncate">-</div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="badge badge-success">confirmed</span>
-                                                            </td>
-                                                            <td>
-                                                                08.06. - 12.06.
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="text-truncate">Bogdan Peric</div>
-                                                                <div class="small text-truncate">BG118TG</div>
-                                                            </td>
-                                                            <td>
-                                                                <span class="badge badge-warning ">unconfirmed</span>
-                                                            </td>
-                                                            <td>
-                                                                08.06. - 12.06.
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div> -->
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div id="bg-gtc-gh" style="display: none;">
-                                GTC GH DATA
-                            </div>
-
-                            <div id="bg-gtc-41" style="display: none;">
-                                GTC 41 DATA
-                            </div>
-
-                            <div id="kg-open" style="display: none;">
-                                KG DATA
-
-                            </div>
-
-                            <div id="ni-open" style="display: none;">
-                                NI DATA
-                            </div>
-
-
-                        </div>
-                    </div>
-
-
-                    <div class="mt-5 mb-3">
-                        <button class="btn btn-primary mr-3">Export as PDF</button>
-                        <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- VIEW REPORT END -->
-
     <!-- CANCEL SPOT START -->
-    <div class="modal fade" id="cancelSpot" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="deleteLocation" aria-hidden="true">
+    <div class="modal fade" id="cancelSpot" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="cancelSpot" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -564,7 +113,7 @@
                 <div class="modal-body">
                     <p>This action can not be undone!</p>
                     <div class="my-3">
-                        <button class="btn btn-danger mr-3">Stop using</button>
+                        <button class="btn btn-danger mr-3">Cancel Parking Spot</button>
                         <button class="btn btn-primary" data-dismiss="modal" aria-label="Close">Cancel</button>
                     </div>
                 </div>
@@ -573,124 +122,182 @@
     </div>
     <!-- CANCEL SPOT END -->
 
-    <!-- CANCEL CAMPAIGN START -->
-    <!-- <div class="modal fade" id="cancelCampaign" data-backdrop="static" tabindex="-1" role="dialog"
-        aria-labelledby="cancelCampaign" aria-hidden="true">
+    <!-- PAUSE APP START -->
+    <div class="modal fade" id="pauseApp" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="pauseApp" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <div>
-                        <div class="modal-title my-4">Are you sure you want to Abort ongoing Campaign?
-                        </div>
+                        <div class="modal-title my-4">Are you sure you want to Pause your Parking App?</div>
                     </div>
                 </div>
                 <div class="modal-body">
+                    <p>This action can not be undone!</p>
                     <div class="my-3">
-                        <button class="btn btn-danger mr-3">Yes, Abort</button>
+                        <button class="btn btn-danger mr-3" data-dismiss="modal" aria-label="Close" id="pauseApp">Pause Parking App</button>
                         <button class="btn btn-primary" data-dismiss="modal" aria-label="Close">Cancel</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
-    <!-- CANCEL CAMPAIGN END -->
+    </div>
+    <!-- PAUSE APP END -->
 
-    <!-- APP RESTART START -->
-    <!-- <div class="modal fade" id="appRestart" data-backdrop="static" tabindex="-1" role="dialog"
-        aria-labelledby="userProfile" aria-hidden="true">
-        <div class="modal-dialog  modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header py-5 px-4 p-sm-5 bg-danger">
-                    <div class="d-flex justify-content-start align-items-center">
-                        <div class="welcome-msg">Unfortunately camapign scheduled for the period 19.06.2020 - 22.06.2020 failed since Parking App was down in the period 22.06.2020, 08:14h - 22.06.2020, 14:35h.
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-body p-4 p-sm-5">
-                    <p>Next campaign is scheduled to run from Wednesday 23.6.2020, 10:00h until Friday 26.6.2020, 10:00h</p>
-                    <div class="form-title mb-4">Please confirm your settings</div>
-                    <div class="row">
-                        <div class="col-7">
-                            <label for="campaign-start">campaign start day</label>
-                            <select name="campaign-start" class="w-100">
-                                <option selected="">Select day</option>
-                                <option>Monday</option>
-                                <option>Tuesday</option>
-                                <option selected>Wednesday</option>
-                                <option>Thursday</option>
-                                <option>Friday</option>
-                            </select>
-                        </div>
-                        <div class="col-5">
-                            <label for="campaign-start-time">start time</label>
-                            <select class="w-100" name="campaign-start-time">
-                                <option>07:00</option>
-                                <option>08:00</option>
-                                <option>09:00</option>
-                                <option selected="">10:00</option>
-                                <option>11:00</option>
-                                <option>12:00</option>
-                                <option>13:00</option>
-                                <option>14:00</option>
-                                <option>15:00</option>
-                                <option>16:00</option>
-                                <option>17:00</option>
-                            </select>
-                            <div class="error-msg">error msg!</div>
-                        </div>
-                    </div>
-                    <div class="row mb-5">
-                        <div class="col-7">
-                            <label for="campaign-start">campaign end day</label>
-                            <select name="campaign-start" class="w-100">
-                                <option selected="">Select day</option>
-                                <option>Monday</option>
-                                <option>Tuesday</option>
-                                <option>Wednesday</option>
-                                <option>Thursday</option>
-                                <option selected>Friday</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="btn btn-primary" data-dismiss="modal" aria-label="Close">Save and Continue</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- APP RESTART END -->
-
-    <!-- MANUAL CAMPAIGN START -->
-    <!-- <div class="modal fade" id="runManually" data-backdrop="static" tabindex="-1" role="dialog"
-        aria-labelledby="runManually" aria-hidden="true">
+    <!-- SPOT HISTORY START -->
+    <div class="modal fade" id="parkingHistory" tabindex="-1" role="dialog" aria-labelledby="parkingHistory"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header py-4 px-4 p-sm-5">
-                    <div class="welcome-msg w-75">Start campaign manually</div>
+                <div class="modal-header border-0">
+                    <div>
+                        <div class="modal-title">Parking History</div>
+                        <p class="m-0 text-white">29.06.2020 - 03.07.2020</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="fas fa-times-circle"></span>
+                    </button>
                 </div>
-                <div class="modal-body p-4 p-sm-5">
-                    <div class="form-title mb-4">Select Parking Period</div>
-                    <div class="row mb-4">
-                        <div class="col-12 col-sm-6">
-                            <label for="license-plate1">from</label>
-                            <input type="text" name="license-plate1">
-                            <div class="error-msg">Required field!</div>
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <label for="license-plate2">to</label>
-                            <input type="text" name="license-plate2">
-                            <div class="error-msg">Enter without white space!</div>
-                        </div>
-                        <div class="col-12">
-                            <p><b>PLEASE NOTE: </b>When campaign is started manually users will instantly get assigned with parking spots for the selected parking period, according to user priority and will be notified per email of this action.</p>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <label>parking location</label>
+                                <select>
+                                    <option>GTC GH</option>
+                                    <option>GTC 41</option>
+                                    <option selected >Posh Open Hole</option>
+                                </select>
+                            </div>
+                            <div class="text-right">
+                                <a href="javascript:void(0)" class="badge badge-secondary p-2" id="view-location"><i
+                                        class="fas fa-map-marker-alt"></i></a>
+                            </div>
                         </div>
                     </div>
-                    <button class="btn btn-primary mr-3" data-dismiss="modal" aria-label="Close">Continue</button>
-                    <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">Cancel</button>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="parking-sceheme-img mb-3" style="display: none;">
+                                <img src="assets/images/BGopenparking.jpg" alt="parking scheme">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+
+                            <div class="table-scroll">
+                                <div>
+                                    <table class="pr-default-table mb-2">
+                                        <thead>
+                                            <tr>
+                                                <th>parking spot</th>
+                                                <th>user</th>
+                                                <th>status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    123
+                                                </td>
+                                                <td>
+                                                    <div>Milan Mirkovic</div>
+                                                    <div class="small">BG1024GX, BG911AU</div>
+
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-primary">spot in use</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    124
+                                                </td>
+                                                <td>
+                                                    <div>Dejan Blagojevic</div>
+                                                    <div class="small">BG1223TU</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-primary">spot in use</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    125
+                                                </td>
+                                                <td>
+                                                    <div>Ljubomir Karaklajic</div>
+                                                    <div class="small">BG1122ER, BG3344AS</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-primary">spot in use</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    126
+                                                </td>
+                                                <td>
+                                                    <div>Mitar Ruzic</div>
+                                                    <div class="small">BG944AK</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-primary">spot in use</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    127
+                                                </td>
+                                                <td>
+                                                    <div>Bojan Kisic</div>
+                                                    <div class="small">BG1054AX</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-primary">spot in use</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    128
+                                                </td>
+                                                <td>
+                                                    <div>Sladjana Secerovski</div>
+                                                    <div class="small">BG912TV</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-primary">spot in use</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    129
+                                                </td>
+                                                <td>
+                                                    <div>Grdana Silnic</div>
+                                                    <div class="small">BG4224IO</div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-primary">spot in use</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="mt-5 mb-3">
+                        <!-- <button class="btn btn-primary mr-3">Export as PDF</button> -->
+                        <button class="btn btn-danger" data-dismiss="modal" aria-label="Close">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div> -->
-    <!-- MANUAL CAMPAIGN END -->
+    </div>
+    <!-- SPOT HISTORY END -->
 
     <!------------------ MODALS END ------------------>
 
@@ -741,7 +348,7 @@
                         <div class="row">
 
                             <!-- PARTICIPATION STATUS - APP PAUSED -->
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-12 pr-block">
+                            <div class="col-12 col-sm-6 col-lg-12 col-xl-12 pr-block js_status paused">
                                 <div class="pr-block-content">
                                     <small class="mb-4">participation status</small>
                                     <div class="title my-2">
@@ -749,12 +356,12 @@
                                     </div>
                                     <p class="mb-4">If you want to participate in parking campaigns please activate your Parking App.</p>
                                     <!-- <small class="mb-3">If you Cancel an ongoing campaign, cancellation email will be sent to all campaign participants.</small> -->
-                                    <button class="btn btn-success" data-toggle="modal" data-target="#cancelSpot">Activate my Parking App</button>
+                                    <button class="btn btn-success" id="activate-app" data-type="success">Activate my Parking App</button>
                                 </div>
                             </div>
 
                             <!-- PARTICIPATION STATUS - APP ACTIVE -->
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-12 pr-block">
+                            <div class="col-12 col-sm-6 col-lg-12 col-xl-12 pr-block" id="status-active">
                                 <div class="pr-block-content">
                                     <small class="mb-4">participation status</small>
                                     <div class="title my-2">
@@ -762,12 +369,12 @@
                                     </div>
                                     <p class="mb-4">If you want to stop participating in parking campaigns please pause your Parking App.</p>
                                     <!-- <small class="mb-3">If you Cancel an ongoing campaign, cancellation email will be sent to all campaign participants.</small> -->
-                                    <button class="btn btn-danger" data-toggle="modal" data-target="#cancelSpot">Pause my Parking App</button>
+                                    <button class="btn btn-danger" data-toggle="modal" data-target="#pauseApp">Pause my Parking App</button>
                                 </div>
                             </div>
 
                             <!-- MY CURRENT STATUS - ASSIGNED -->
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-12 pr-block">
+                            <div class="col-12 col-sm-6 col-lg-12 col-xl-12 pr-block" id="parking-status-use">
                                 <div class="pr-block-content">
                                     <small class="mb-4">my parking status</small>
                                     <div class="title my-2">
@@ -780,7 +387,7 @@
                             </div>
 
                             <!-- MY CURRENT STATUS - UNASSIGNED -->
-                            <div class="col-12 col-sm-6 col-lg-12 col-xl-12 pr-block">
+                            <div class="col-12 col-sm-6 col-lg-12 col-xl-12 pr-block" id="parking-status-nouse">
                                 <div class="pr-block-content">
                                     <small class="mb-4">my parking status</small>
                                     <div class="title my-2">
@@ -825,10 +432,10 @@
                                             <option selected>2021</option>
                                             <option>2020</option>
                                         </select>
-                                        <div class="title ml-2">Campaign History</div>
+                                        <div class="title ml-2">Parking History</div>
                                     </div>
                                     <!-- BLOCK -->
-                                    <div class="pr-block-menu fas fa-ellipsis-v">
+                                    <!-- <div class="pr-block-menu fas fa-ellipsis-v">
                                         <div class="menu-items">
                                             <div class="pointer"></div>
                                             <ul>
@@ -837,45 +444,24 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
 
+
+                            
 
                             <!-- CAMPAIGN HISTORY ENTRY -->
                             <div class="col-12 pr-block mb-2 history-item">
                                 <div class="pr-block-content py-3">
                                     <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">10.06.- 12.06.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
+                                        <div class="col-6">
                                             <small>parking period</small>
-                                            <span class="period">15.06. - 19.06.</span>
+                                            <span class="period">29.06.- 03.07.</span>
                                         </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-success mr-1 my-1">active</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CAMPAIGN HISTORY ENTRY -->
-                            <div class="col-12 pr-block mb-2 history-item">
-                                <div class="pr-block-content py-3">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">03.06.- 05.06.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <small>parking period</small>
-                                            <span class="period">08.06. - 12.06.</span>
-                                        </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
-                                            <span class="badge badge-primary mr-1 my-1">parking in use</span>
+                                        <div class="col-6">
+                                            <small>my status</small>
+                                            <span class="badge badge-success">assigned</span>
                                         </div>
                                     </div>
                                     <!-- BLOCK -->
@@ -884,7 +470,7 @@
                                             <div class="pointer"></div>
                                             <ul>
                                                 <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#parkingHistory" aria-disabled="true">View Report</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -896,16 +482,13 @@
                             <div class="col-12 pr-block mb-2 history-item">
                                 <div class="pr-block-content py-3">
                                     <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
+                                        <div class="col-6">
                                             <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
+                                            <span class="period">22.06.- 26.06.</span>
                                         </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
+                                        <div class="col-6">
+                                            <!-- <small>my status</small>
+                                            <span class="badge badge-success">assigned</span> -->
                                         </div>
                                     </div>
                                     <!-- BLOCK -->
@@ -914,7 +497,7 @@
                                             <div class="pointer"></div>
                                             <ul>
                                                 <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#parkingHistory" aria-disabled="true">View Report</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -926,16 +509,13 @@
                             <div class="col-12 pr-block mb-2 history-item">
                                 <div class="pr-block-content py-3">
                                     <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
+                                        <div class="col-6">
                                             <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
+                                            <span class="period">15.06.- 19.06.</span>
                                         </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
+                                        <div class="col-6">
+                                            <small>my status</small>
+                                            <span class="badge badge-success">assigned</span>
                                         </div>
                                     </div>
                                     <!-- BLOCK -->
@@ -944,7 +524,7 @@
                                             <div class="pointer"></div>
                                             <ul>
                                                 <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#parkingHistory" aria-disabled="true">View Report</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -956,16 +536,13 @@
                             <div class="col-12 pr-block mb-2 history-item">
                                 <div class="pr-block-content py-3">
                                     <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
+                                        <div class="col-6">
                                             <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
+                                            <span class="period">08.06.- 12.06.</span>
                                         </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
+                                        <div class="col-6">
+                                            <small>my status</small>
+                                            <span class="badge badge-success">assigned</span>
                                         </div>
                                     </div>
                                     <!-- BLOCK -->
@@ -974,7 +551,7 @@
                                             <div class="pointer"></div>
                                             <ul>
                                                 <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#parkingHistory" aria-disabled="true">View Report</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -986,16 +563,13 @@
                             <div class="col-12 pr-block mb-2 history-item">
                                 <div class="pr-block-content py-3">
                                     <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
+                                        <div class="col-6">
                                             <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
+                                            <span class="period">01.06.- 05.06.</span>
                                         </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
+                                        <div class="col-6">
+                                            <!-- <small>my status</small>
+                                            <span class="badge badge-success">assigned</span> -->
                                         </div>
                                     </div>
                                     <!-- BLOCK -->
@@ -1004,7 +578,7 @@
                                             <div class="pointer"></div>
                                             <ul>
                                                 <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#parkingHistory" aria-disabled="true">View Report</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1016,16 +590,13 @@
                             <div class="col-12 pr-block mb-2 history-item">
                                 <div class="pr-block-content py-3">
                                     <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
+                                        <div class="col-6">
                                             <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
+                                            <span class="period">25.05.- 29.05.</span>
                                         </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
+                                        <div class="col-6">
+                                            <!-- <small>my status</small>
+                                            <span class="badge badge-success">assigned</span> -->
                                         </div>
                                     </div>
                                     <!-- BLOCK -->
@@ -1034,7 +605,7 @@
                                             <div class="pointer"></div>
                                             <ul>
                                                 <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#parkingHistory" aria-disabled="true">View Report</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1046,16 +617,13 @@
                             <div class="col-12 pr-block mb-2 history-item">
                                 <div class="pr-block-content py-3">
                                     <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
+                                        <div class="col-6">
                                             <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
+                                            <span class="period">18.05.- 22.05.</span>
                                         </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
+                                        <div class="col-6">
+                                            <!-- <small>my status</small>
+                                            <span class="badge badge-success">assigned</span> -->
                                         </div>
                                     </div>
                                     <!-- BLOCK -->
@@ -1064,7 +632,7 @@
                                             <div class="pointer"></div>
                                             <ul>
                                                 <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#parkingHistory" aria-disabled="true">View Report</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1076,16 +644,13 @@
                             <div class="col-12 pr-block mb-2 history-item">
                                 <div class="pr-block-content py-3">
                                     <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
+                                        <div class="col-6">
                                             <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
+                                            <span class="period">11.05.- 15.05.</span>
                                         </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
+                                        <div class="col-6">
+                                            <small>my status</small>
+                                            <span class="badge badge-success">assigned</span>
                                         </div>
                                     </div>
                                     <!-- BLOCK -->
@@ -1094,7 +659,7 @@
                                             <div class="pointer"></div>
                                             <ul>
                                                 <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#parkingHistory" aria-disabled="true">View Report</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1106,16 +671,13 @@
                             <div class="col-12 pr-block mb-2 history-item">
                                 <div class="pr-block-content py-3">
                                     <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
+                                        <div class="col-6">
                                             <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
+                                            <span class="period">04.05.- 08.05.</span>
                                         </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
+                                        <div class="col-6">
+                                            <!-- <small>my status</small>
+                                            <span class="badge badge-success">assigned</span> -->
                                         </div>
                                     </div>
                                     <!-- BLOCK -->
@@ -1124,7 +686,7 @@
                                             <div class="pointer"></div>
                                             <ul>
                                                 <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#parkingHistory" aria-disabled="true">View Report</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1136,16 +698,13 @@
                             <div class="col-12 pr-block mb-2 history-item">
                                 <div class="pr-block-content py-3">
                                     <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
+                                        <div class="col-6">
                                             <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
+                                            <span class="period">27.04.- 01.05.</span>
                                         </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
+                                        <div class="col-6">
+                                            <small>my status</small>
+                                            <span class="badge badge-success">assigned</span>
                                         </div>
                                     </div>
                                     <!-- BLOCK -->
@@ -1154,7 +713,7 @@
                                             <div class="pointer"></div>
                                             <ul>
                                                 <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#parkingHistory" aria-disabled="true">View Report</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1166,16 +725,13 @@
                             <div class="col-12 pr-block mb-2 history-item">
                                 <div class="pr-block-content py-3">
                                     <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
+                                        <div class="col-6">
                                             <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
+                                            <span class="period">20.04.- 24.04.</span>
                                         </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
+                                        <div class="col-6">
+                                            <!-- <small>my status</small>
+                                            <span class="badge badge-success">assigned</span> -->
                                         </div>
                                     </div>
                                     <!-- BLOCK -->
@@ -1184,7 +740,7 @@
                                             <div class="pointer"></div>
                                             <ul>
                                                 <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#parkingHistory" aria-disabled="true">View Report</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1196,16 +752,13 @@
                             <div class="col-12 pr-block mb-2 history-item">
                                 <div class="pr-block-content py-3">
                                     <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
+                                        <div class="col-6">
                                             <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
+                                            <span class="period">13.04.- 17.04.</span>
                                         </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
+                                        <div class="col-6">
+                                            <small>my status</small>
+                                            <span class="badge badge-success">assigned</span>
                                         </div>
                                     </div>
                                     <!-- BLOCK -->
@@ -1214,7 +767,7 @@
                                             <div class="pointer"></div>
                                             <ul>
                                                 <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#parkingHistory" aria-disabled="true">View Report</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1226,16 +779,13 @@
                             <div class="col-12 pr-block mb-2 history-item">
                                 <div class="pr-block-content py-3">
                                     <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
+                                        <div class="col-6">
                                             <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
+                                            <span class="period">06.04.- 10.04.</span>
                                         </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
+                                        <div class="col-6">
+                                            <small>my status</small>
+                                            <span class="badge badge-success">assigned</span>
                                         </div>
                                     </div>
                                     <!-- BLOCK -->
@@ -1244,7 +794,7 @@
                                             <div class="pointer"></div>
                                             <ul>
                                                 <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
+                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#parkingHistory" aria-disabled="true">View Report</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1252,339 +802,9 @@
                                 </div>
                             </div>
 
-                            <!-- CAMPAIGN HISTORY ENTRY -->
-                            <div class="col-12 pr-block mb-2 history-item">
-                                <div class="pr-block-content py-3">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
-                                        </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
-                                        </div>
-                                    </div>
-                                    <!-- BLOCK -->
-                                    <div class="pr-block-menu fas fa-ellipsis-v">
-                                        <div class="menu-items">
-                                            <div class="pointer"></div>
-                                            <ul>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CAMPAIGN HISTORY ENTRY -->
-                            <div class="col-12 pr-block mb-2 history-item">
-                                <div class="pr-block-content py-3">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
-                                        </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
-                                        </div>
-                                    </div>
-                                    <!-- BLOCK -->
-                                    <div class="pr-block-menu fas fa-ellipsis-v">
-                                        <div class="menu-items">
-                                            <div class="pointer"></div>
-                                            <ul>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CAMPAIGN HISTORY ENTRY -->
-                            <div class="col-12 pr-block mb-2 history-item">
-                                <div class="pr-block-content py-3">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
-                                        </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
-                                        </div>
-                                    </div>
-                                    <!-- BLOCK -->
-                                    <div class="pr-block-menu fas fa-ellipsis-v">
-                                        <div class="menu-items">
-                                            <div class="pointer"></div>
-                                            <ul>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CAMPAIGN HISTORY ENTRY -->
-                            <div class="col-12 pr-block mb-2 history-item">
-                                <div class="pr-block-content py-3">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
-                                        </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
-                                        </div>
-                                    </div>
-                                    <!-- BLOCK -->
-                                    <div class="pr-block-menu fas fa-ellipsis-v">
-                                        <div class="menu-items">
-                                            <div class="pointer"></div>
-                                            <ul>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CAMPAIGN HISTORY ENTRY -->
-                            <div class="col-12 pr-block mb-2 history-item">
-                                <div class="pr-block-content py-3">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
-                                        </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
-                                        </div>
-                                    </div>
-                                    <!-- BLOCK -->
-                                    <div class="pr-block-menu fas fa-ellipsis-v">
-                                        <div class="menu-items">
-                                            <div class="pointer"></div>
-                                            <ul>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CAMPAIGN HISTORY ENTRY -->
-                            <div class="col-12 pr-block mb-2 history-item">
-                                <div class="pr-block-content py-3">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
-                                        </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
-                                        </div>
-                                    </div>
-                                    <!-- BLOCK -->
-                                    <div class="pr-block-menu fas fa-ellipsis-v">
-                                        <div class="menu-items">
-                                            <div class="pointer"></div>
-                                            <ul>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CAMPAIGN HISTORY ENTRY -->
-                            <div class="col-12 pr-block mb-2 history-item">
-                                <div class="pr-block-content py-3">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
-                                        </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
-                                        </div>
-                                    </div>
-                                    <!-- BLOCK -->
-                                    <div class="pr-block-menu fas fa-ellipsis-v">
-                                        <div class="menu-items">
-                                            <div class="pointer"></div>
-                                            <ul>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CAMPAIGN HISTORY ENTRY -->
-                            <div class="col-12 pr-block mb-2 history-item">
-                                <div class="pr-block-content py-3">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
-                                        </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
-                                        </div>
-                                    </div>
-                                    <!-- BLOCK -->
-                                    <div class="pr-block-menu fas fa-ellipsis-v">
-                                        <div class="menu-items">
-                                            <div class="pointer"></div>
-                                            <ul>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CAMPAIGN HISTORY ENTRY -->
-                            <div class="col-12 pr-block mb-2 history-item">
-                                <div class="pr-block-content py-3">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
-                                        </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
-                                        </div>
-                                    </div>
-                                    <!-- BLOCK -->
-                                    <div class="pr-block-menu fas fa-ellipsis-v">
-                                        <div class="menu-items">
-                                            <div class="pointer"></div>
-                                            <ul>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CAMPAIGN HISTORY ENTRY -->
-                            <div class="col-12 pr-block mb-2 history-item">
-                                <div class="pr-block-content py-3">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
-                                        </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
-                                        </div>
-                                    </div>
-                                    <!-- BLOCK -->
-                                    <div class="pr-block-menu fas fa-ellipsis-v">
-                                        <div class="menu-items">
-                                            <div class="pointer"></div>
-                                            <ul>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CAMPAIGN HISTORY ENTRY -->
-                            <div class="col-12 pr-block mb-2 history-item">
-                                <div class="pr-block-content py-3">
-                                    <div class="row align-items-center">
-                                        <div class="col-6 col-sm-3">
-                                            <small>campaign period</small>
-                                            <span class="period">27.05.- 29.05.</span>
-                                        </div>
-                                        <div class="col-6 col-sm-3">
-                                            <small>parking period</small>
-                                            <span class="period">01.06. - 05.06.</span>
-                                        </div>
-                                        <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                            <span class="badge badge-secondary mr-1 my-1">done</span>
-                                        </div>
-                                    </div>
-                                    <!-- BLOCK -->
-                                    <div class="pr-block-menu fas fa-ellipsis-v">
-                                        <div class="menu-items">
-                                            <div class="pointer"></div>
-                                            <ul>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="menu-item" data-toggle="modal" data-target="#viewReport" aria-disabled="true">View Report</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="col-12 d-flex justify-content-center">
-                                <a href="#" id="load-more" class="p-4"><i class="fas fa-angle-double-down mr-2"></i>Load
-                                    More</a>
+                                <a href="#" id="load-more" class="p-4"><i class="fas fa-angle-double-down mr-2"></i>Load More</a>
                             </div>
 
                         </div>
