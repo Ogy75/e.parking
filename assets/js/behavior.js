@@ -326,7 +326,7 @@ $(document).ready(function () {
     $(function () {
         setTimeout(function () {
             $('#userAssigned').modal();
-        }, 3000);
+        }, 1500);
     });
 
     $('.parking-sceheme-img').zoom()
