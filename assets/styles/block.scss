@@ -81,6 +81,31 @@
         color: fade-out($black, 0.85);
       }
     }
+    .licence-plate{
+      display: inline-block;
+      border: 2px solid black;
+      border-radius: 4px;
+      &:before{
+        content: "";
+        display: block;
+        float: left;
+        width:12px;
+        height:28px;
+        margin:0;
+        background-color: $parking-blue;
+      }
+      #plate-data1,
+      #plate-data2{
+        font-family: 'Roboto Condensed', sans-serif;
+        display: block;
+        float: left;
+        padding: 2px 4px;
+        letter-spacing: .5px;
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 700;
+      }
+    }
   }
 }
 .history-item{

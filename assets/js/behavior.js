@@ -319,7 +319,14 @@ $( document).ready(function() {
 
     
     $("#appRestart").modal();
+    $('.parking-sceheme-img').zoom()
+
+    //LICENCE PLATE display (My Parking)
+    //var dot = ;
+    var p1Last2 = $('#plate-data1').text().split(/(?=.{2}$)/).join('‧');
+    $('#plate-data1').text(p1Last2);
+    var p2Last2 = $('#plate-data2').text().split(/(?=.{2}$)/).join('‧');
+    $('#plate-data2').text(p2Last2);
 
 });
 
-$('.parking-sceheme-img').zoom()

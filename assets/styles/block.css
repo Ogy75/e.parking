@@ -99,6 +99,34 @@
   color: rgba(39, 39, 36, 0.15);
 }
 
+.pr-block .pr-block-content .licence-plate {
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.pr-block .pr-block-content .licence-plate:before {
+  content: "";
+  display: block;
+  float: left;
+  width: 12px;
+  height: 28px;
+  margin: 0;
+  background-color: #0000b4;
+}
+
+.pr-block .pr-block-content .licence-plate #plate-data1,
+.pr-block .pr-block-content .licence-plate #plate-data2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  display: block;
+  float: left;
+  padding: 2px 4px;
+  letter-spacing: .5px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
 .history-item {
   display: none;
 }
