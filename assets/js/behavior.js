@@ -341,6 +341,9 @@ $(document).ready(function () {
             $('#status-active').show();
             $('#parking-status-nouse').show();
             Notiflix.Notify.Success(success.appActive);
+            setTimeout(function () {
+                $('#userAssigned').modal();
+            }, 4000);
         });
         $('#pauseApp').on('click', function () {
             $('.js_status').addClass('paused').show();
